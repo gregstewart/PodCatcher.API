@@ -101,7 +101,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Feed.cs" />
+    <Compile Include="Models\FeedFetcherWrapper.cs" />
     <Compile Include="Models\FeedRepository.cs" />
+    <Compile Include="Models\IFeedFetcherWrapper.cs" />
     <Compile Include="Models\IFeedRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

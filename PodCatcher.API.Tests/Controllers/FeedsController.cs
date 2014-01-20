@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Web.Http.Results;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PodCatcher.API.Models;
+using NUnit.Framework;
 
 namespace PodCatcher.API.Controllers
 {
-    [TestClass]
-    public class QuizControllerTest
+    [TestFixture]
+    public class FeedsControllerTest
     {
-        [TestMethod]
+        [Test]
         public void PostNewFeedReturnsCreated()
         {
             // Arrange
@@ -26,13 +26,19 @@ namespace PodCatcher.API.Controllers
             Assert.AreEqual(response.Content.Id, response.RouteValues["Id"]);
         }
 
-        [TestMethod, Ignore]
+        [Test, Ignore]
         public void PostDuplicateFeedReturnsConflict()
         {
-            //should return 409
+            //should return 409 or 422
         }
 
-        [TestMethod]
+        [Test, Ignore]
+        public void PostEmptyUrlReturnsBadRequest()
+        {
+            // should return 400;
+        }
+
+        [Test]
         public void GetFeedAfterPostNewFeedShouldReturnOk()
         {
             // Arrange
@@ -49,7 +55,7 @@ namespace PodCatcher.API.Controllers
             Assert.AreEqual(Id(response), Id(getResponse));
         }
 
-        [TestMethod]
+        [Test]
         public void GetFeedWithAnUnknownIdItShouldReturnNotFound()
         {
             // Arrange
@@ -59,16 +65,16 @@ namespace PodCatcher.API.Controllers
             var actionResult = controller.Get(new Guid("05963625-9f5c-4e66-a573-c70bb36cc225"));
 
             // Assert
-            Assert.IsInstanceOfType(actionResult, typeof(NotFoundResult));
+            Assert.AreEqual(actionResult.GetType(), typeof(System.Web.Http.Results.NotFoundResult));
         }
 
-        [TestMethod, Ignore]
+        [Test, Ignore]
         public void PutFeed()
         {
             
         }
 
-        [TestMethod, Ignore]
+        [Test, Ignore]
         public void DeleteFeed()
         {
 

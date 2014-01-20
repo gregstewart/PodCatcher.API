@@ -37,6 +37,9 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -61,7 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\FeedsController.cs" />
+    <Compile Include="Models\FeedFetcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stubs\FeedFetcherWrapperStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PodCatcher.API\PodCatcher.API.csproj">
