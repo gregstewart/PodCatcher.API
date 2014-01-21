@@ -45,5 +45,15 @@ namespace PodCatcher.API.Tests.Models
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.InternalServerError);
         }
+
+        [Test]
+        public void FetchFeedWithNullUrieturnBadRequest()
+        {
+            _mFeedFetcherWrapper.ToReturn = new HttpResponseMessage(HttpStatusCode.BadRequest);
+
+            HttpResponseMessage response = _mFeedFetcherWrapper.GetFeed(null);
+
+            Assert.AreEqual(response.StatusCode, HttpStatusCode.BadRequest);
+        }
     }
 }

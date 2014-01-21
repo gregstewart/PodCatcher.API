@@ -6,20 +6,20 @@ using NUnit.Framework;
 namespace PodCatcher.API.Controllers
 {
     [TestFixture]
-    public class FeedsControllerTest
+    public class PodcastsControllerTest
     {
         [Test]
-        public void PostNewFeedReturnsCreated()
+        public void PostNewPodcastReturnsCreated()
         {
             // Arrange
-            FeedsController controller = new FeedsController();
+            PodcastsController controller = new PodcastsController();
 
             // Act
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
             var actionResult = controller.Post(httpWwwTestComFeedXml);
 
             // Assert
-            var response = actionResult as CreatedAtRouteNegotiatedContentResult<Feed>;
+            var response = actionResult as CreatedAtRouteNegotiatedContentResult<Podcast>;
 
             Assert.IsNotNull(response);
             Assert.AreEqual("DefaultApi", response.RouteName);
@@ -27,7 +27,7 @@ namespace PodCatcher.API.Controllers
         }
 
         [Test, Ignore]
-        public void PostDuplicateFeedReturnsConflict()
+        public void PostDuplicatePodcastReturnsConflict()
         {
             //should return 409 or 422
         }
@@ -39,27 +39,27 @@ namespace PodCatcher.API.Controllers
         }
 
         [Test]
-        public void GetFeedAfterPostNewFeedShouldReturnOk()
+        public void GetPodcastAfterPostNewFeedShouldReturnOk()
         {
             // Arrange
-            FeedsController controller = new FeedsController();
+            PodcastsController controller = new PodcastsController();
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
             var actionResult = controller.Post(httpWwwTestComFeedXml);
-            var response = actionResult as CreatedAtRouteNegotiatedContentResult<Feed>;
+            var response = actionResult as CreatedAtRouteNegotiatedContentResult<Podcast>;
 
             // Act
             var getActionResult = controller.Get(Id(response));
             // Assert
-            var getResponse = getActionResult as OkNegotiatedContentResult<Feed>;
+            var getResponse = getActionResult as OkNegotiatedContentResult<Podcast>;
             Assert.IsNotNull(getResponse);
             Assert.AreEqual(Id(response), Id(getResponse));
         }
 
         [Test]
-        public void GetFeedWithAnUnknownIdItShouldReturnNotFound()
+        public void GetPodcastWithAnUnknownIdItShouldReturnNotFound()
         {
             // Arrange
-            var controller = new FeedsController();
+            var controller = new PodcastsController();
 
             // Act
             var actionResult = controller.Get(new Guid("05963625-9f5c-4e66-a573-c70bb36cc225"));
@@ -69,23 +69,23 @@ namespace PodCatcher.API.Controllers
         }
 
         [Test, Ignore]
-        public void PutFeed()
+        public void PutPodcast()
         {
             
         }
 
         [Test, Ignore]
-        public void DeleteFeed()
+        public void DeletePodcast()
         {
 
         }
 
-        private Guid Id(OkNegotiatedContentResult<Feed> response)
+        private Guid Id(OkNegotiatedContentResult<Podcast> response)
         {
             return response.Content.Id;
         }
 
-        private static Guid Id(CreatedAtRouteNegotiatedContentResult<Feed> response)
+        private static Guid Id(CreatedAtRouteNegotiatedContentResult<Podcast> response)
         {
             return response.Content.Id;
         }

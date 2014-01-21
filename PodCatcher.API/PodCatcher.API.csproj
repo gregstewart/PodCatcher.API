@@ -96,15 +96,16 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\FeedsController.cs" />
+    <Compile Include="Controllers\PodcastsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Feed.cs" />
+    <Compile Include="Models\FeedParser.cs" />
+    <Compile Include="Models\Podcast.cs" />
     <Compile Include="Models\FeedFetcherWrapper.cs" />
-    <Compile Include="Models\FeedRepository.cs" />
+    <Compile Include="Models\PodcastRepository.cs" />
     <Compile Include="Models\IFeedFetcherWrapper.cs" />
-    <Compile Include="Models\IFeedRepository.cs" />
+    <Compile Include="Models\IPodcastRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

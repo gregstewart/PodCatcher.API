@@ -5,7 +5,7 @@ using System.Web;
 
 namespace PodCatcher.API.Models
 {
-    public class Feed
+    public class Podcast
     {
         public Guid Id { get; set; }
         public string Title { get; set; } // title

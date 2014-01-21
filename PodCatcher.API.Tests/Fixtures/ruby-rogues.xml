@@ -1,0 +1,3078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
+>
+
+<channel>
+	<title>Ruby Rogues</title>
+	<atom:link href="http://rubyrogues.com/feed/" rel="self" type="application/rss+xml" />
+	<link>http://rubyrogues.com</link>
+	<description>Rubyist.where(:rogue =&#62; true).limit(6).all.talk(:about =&#62; Topics.where(:awesome =&#62; true))</description>
+	<lastBuildDate>Thu, 16 Jan 2014 19:39:52 +0000</lastBuildDate>
+	<language>en-US</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.7.1</generator>
+<!-- podcast_generator="Blubrry PowerPress/5.0.2" mode="advanced" -->
+	<itunes:new-feed-url>http://rubyrogues.com/podcast.rss</itunes:new-feed-url>
+	<itunes:summary>Rubyist.where(:rogue =&gt; true).limit(6).all.talk(:about =&gt; Topics.where(:awesome =&gt; true))</itunes:summary>
+	<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+	<itunes:explicit>no</itunes:explicit>
+	<itunes:image href="http://rubyrogues.com/wp-content/uploads/2013/05/RubyRogues_iTunes.jpg" />
+	<itunes:owner>
+		<itunes:name>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:name>
+		<itunes:email>chuck@devchat.tv</itunes:email>
+	</itunes:owner>
+	<managingEditor>chuck@devchat.tv (Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen)</managingEditor>
+	<itunes:subtitle>Rubyist.where(:rogue =&gt; true).limit(6).all.talk(:about =&gt; Topics.where(:awesome =&gt; true))</itunes:subtitle>
+	<itunes:keywords>ruby, rails, programmer, programming, technology, learn, code, coder, tools, computers</itunes:keywords>
+	<image>
+		<title>Ruby Rogues</title>
+		<url>http://rubyrogues.com/wp-content/uploads/2011/09/iTunesLogo.png</url>
+		<link>http://rubyrogues.com</link>
+	</image>
+	<itunes:category text="Technology">
+		<itunes:category text="Software How-To" />
+	</itunes:category>
+	<item>
+		<title>139 RR Riak with Sean Cribbs and Bryce Kerley</title>
+		<link>http://rubyrogues.com/139-rr-riak-with-sean-cribbs-and-bryce-kerley/</link>
+		<comments>http://rubyrogues.com/139-rr-riak-with-sean-cribbs-and-bryce-kerley/#comments</comments>
+		<pubDate>Wed, 15 Jan 2014 12:00:57 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Bryce Kerley]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Sean Cribbs]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1673</guid>
+		<description><![CDATA[Get your Ruby Rogues T-Shirt or hoodie!! Ladies&#8217; sizes available as well! Panel Sean Cribbs (twitter github blog) Bryce Kerley (twitter github blog) Avdi Grimm (twitter github blog book) James Edward Gray (twitter github blog) David Brady (twitter github blog ADDcasts) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:32 [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/139-rr-riak-with-sean-cribbs-and-bryce-kerley/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR139Riak.mp3" length="69286507" type="audio/mpeg" />
+		<itunes:subtitle>Get your Ruby Rogues T-Shirt or hoodie!! Ladies&#039; sizes available as well! Panel  Sean Cribbs (twitter github blog)   Bryce Kerley (twitter github blog)   Avdi Grimm (twitter github blog book)   James Edward Gray (twitter github blog) </itunes:subtitle>
+		<itunes:summary>Get your Ruby Rogues T-Shirt or hoodie!! Ladies&#039; sizes available as well!
+Panel
+
+	Sean Cribbs (twitter github blog)
+	Bryce Kerley (twitter github blog)
+	Avdi Grimm (twitter github blog book)
+	James Edward Gray (twitter github blog)
+	David Brady (twitter github blog ADDcasts)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:32 - Job Replacement Guide by David Brady
+03:28 - Sean Cribbs Introduction
+04:31 - Bryce Kerley Introduction
+04:45 - Riak and Advantages
+
+
+	Dynamo: Amazon’s Highly Available Key-value Store
+
+08:51 - The CAP Theorem
+
+
+	Code Hale: You Can’t Sacrifice Partition Tolerance
+
+10:27 - What is Riak?
+
+
+	The Ring
+
+14:07 - Introducing Riak 2.0: Data Types, Strong Consistency, Full-Text Search, and Much More
+
+
+	Sean Cribbs - Eventually Consistent Data Structures
+
+16:05 - Autocomplete
+27:50 - Scaling
+30:02 - Guidelines for Designing Code
+37:39 - HTTP 2.0 Support
+41:40 - MapReduce
+46:24 - Full-Text Search
+
+
+	yokozuna
+	riak-yz-query
+
+49:50 - Primary Data Store
+
+
+	Datomic
+
+52:27 - Programming Riak
+
+Picks
+
+	IRCCloud (Avdi)
+	One Today (Avdi)
+	Code Climate: When Is It Time to Refactor? (James)
+	sandi_meter (James)
+	Gone Home (James)
+	MailChimp (David)
+	The Gentle Art of Verbal Self-Defense at Work by Suzette H. Elgin (David)
+	Metro Franchise Pack (David)
+	Charity Navigator (David)
+	Disneyland (Chuck)
+	New Media Expo (Chuck)
+	Om (Sean)
+	QuickCheck (Erlang): QuivQ (Sean)
+	proper (Sean)
+	triq (Sean)
+	(Clojure): simple-check (Sean)
+	(Ruby): rantly (Sean)
+	Peter Bailis (@pbailis)(Sean)
+	Bastion Soundtrack (Sean)
+	Kennedy Space Center (Bryce)
+	Project Kenai (Bryce)
+	Atlantis (Bryce)
+
+Book Club
+Ruby Under a Microscope by Pat Shaughnessy! We will be interviewing Pat on February 27, 2014. The episode will air on March 6th, 2014. No Starch was kind enough to provide this coupon code your listeners can use to get a discount for Ruby Under a Microscope. Use the coupon code ROGUE for 40% off! (Coupon expires April 1, 2014.)
+Next Week
+Heroku with Richard Schneeman
+Transcript
+DAVID:  If Liz was up and dressed, I’d send her to the mailbox and then I could squee in the middle of the show, “My shirt came! My shirt came!”
+
+[Laughter]
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Code Climate automated code reviews ensure that your projects stay on track. Fix and find quality and security issues in your Ruby code sooner. Try it free at RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+CHUCK:  Hey everybody and welcome to episode 139 of the Ruby Rogues podcast. This week on our panel, we have Avdi Grimm.
+
+AVDI:  Hello.
+
+CHUCK:  James Edward Gray.
+
+JAMES:  I’m Batman.
+
+CHUCK:  David Brady.
+
+DAVID:  Wait, I thought I was Batman.
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. We also have two special guests this week, Sean Cribbs.
+
+SEAN:  Howdy.
+
+CHUCK:  And Bryce Kerley.
+
+BRYCE:  Good afternoon.
+
+CHUCK:  Before we get started, I’m hearing that Dave has an announcement he’d like to make. So, I’m going to let him go and then we’ll have you guys introduce yourselves.
+
+DAVID:  Thanks, Chuck. So, we always do introductions and then Chuck tells us what course he’s working on. And I wanted to do that today. I’m putting together an emergency job replacement guide. Basically,</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:12:10</itunes:duration>
+	</item>
+		<item>
+		<title>138 RR The RubyRep Holiday Takeover</title>
+		<link>http://rubyrogues.com/138-rr-the-rubyrep-holiday-takeover/</link>
+		<comments>http://rubyrogues.com/138-rr-the-rubyrep-holiday-takeover/#comments</comments>
+		<pubDate>Tue, 31 Dec 2013 14:00:22 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+		<category><![CDATA[Mandy Moore]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1631</guid>
+		<description><![CDATA[Panel Mandy Moore (twitter RubyRep DevReps) Discussion &#160; Happy Holidays and Happy New Year &#160; from the Ruby Rogues &#160; (and Mandy)!! Book Club Ruby Under a Microscope by Pat Shaughnessy! We will be interviewing Pat on February 27, 2014. The episode will air on March 6th, 2014. No Starch was kind enough to provide this coupon [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/138-rr-the-rubyrep-holiday-takeover/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR138RubyRepTakeover.mp3" length="36001482" type="audio/mpeg" />
+		<itunes:subtitle>Panel Mandy Moore (twitter RubyRep DevReps) - Discussion   Happy Holidays and Happy New Year   from the Ruby Rogues   (and Mandy)!! Book Club Ruby Under a Microscope by Pat Shaughnessy! We will be interviewing Pat on February 27, 2014.</itunes:subtitle>
+		<itunes:summary>Panel
+Mandy Moore (twitter RubyRep DevReps)
+
+Discussion
+ 
+Happy Holidays and Happy New Year
+ 
+
+
+from the Ruby Rogues
+ 
+(and Mandy)!!
+Book Club
+Ruby Under a Microscope by Pat Shaughnessy! We will be interviewing Pat on February 27, 2014. The episode will air on March 6th, 2014. No Starch was kind enough to provide this coupon code your listeners can use to get a discount for Ruby Under a Microscope. Use the coupon code ROGUE for 40% off! (Coupon expires April 1, 2014.)
+In Two Weeks
+Riak with Sean Cribbs and Bryce Kerley
+Transcript
+DAVID:  [whispers] Get out.
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Code Climate automated code reviews ensure that your projects stay on track. Fix and find quality and security issues in your Ruby code sooner. Try it free at RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+MANDY:  Hey everybody and welcome to episode 138 of the Ruby Rogues podcast. Today, I am your host, Mandy Moore, otherwise known as Ruby Rep, otherwise known as the Rogues assistant. Today, I will be giving you a very special and hopefully hilarious glimpse into the Ruby Rogues Retreat in which I had the pleasure, or misfortune, of attending this past July after the LoneStar Ruby Conference.
+
+We rented a house in Austin, Texas, which was basically a mansion and holed up for four days so the Rogues could discuss their boring book stuff and I could eat all their food and record super-secret conversations in a very James Bond-esque manner. A great time was had by all and no one died, though David came close and we went our separate ways still friends. I made it on and off an airplane, which was a huge win for me, though Katrina tried to get me to stay on the streets of Austin for an extra month by booking my return flight for August 24th instead of July.
+
+Alas, all worked out and I got to come home to my daughter whom I lovingly refer to as chicken, and my four cats, two dogs, three hopelessly lost men, and a very, very dirty kitchen. When I got home, I had over 24 hours’ worth of audio to go through, a lot of which were the sounds of James’s wife, Dana, cooking amazing meals in the kitchen, which was not so easy on my ears. But I managed to get around Dana’s kitchen drum solos to gather some good content. All in all, the Rogues were good to me and treated me like the princess that deep inside I know I am.
+
+DAVID:  Oh my god, I love your hair!
+
+MANDY:  [Chuckles] I did look pretty good that day. But while I was being treated like a princess, there was another one giving birth.
+
+MANDY:  Oh, Kate’s giving birth.
+
+JOSH:  Yeah, I heard. She went into labor.
+
+MANDY:  No she, he’s arrived.
+
+JAMES:  It’s here?
+
+JOSH:  Is it human?
+
+JAMES:  Is it human? [Chuckles]
+
+JOSH:  You never know with the British Royals.
+
+MANDY:  It’s a boy. It’s a boy.
+
+MANDY:  And in typical Avdi fashion, he just didn’t get it.
+
+AVDI:  Why is this royal baby the top news?
+
+JAMES:  I don’t know. Because it’s the royal baby, Avdi.
+
+MANDY:  Though everyone there was obviously not as concerned at pop culture and royal babies as I was, we still managed to have fun. And David continued to be David.
+
+DAVID:  I just realized, I kind of want to troll exercism the way we donkey-punched the, or donkey-patched, excuse me…
+
+[Laughter]
+
+JOSH:  Excuse me.
+
+[Laughter]
+
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>37:30</itunes:duration>
+	</item>
+		<item>
+		<title>137 RR Book Club &#8211; Functional Programming for the Object-Oriented Programmer with Brian Marick</title>
+		<link>http://rubyrogues.com/137-rr-book-club-functional-programming-for-the-object-oriented-programmer-with-brian-marick/</link>
+		<comments>http://rubyrogues.com/137-rr-book-club-functional-programming-for-the-object-oriented-programmer-with-brian-marick/#comments</comments>
+		<pubDate>Wed, 25 Dec 2013 14:00:49 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Book Club]]></category>
+		<category><![CDATA[Brian Marick]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1643</guid>
+		<description><![CDATA[Panel Brian Marick (twitter github blog) Avdi Grimm (twitter github blog book) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:27 &#8211; Brian Marick Introduction Functional Programming for the Object-Oriented Programmer by Brian Marick 01:58 &#8211; The Making of FPOOP LISP Clojure Leanpub 05:00 [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/137-rr-book-club-functional-programming-for-the-object-oriented-programmer-with-brian-marick/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR137FPOOP.mp3" length="56153431" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Brian Marick (twitter github blog)   Avdi Grimm (twitter github blog book)   James Edward Gray (twitter github blog)   Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) - Discussion 01:27 - Brian Marick Introduction - </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Brian Marick (twitter github blog)
+	Avdi Grimm (twitter github blog book)
+	James Edward Gray (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:27 - Brian Marick Introduction
+
+	Functional Programming for the Object-Oriented Programmer by Brian Marick
+
+01:58 - The Making of FPOOP
+
+
+	LISP
+	Clojure
+	Leanpub
+
+05:00 - Using Objects in Functional Programming
+
+
+	Multimethods
+
+08:41 - Objects and Clojure
+
+
+	Smalltalk
+	Design Patterns: Elements of Reusable Object-Oriented Software by Erich Gamma, Richard Heim, Ralph Johnson and John Vlissides
+	macros
+
+12:39 - The Title
+
+
+	Types
+	Haskell
+
+15:55 - Dataflow
+
+
+	Patterns of Enterprise Application Architecture by Martin Fowler
+	Elixir
+	multimethods
+
+26:06 - Parallelizing
+27:30 - pmap
+28:26 - When to Name Functions/When to Name Parameters
+
+
+	Naming Conventions
+
+34:44 - Ruby and LISP
+
+
+	Why Ruby is an acceptable LISP
+
+40:16 - Lazy
+41:48 - Organizing Large Functional Programs
+
+Picks
+
+	Julia Evans Blog Series (Avdi)
+	Jepsen (Avdi)
+	tkn (James)
+	Desktop Dungeons (James)
+	Turn Off the Screen Shot &amp; Empty Trash Sound Effects in Mac OS X
+	RspecMode (Chuck)
+	FuzeBox (Chuck)
+	Notes from Two Scientific Psychologists (Brian)
+	Beyond the Brain: How Body and Environment Shape Animal and Human Minds by Louise Barrett (Brian)
+	The Ecological Approach To Visual Perception by James J. Gibson (Brian)
+	Laboratory Life: The Construction of Scientific Facts by Bruno Latour (Brian)
+	Science in Action: How to Follow Scientists and Engineers Through Society by Bruno Latour (Brian)
+	Exploration Through Example: Example-driven development, Agile software development, testing, Ruby, and other things of interest to Brian Marick (Brian)
+
+Book Club
+Ruby Under a Microscope by Pat Shaughnessy! We will be interviewing Pat on February 27, 2014. The episode will air on March 6th, 2014. No Starch was kind enough to provide this coupon code your listeners can use to get a discount for Ruby Under a Microscope. Use the coupon code ROGUE for 40% off! (Coupon expires April 1, 2014.)
+Next Week
+A Special Surprise
+Transcript
+AVDI:  [Electronic noise]
+
+JAMES:  Avdi, you sound terrible.
+
+CHUCK:  He’s shooting us with his death ray. Aaah!
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Code Climate’s new security monitor alerts you immediately when vulnerabilities are introduced into your Rails app. Sleep better knowing that your data is protected. Try it free at RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+CHUCK:  Hey everybody and welcome to episode 137 of the Ruby Rogues podcast. This week on our panel, we have Avdi Grimm.
+
+AVDI:  Hello from Pennsylvania.
+
+CHUCK:  James Edward Gray.
+
+JAMES:  I’m on vacation.
+
+CHUCK:  Brian Marick.
+
+BRIAN:  Hello.
+
+CHUCK:  I just threw you in with the Rogues. Do you want to introduce yourself, Brian?
+
+BRIAN:  My name is Brian Marick. The reason I’m on here is I wrote a book called ‘Functional Programming for the Object-Oriented Programmer’ which I understand is going to be the topic of this talk.
+
+JAMES:  What?! That’s what we’re talking about? That does it. I’m hanging up.
+
+BRIAN:  [Chuckles]
+
+CHUCK:  I thought we were talking about hats.
+
+JAMES:  [Chuckles] And who are you, Chuck?
+
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>58:30</itunes:duration>
+	</item>
+		<item>
+		<title>136 RR Consulting vs Product Work Part 2 with Steven Proctor</title>
+		<link>http://rubyrogues.com/136-rr-consulting-vs-product-work-part-2-with-steven-proctor/</link>
+		<comments>http://rubyrogues.com/136-rr-consulting-vs-product-work-part-2-with-steven-proctor/#comments</comments>
+		<pubDate>Wed, 18 Dec 2013 14:00:42 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+		<category><![CDATA[Steven Proctor]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1629</guid>
+		<description><![CDATA[Panel Steven Proctor (twitter github blog) James Edward Gray (twitter github blog) Katrina Owen (twitter github blog) Josh Susser (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:37 &#8211; Steven Proctor Introduction Simpli.fi 03:36 &#8211; Background 121 RR Consulting vs Product Work with Adam Keys 08:37 &#8211; [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/136-rr-consulting-vs-product-work-part-2-with-steven-proctor/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR136ConsultingProductWork.mp3" length="49760717" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Steven Proctor (twitter github blog)   James Edward Gray (twitter github blog)   Katrina Owen (twitter github blog)   Josh Susser (twitter github blog)   Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) - Discussion </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Steven Proctor (twitter github blog)
+	James Edward Gray (twitter github blog)
+	Katrina Owen (twitter github blog)
+	Josh Susser (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:37 - Steven Proctor Introduction
+
+	Simpli.fi
+
+03:36 - Background
+
+
+	121 RR Consulting vs Product Work with Adam Keys
+
+08:37 - Bringing in Consultants
+13:39 - Managing Teams
+
+
+	Who Should Get Hired?
+	Full-Time Employees vs Consultants
+
+20:15 - Ruby Consultants
+27:34 - Motivation, Interest and Avoiding Burnout
+30:31 - Fulfillment and Forward Progress
+34:29 - Changing Culture
+
+Picks
+
+	Omakase Charity (Katrina)
+	Hacker Factor: Gender Guesser (Katrina)
+	Multipliers: How the Best Leaders Make Everyone Smarter by Liz Wiseman and Greg Mckeown (Katrina)
+	How to Bake a Potato (Katrina)
+	githug (Katrina)
+	King James Programming (Katrina)
+	Bacon Method (Josh)
+	Pan Frying: Testing for Proper Pan Heat (Rouxbe Cooking School) (James)
+	So Good They Can&#039;t Ignore You: Why Skills Trump Passion in the Quest for Work You Love by Cal Newport (James)
+	The Ruby Rogues (Steven)
+	Goodreads/Goodreads: Steven (Steven)
+	f.lux (Steven)
+	LaVar Burton (Steven)
+	Jim Henson (Steven)
+	Functional Geekery (Steven)
+
+Book Club
+Functional Programming for the Object-Oriented Programmer by Brian Marick! We will be interviewing Brian next week, and the show will air on Christmas Day. There&#039;s still time left to get your $5.00 off code to get the book: please_remember_the_starving_artist
+Ruby Rogues Parley
+Sign up for our Discourse Discussion Board!
+Ruby Rogues T-Shirts!
+Support the show! Buy a T-Shirt!
+Next Week
+Functional Programming for the Object-Oriented Programmer with Brian Marick
+Transcript
+JOSH:  It’s like digging your own grave with a backhoe. [Chuckles]
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Over 1,000 organizations trust Code Climate to help improve quality and security in their Ruby apps. Get 50% off your first three months for being a Rogues listener by starting a free trial this week. Go to RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+CHUCK:  Hey everybody and welcome to episode 136 of the Ruby Rogues podcast. This week on our panel, we have James Edward Gray.
+
+JAMES:  Good morning everyone.
+
+CHUCK:  Katrina Owen.
+
+KATRINA:  Good morning.
+
+CHUCK:  Josh Susser.
+
+JOSH:  Good morning from San Francisco where it’s 85° out today.
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. I&#039;m just going to give a quick reminder. You got two and a half weeks to get the 1/3 off on Rails Ramp Up, if you want to sign up.
+
+We also have a special guest this week and that’s Steven Proctor.
+
+STEVEN:  Howdy from Dallas-Fort Worth.
+
+CHUCK:  You want to introduce yourself, Steven?
+
+STEVEN:  Yeah. I&#039;m a Ruby immigrant. I have been spending most of my time in .NET up until about the past year when I got laid off. Sent an email out to the Ruby user groups in the area and got picked up from someone taking a chance at someone on someone who’s got development experience but has only played with Ruby. So, I&#039;m currently at Simplify and doing Ruby and some Erlang here as well.
+
+JAMES:  Cool.
+
+CHUCK:  Very nice. So, before we get going too far, we have some sad news. Katrina, do you want to give us our sad news?
+
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>51:50</itunes:duration>
+	</item>
+		<item>
+		<title>135 RR HTTP 2.0 with Ilya Grigorik</title>
+		<link>http://rubyrogues.com/135-rr-http-2-0-with-ilya-grigorik/</link>
+		<comments>http://rubyrogues.com/135-rr-http-2-0-with-ilya-grigorik/#comments</comments>
+		<pubDate>Wed, 11 Dec 2013 14:00:02 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[Ilya Grigorik]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1617</guid>
+		<description><![CDATA[Panel Ilya Grigorik (twitter github blog) Josh Susser (twitter github blog) Avdi Grimm (twitter github blog book) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:49 &#8211; Ilya Grigorik Introduction Web Performance Engineer at Google 03:08 &#8211; HTTP 2.0 HTTP 0.9 Gopher HTTP 1.0 [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/135-rr-http-2-0-with-ilya-grigorik/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR135HTTP20.mp3" length="66599019" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Ilya Grigorik (twitter github blog)   Josh Susser (twitter github blog)   Avdi Grimm (twitter github blog book)   James Edward Gray (twitter github blog)   Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) - Discussion </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Ilya Grigorik (twitter github blog)
+	Josh Susser (twitter github blog)
+	Avdi Grimm (twitter github blog book)
+	James Edward Gray (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:49 - Ilya Grigorik Introduction
+
+	Web Performance Engineer at Google
+
+03:08 - HTTP 2.0
+
+
+	HTTP 0.9
+	Gopher
+	HTTP 1.0
+
+09:05 - Performance
+
+
+	Latency
+	Bandwidth
+
+15:48 - Binary Framing
+
+
+	Transparency
+
+19:21 - HTTP 1.0 vs HTTP 2.0
+
+
+	Connection Speeds
+
+33:28 - Seeing HTTP 2.0
+
+
+	SPDY
+
+36:13 - Browser Support
+39:25 - The Web Developer Experience
+41:04 - Upgrading
+
+
+	Ports
+	Proxies
+	Websockets
+
+44:21 - Caching
+46:00 - Server Push
+
+
+	Inlining
+
+47:30 - Streaming
+48:22 - Header Compression
+50:31 - Browser Development
+52:06 - Sites Switching Over: Timeline
+56:47 - References
+
+
+	Mailing List
+	High Performance Browser Networking by Ilya Grigorik
+
+57:49 - The Extensible Web Manifesto
+
+Picks
+
+	Astronomy Picture Of the Day&#039;s 2014 Calendar (Josh)
+	The &quot;Blog&quot; of &quot;Unnecessary&quot; Quotation Marks (Josh)
+	Bryan Cantrill: The Power of a Pronoun (James)
+	Papers, Please (James)
+	Ilya&#039;s Blog (Avdi)
+	Revenge (Avdi)
+	The Walking Dead (Chuck)
+	Audible (Chuck)
+	Duct Tape Marketing Revised &amp; Updated: The World&#039;s Most Practical Small Business Marketing Guide by John Jantsch (Chuck)
+	High Performance Browser Networking by Ilya Grigorik (Ilya)
+	Exploding The Phone: The Untold Story of the Teenagers and Outlaws Who Hacked Ma Bell (Ilya)
+	the_coding_love(); (Ilya)
+
+Book Club
+Functional Programming for the Object-Oriented Programmer by Brian Marick! We will be interviewing Brian on December 18th, and the show will air on Christmas Day. Oh! And here’s a $5.00 off code to get the book: please_remember_the_starving_artist
+
+So, Merry Christmas!
+Ruby Rogues Parley
+Sign up for our Discourse Discussion Board!
+Ruby Rogues T-Shirts!
+Support the show! Buy a T-Shirt!
+Next Week
+Full-Time Employees vs Contractors with Steven Proctor
+Transcript
+ILYA:  Yeah, this time zone thing is annoying.
+
+JAMES:  I know, right? Why do we have that round earth thing? I don’t know.
+
+AVDI:  [Chuckles]
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+[This episode is sponsored by Code Climate. Code Climate automated code reviews ensure that your projects stay on track. Fix and find quality and security issues in your Ruby code sooner. Try it free at RubyRogues.com/CodeClimate.]
+
+CHUCK:  Hey everybody and welcome to episode 135 of the Ruby Rogues podcast. This week on our panel, we have Josh Susser.
+
+JOSH:  Hey, good morning everyone.
+
+CHUCK:  Avdi Grimm.
+
+AVDI:  Hello from Pennsylvania.
+
+CHUCK:  James Edward Gray.
+
+JAMES:  Good morning everyone.
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. And I just want to let you know I’m going to do Rails Ramp Up again. Sign up by the beginning of the year. I’m doing a 30% discount and I will probably never do that again. So, if you want in, get it now. We also have a special guest and that’s Ilya Grigorik.
+
+ILYA:  Hey everyone. I’m glad to be here.
+
+JOSH:  Hey, welcome to the show.
+
+CHUCK:  I asked you before the show and I still probably slaughtered your name.
+
+ILYA:  No, that was good. That was right.
+
+CHUCK:  Yehey! [Chuckles] So, since you haven’t been on the show before, do you want to introduce yourself?
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:09:22</itunes:duration>
+	</item>
+		<item>
+		<title>134 RR Sharktime with Lucas Dohmen</title>
+		<link>http://rubyrogues.com/134-rr-sharktime-with-lucas-dohmen/</link>
+		<comments>http://rubyrogues.com/134-rr-sharktime-with-lucas-dohmen/#comments</comments>
+		<pubDate>Wed, 04 Dec 2013 14:00:49 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+		<category><![CDATA[Lucas Dohmen]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1612</guid>
+		<description><![CDATA[Panel Lucas Dohmen (twitter github) Katrina Owen (twitter github blog) David Brady (twitter github blog ADDcasts) Avdi Grimm (twitter github blog book) Discussion 01:51 &#8211; Ruby Rogues T-Shirts! 02:22 &#8211; Lucas Dohmen Introduction Ruby Golf Contest Winner Lucas&#8217; Ruby Golf Submission: Sharktime Lucas&#8217; Ruby Golf Submission: To-Do List triAGENS 11:03 &#8211; ArangoDB arangodb 12:35 &#8211; [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/134-rr-sharktime-with-lucas-dohmen/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR134Sharktime.mp3" length="75444289" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Lucas Dohmen (twitter github)   Katrina Owen (twitter github blog)   David Brady (twitter github blog ADDcasts)   Avdi Grimm (twitter github blog book) - Discussion 01:51 - Ruby Rogues T-Shirts! 02:22 - Lucas Dohmen Introduction </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Lucas Dohmen (twitter github)
+	Katrina Owen (twitter github blog)
+	David Brady (twitter github blog ADDcasts)
+	Avdi Grimm (twitter github blog book)
+
+Discussion
+01:51 - Ruby Rogues T-Shirts!
+02:22 - Lucas Dohmen Introduction
+
+
+	Ruby Golf Contest Winner
+	Lucas&#039; Ruby Golf Submission: Sharktime
+	Lucas&#039; Ruby Golf Submission: To-Do List
+	triAGENS
+
+11:03 - ArangoDB
+
+
+	arangodb
+
+12:35 - Graph Databases
+
+
+	Oracle Database
+	DB2
+
+17:31 - Computer Science Education
+
+
+	Ruby Rogues #120 - Book Club: Understanding Computation with Tom Stuart
+	Galois sets/connections
+	Overtone
+	Understanding Computation by Tom Stuart
+
+29:18 - The Halting Problem
+32:45 - Lucas’ Other Projects &amp; Open Source Code
+
+
+	ashikawa-core
+	guacamole
+	hcking
+
+36:51 - exercism.io and exogenesis
+
+
+	devtools
+
+45:46 - Functional Programming
+
+
+	Haskell
+	Project Euler
+
+53:28 - Haskell and Functional Programming Resources
+
+
+	Clojure
+	Learn You a Haskell for Great Good! A Beginner&#039;s Guide by Miran Lipovača
+	Real World Haskell by by Bryan O&#039;Sullivan, Don Stewart, and John Goerzen
+	Programming in Haskell by Graham Hutton
+	Lisp
+	QuickCheck
+
+Picks
+
+	Rich Hickey: Simple Made Easy (Katrina)
+	How To Make Eye Contact (Katrina)
+	Temple Grandin (Katrina)
+	TEDxDU Temple Grandin -- Different kinds of minds (Katrina)
+	The Changelog: Rich Hickey’s Greatest Hits (Lucas)
+	Tiny Habits (David)
+	exercism.io (David)
+	Jessica Kerr: From lists to trains to functors (Avdi)
+	Jessica Kerr: Trains within trains (Avdi)
+	An Eye Tracking Study on camelCase and under_score Identifier Styles (Sharif &amp; Maletic) (Lucas)
+	Teaching Kids (link to Coder Dojo) (Lucas)
+	Super Spell Boy (Lucas)
+
+Book Club
+Functional Programming for the Object-Oriented Programmer by Brian Marick! We will be interviewing Brian on December 18th, and the show will air on Christmas Day. Oh! And here’s a $5.00 off code to get the book: please_remember_the_starving_artist
+
+So, Merry Christmas!
+Ruby Rogues Parley
+Sign up for our Discourse Discussion Board!
+Ruby Rogues T-Shirts!
+Support the show! Buy a T-Shirt!
+Next Week
+HTTP 2.0 with Ilya Grigorik
+Transcript
+DAVID:  Okay. So, Charles and James are not going to be joining. So, I&#039;m going to hang up on them.
+
+AVDI:  Finally, we get to hang up on those guys.
+
+DAVID:  Yeah. We get to do Rogues our way.
+
+[Laughter]
+
+AVDI:  But I don’t know what my way is.
+
+DAVID:  Yeah.
+
+[Laughter]
+
+DAVID:  Crap! Our way is to have Chuck and Josh and James have a list of questions ready to go.
+
+AVDI:  [Laughs]
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+[This episode is sponsored by Code Climate. Code Climate’s new security monitor alerts you immediately when vulnerabilities are introduced into your Rails app. Sleep better knowing that your data is protected. Try it free at RubyRogues.com/CodeClimate.]
+
+AVDI:  It’s the Ruby Rogues podcast. This is episode 134. Today, we have Katrina Owen.
+
+KATRINA:  Hello.
+
+AVDI:  And David Brady.
+
+DAVID:  I just want to be on the blooper reel.
+
+AVDI:  I am Avdi Grimm from RubyTapas.com. And joining us on the panel today, we have Lucas Dohmen.
+
+LUCAS:  Hello from Germany.
+
+AVDI:  So, I think we have a little tiny bit of business to get out of the way before we get into the episode.
+
+DAVID:  Oh, yes! We have some awesome business.
+
+AVDI:  Awesome business, yes.</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:18:35</itunes:duration>
+	</item>
+		<item>
+		<title>133 RR Threading with Emily Stolfo</title>
+		<link>http://rubyrogues.com/133-rr-threading-with-emily-stolfo/</link>
+		<comments>http://rubyrogues.com/133-rr-threading-with-emily-stolfo/#comments</comments>
+		<pubDate>Wed, 27 Nov 2013 14:00:12 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[Emily Stolfo]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1603</guid>
+		<description><![CDATA[Panel Emily Stolfo (twitter github) Avdi Grimm (twitter github blog book) James Edward Gray (twitter github blog) David Brady (twitter github blog ADDcasts) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:00 &#8211; Emily Stolfo Introduction MongoDB Columbia University 06:46 &#8211; Emily Stolfo: Thread Safety First José Valim: Concurrency in [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/133-rr-threading-with-emily-stolfo/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR133Threads.mp3" length="75608547" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Emily Stolfo (twitter github)   Avdi Grimm (twitter github blog book)   James Edward Gray (twitter github blog)   David Brady (twitter github blog ADDcasts)   Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) - Discussion </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Emily Stolfo (twitter github)
+	Avdi Grimm (twitter github blog book)
+	James Edward Gray (twitter github blog)
+	David Brady (twitter github blog ADDcasts)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+02:00 - Emily Stolfo Introduction
+
+	MongoDB
+	Columbia University
+
+06:46 - Emily Stolfo: Thread Safety First
+
+
+	José Valim: Concurrency in Ruby: In search of inspiration - RubyKaigi 2013 Keynote
+
+07:43 - Threading
+
+
+	Mutex
+	JRuby
+	MRI
+
+15:49 - “There is no such thing as thread-safe Ruby code.”
+
+
+	Ruby Tapas
+	ConditionVariable
+	Queue
+	SizedQueue
+
+20:02 - Debugging
+
+
+	Heisenbug
+
+26:57 - Shared Data
+
+
+	The Reactor Model
+	The Deferred Interrupt Handler
+	Buffering
+
+39:49 - Testing Threads
+
+
+	The GIL
+	ruby-atomic
+	thread_safe
+
+57:43 - When to Use Threads
+01:00:59 - Tips for writing fairly thread-safe code
+
+Picks
+
+	Ruby Tapas (James)
+	The Heroku Hacker&#039;s Guide by Randall Degges (James)
+	The Castles Of Burgundy by Ravensburger (James)
+	Apoio (Avdi)
+	Dracula (Avdi)
+	CSV (David)
+	Day of the Doctor (and Prequel) (Chuck)
+	Haribo Gummy Candy, Sugarless Gummy Bears Reviews (Chuck)
+	Remote: Office Not Required by Jason Fried and David Heinemeier Hansson (Chuck)
+	The Healthy Programmer: Get Fit, Feel Better, and Keep Coding by Joe Kutner (Chuck)
+	The Freelancers’ Show 086: Book Club - The Healthy Programmer with Joe Kutner (Chuck)
+	Programming Pearls, Second Edition by Jon Bentley (Emily)
+	Gists (Emily)
+	Archery (Emily)
+
+Book Club
+Functional Programming for the Object-Oriented Programmer by Brian Marick! We will be interviewing Brian on December 18th, and the show will air on Christmas Day. Oh! And here’s a $5.00 off code to get the book: please_remember_the_starving_artist
+
+So, Merry Christmas!
+Next Week
+Lucas Dohmen (@moonbeamlabs)
+Transcript
+CHUCK:  Hello.
+
+EMILY:  Hello.
+
+[Electronic buzzing]
+
+EMILY:  Is my audio looking okay?
+
+[Electronic buzzing]
+
+JAMES:  Yes, I believe it’s fine.
+
+[Laughter]
+
+CHUCK:  That’s got to be on purpose.
+
+[Electronic buzzing]
+
+CHUCK:  [Laughs]
+
+DAVID:  Okay, so that was three cheeseburgers. One with no pickle, no onion, one with extra cheese, and…Okay, please move forward to the next window.
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Raise the visibility of quality within your team with Code Climate and start shipping better code faster. Try it free at RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+CHUCK:  Hey everybody and welcome to episode 133 of the Ruby Rogues podcast. This week on our panel, we have Avdi Grimm.
+
+AVDI:  Hello from Pennsylvania.
+
+CHUCK:  James Edward Gray.
+
+JAMES:  I can’t tell if I’m mostly dead or all dead.
+
+CHUCK:  David Brady.
+
+DAVID:  Some programmers, when faced with a problem, say, “I know, I’ll use threads.” Now problems, [hey, they too have].
+
+[Laughter]
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. And I [makes electronic buzzing sounds]. We also have a special guest this week and that’s Emily Stolfo.
+
+EMILY:  Hello.
+
+CHUCK:  Emily, do you want to introduce yourself really quickly?
+
+EMILY:  Sure. I work at MongoDB in New York. I co-maintain the Ruby driver to the database. And I do a lot of community development in the Ruby community. And I also teach at Columbia University as an interim professor.</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:18:46</itunes:duration>
+	</item>
+		<item>
+		<title>132 RR Nothing to Hide with Steve Klabnik</title>
+		<link>http://rubyrogues.com/132-rr-nothing-to-hide-with-steve-klabnik/</link>
+		<comments>http://rubyrogues.com/132-rr-nothing-to-hide-with-steve-klabnik/#comments</comments>
+		<pubDate>Wed, 20 Nov 2013 14:00:37 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Steve Klabnik]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1595</guid>
+		<description><![CDATA[Panel Steve Klabnik (blog twitter github) James Edward Gray (twitter github blog) David Brady (twitter github blog ADDcasts) Josh Susser (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:48 &#8211; Steve Klabnik Introduction 021 RR REST Done Right with Steve Klabnik 02:52 &#8211; GoGaRuCo 2013 &#8211; No [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/132-rr-nothing-to-hide-with-steve-klabnik/feed/</wfw:commentRss>
+		<slash:comments>1</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR132Secrets.mp3" length="80269209" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Steve Klabnik (blog twitter github)   James Edward Gray (twitter github blog)   David Brady (twitter github blog ADDcasts)   Josh Susser (twitter github blog)   Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) - Discussion </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Steve Klabnik (blog twitter github)
+	James Edward Gray (twitter github blog)
+	David Brady (twitter github blog ADDcasts)
+	Josh Susser (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:48 - Steve Klabnik Introduction
+
+	021 RR REST Done Right with Steve Klabnik
+
+02:52 - GoGaRuCo 2013 - No Secrets Allowed by Steve Klabnik
+
+
+	“I’ve Got Nothing to Hide”
+
+10:51 - Secrecy
+
+
+	Government Gaining Power vs Citizens Losing Power
+	Breaking Laws
+	Selected Enforcement
+
+19:27 - How Long Has This Been Going On?
+
+
+	The Stasi
+
+22:23 - Why Should Software Developers Care?
+
+
+	Cookies
+	Fluid App
+
+27:14 - The Tor Project
+
+
+	Anonymizing Proxy
+
+31:24 - Standing Up to the NSA
+32:17 - Hosting Outside of the US
+36:33 - Acquiring Information
+
+
+	The Art of Deception: Controlling the Human Element of Security by Kevin D. Mitnick
+
+42:42 - Worrying About Security &amp; Negative Consequences
+
+
+	BitCoin
+	Encryption
+
+49:12 - What Can Developers Do?
+
+
+	Valuable Data
+
+59:16 - Vulnerability
+
+
+	LinkedIn Intro
+
+Picks
+
+	TMate: Kudos to @KevinSjoberg (David)
+	Mnemonic Major System (David)
+	Mandrill (James)
+	Moom (James)
+	Sarah Mei: Why You Should Never Use MongoDB (Josh)
+	Mrs Beeton’s Book of Household Management (Josh)
+	Airbnb (Chuck)
+	proXPN - Code: TMTCS (Teach Me To Code Screencasts) (Chuck)
+	Beeminder (Steve)
+	Lift (Steve)
+	The Extensible Web Manifesto (Steve)
+
+Book Club
+Functional Programming for the Object-Oriented Programmer by Brian Marick! We will be interviewing Brian on December 18th, and the show will air on Christmas Day. Oh! And here’s a $5.00 off code to get the book: please_remember_the_starving_artist
+
+So, well, Merry Christmas!
+Next Week
+Threading with Emily Stolfo
+Transcript
+JOSH:  Aren’t you always one of those guys?
+
+STEVE:  I am always one of those guys [Chuckles]. No matter what “those” is, I’m probably one of those guys.
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, white labeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+[This episode is sponsored by Code Climate. Over 1,000 organizations trust Code Climate to help improve quality and security in their Ruby apps. Get 50% off your first three months for being a Rogues listener by starting a free trial this week. Go to RubyRogues.com/CodeClimate.]
+
+CHUCK:  Hey everybody and welcome to episode 132 of the Ruby Rogues Podcast. This week on our panel, we have James Edward Gray.
+
+JAMES:  So, I just talk into this can at the end of this string you handed me?
+
+CHUCK:  Yup. We also have David Brady.
+
+DAVID:  I can neither confirm nor deny the existence of a one-time [pad].
+
+CHUCK:  Josh Susser.
+
+JOSH:  I think I can’t use these semaphore flags. How do they work?
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. And this week, we have a special guest, Steve Klabnik.
+
+STEVE:  Hey everybody. A witty saying proves nothing.
+
+CHUCK:  So, you’ve been on the show before. Do you want to introduce yourself since you haven’t been on for a while?
+
+STEVE:  Totally. Hi everybody, I’m Steve. I write lots of codes in various things, mostly Ruby at this point. I have been doing a lot of work over the last couple of years. Teaching, working on Rails, writing books, designing APIs, tweeting too much, getting really angry on the internet. Yeah, like lots of that.
+
+JOSH:  And keep it up.
+
+STEVE:  Yeah. I try.
+
+[Laughter]
+
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:23:37</itunes:duration>
+	</item>
+		<item>
+		<title>131 RR How to Learn</title>
+		<link>http://rubyrogues.com/131-rr-how-to-learn/</link>
+		<comments>http://rubyrogues.com/131-rr-how-to-learn/#comments</comments>
+		<pubDate>Wed, 13 Nov 2013 14:00:01 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1584</guid>
+		<description><![CDATA[Panel James Edward Gray (twitter github blog) Katrina Owen (twitter github blog) David Brady (twitter github blog ADDcasts) Avdi Grimm (twitter github blog book) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:46 &#8211; How to Learn Ruby Rogues Parley: How to read programming books Katrina Owen: Keynote &#8211; Hacking [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/131-rr-how-to-learn/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/131_Episode_131_How_to_Learn.mp3" length="94655350" type="audio/mpeg" />
+		<itunes:subtitle>Panel  James Edward Gray (twitter github blog)   Katrina Owen (twitter github blog)   David Brady (twitter github blog ADDcasts)   Avdi Grimm (twitter github blog book)   Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) - Discussion </itunes:subtitle>
+		<itunes:summary>Panel
+
+	James Edward Gray (twitter github blog)
+	Katrina Owen (twitter github blog)
+	David Brady (twitter github blog ADDcasts)
+	Avdi Grimm (twitter github blog book)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:46 - How to Learn
+
+	Ruby Rogues Parley: How to read programming books
+	Katrina Owen: Keynote - Hacking Passion
+
+03:27 - Talent and Effort
+
+
+	Praising Effort over Ability
+	Teaching Kids
+
+10:29 - The NOPS Trick
+
+
+	Notice It
+	Own It
+	Push Into It
+	Stay With It
+
+13:19 - Talent (Cont’d)
+
+
+	Natural Aptitude
+	Outliers: The Story of Success by Malcolm Gladwell
+
+26:43 - Practice
+
+
+	Drills
+	Simulations
+	Case Studies
+	Direct Practice
+	Imitation
+	Brian Marick: Rocky Mountain Ruby 2013 Programming with that Disreputable Part of your Brain
+
+35:27 - Following Rules
+
+
+	047 Ruby Rogues: Coding Disciplines with Dan Kubb
+	What&#039;s Wrong With Ruby&#039;s Object Model (And Why That&#039;s a Good Thing) by David Brady
+	Steve Klabnik: Keynote - Functional Reactive Programming With Frappuccino (LoneStar Ruby 2013)
+
+40:47 - Tips on Starting Learning Something New
+
+
+	Sucking at something is the first step to becoming sorta good at something.
+	064 Ruby Rogues: Presenting at Conferences
+	“The License to not Care”
+
+47:28 - Setting Goals
+
+
+	Making Mistakes
+
+53:01 - How to Read Programming Books
+
+
+	Ruby Rogues Parley: How to read programming books
+	Information Retrieval Bias
+	Teach Yourself a New Programming Language in 21 Minutes (Or 2-3 Years, It Depends)
+
+01:17:19 - Teaching Others
+
+
+	Teddy Bear Debugging --&gt; Teddy Bear Teaching
+
+Picks
+
+	Mastery by Robert Greene (Katrina)
+	The 5 Elements of Effective Thinking by Edward B. Burger and Michael Starbird (Katrina)
+	So Good They Can&#039;t Ignore You: Why Skills Trump Passion in the Quest for Work You Love by Cal Newport (Katrina)
+	The First 20 Hours - How to Learn Anything: Josh Kaufman at TEDxCSU (Katrina)
+	PhotoReading Personal Learning Course by Paul R. Scheele (David)
+	How to Be Twice as Smart: Boosting Your Brainpower and Unleashing the Miracles of Your Mind by Scott Witt (David)
+	Make the Most of Your Mind by Tony Buzan (David)
+	The Makings of an Expert by The Harvard Business Review (Katrina)
+	Mind Hacks: Tips &amp; Tricks for Using Your Brain by Tom Stafford and Matt Webb (James)
+	Cavalier King Charles Spaniel (James)
+	HMDX Jam Plus Portable Speaker (Chuck)
+	A standing desk for $22 (Chuck)
+	MonMount Dual LCD Monitor Stand Desk Clamp (Chuck)
+	Vegasaur (Avdi)
+	HelloSign (Avdi)
+	HelloFax (Avdi)
+	LastPass (Avdi)
+
+Book Club
+Functional Programming for the Object-Oriented Programmer by Brian Marick! We will be interviewing Brian on December 18th, and the show will air on Christmas Day. Oh! And here’s a $5.00 off code to get the book: please_remember_the_starving_artist
+
+So, well, Merry Christmas!
+Next Week
+Secrets with Steve Klabnik
+Transcript
+DAVID:  Remember, if anything goes wrong, one hand washes the other. Nobody saw nothing.
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Code Climate automated code reviews ensure that your projects stay on track. Fix and find quality and security issues in your Ruby code sooner. Try it free at RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+CHUCK:  Hey everybody and welcome to episode 131 of the Ruby Rogues podcast.</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:38:36</itunes:duration>
+	</item>
+		<item>
+		<title>130 RR Data Visualization with Aja Hammerly</title>
+		<link>http://rubyrogues.com/130-rr-data-visualization-with-aja-hammerly/</link>
+		<comments>http://rubyrogues.com/130-rr-data-visualization-with-aja-hammerly/#comments</comments>
+		<pubDate>Wed, 06 Nov 2013 14:00:13 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Aja Hammerly]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1575</guid>
+		<description><![CDATA[Panel Aja Hammerly (twitter github blog) David Brady (twitter github blog ADDcasts) James Edward Gray (twitter github blog) Josh Susser (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 02:08 &#8211; Aja Hammerly Introduction 03:28 &#8211; Aja Hammerly, Seeing the Big Picture: Quick and Easy Data Visualization with [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/130-rr-data-visualization-with-aja-hammerly/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR130DataViz.mp3" length="59514202" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Aja Hammerly (twitter github blog)   David Brady (twitter github blog ADDcasts)   James Edward Gray (twitter github blog)   Josh Susser (twitter github blog)   Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) - Discussion </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Aja Hammerly (twitter github blog)
+	David Brady (twitter github blog ADDcasts)
+	James Edward Gray (twitter github blog)
+	Josh Susser (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+02:08 - Aja Hammerly Introduction
+03:28 - Aja Hammerly, Seeing the Big Picture: Quick and Easy Data Visualization with Ruby
+05:57 - Seeing Data
+
+
+	OS X 10.9 Mavericks: The Ars Technica Review
+	Feynman Diagram
+
+14:16 - Data Collection
+
+
+	Mechanize
+	Nokogiri
+
+15:31 - Tools
+
+
+	Highcharts JS
+	Graphviz
+	graph
+	Aja Hammerly: Powerful (but Easy) Data Visualization with the Graph Gem
+
+20:22 - The graph Gem
+21:31 - Interpreting Data
+22:51 - Colors
+
+
+	Colorbrewer
+
+24:36 - Error Bars
+26:41 - Non-Technical Decision Points
+28:32 - API Level Stuff
+31:37 - Printing
+33:01 - Quick and Dirty Techniques
+
+
+	work-over-time-2
+
+36:57 - Analytics Tools
+
+
+	New Relic
+
+38:59 - Animation
+
+
+	GraphicConverter
+
+41:44 - D3.js
+44:10 - Behavior Visualization
+
+
+	Designing Hypermedia APIs
+	OmniGraffle
+
+50:36 - Whimsical Graphing
+
+
+	Balsamiq Mockups
+
+Picks
+
+	Internet Traffic Report (David)
+	Girls Don&#039;t Poop - PooPourri.com (David)
+	Too Cute (David)
+	The Petrie Multiplier: Why an Attack on Sexism in Tech is NOT an Attack on Men (James)
+	Jackson Katz: Violence against women—it&#039;s a men&#039;s issue (James)
+	DragonVale (Chuck)
+	Dragon City (Chuck)
+	Office Autopilot (Chuck)
+	Office Autopilot Affiliate Link (Chuck)
+	
+Realm of Racket (Aja)
+
+	Ze Frank&#039;s How To Public Speaking (Aja)
+	Toastmasters (Aja)
+
+Book Club
+Functional Programming for the Object-Oriented Programmer by Brian Marick! We will be interviewing Brian on December 18th, and the show will air on Christmas Day. Oh! And here’s a $5.00 off code to get the book: please_remember_the_starving_artist
+
+So, well, Merry Christmas!
+Next Week
+Rogues Only: How to Learn
+Transcript
+CHUCK:  We have everyone here?
+
+JAMES:  This is everyone we’re going to have, yes.
+
+JOSH:  Avdi is two-timing us.
+
+[Laughter]
+
+JAMES:  That’s accurate.
+
+[Laughter]
+
+JOSH:  He’s cheating on us with another podcast.
+
+DAVID:  I’m not taking him back.
+
+JAMES:  [Chuckles] You say that every time, David.
+
+DAVID:  I know. I know. I know. [Laughter]
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+[This episode is sponsored by Code Climate. Code Climate’s new security monitor alerts you immediately when vulnerabilities are introduced into your Rails app. Sleep better knowing that your data is protected. Try it free at RubyRogues.com/CodeClimate.]
+
+CHUCK:  Hey everybody and welcome to episode 130 of the Ruby Rogues podcast. This week on our panel, we have David Brady.
+
+DAVID:  Three Ruby Rogues and Aja Hammerly walk into a bar.
+
+CHUCK:  James Edward Gray.
+
+JAMES:  In this episode, I will be visualized as the invisible [study].
+
+CHUCK:  Josh Susser.
+
+JOSH:  Apparently this morning, it’s Josh versus the Kombucha.
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. And all I have to say is I’ve got stickers with all of the album art from the different shows that we do. So if you want one, find me at RubyConf. And we also have a special guest and that is Aja Hammerly.
+
+AJA:  Good morning from cloudy Seattle.
+
+JOSH:  Hey, good morning.
+
+CHUCK:  Is there any other kind?
+
+JAMES:  It’s cloudy here, too.
+
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:02:00</itunes:duration>
+	</item>
+		<item>
+		<title>129 RR Sharpening Tools with Ben Orenstein</title>
+		<link>http://rubyrogues.com/129-rr-sharpening-tools-with-ben-orenstein/</link>
+		<comments>http://rubyrogues.com/129-rr-sharpening-tools-with-ben-orenstein/#comments</comments>
+		<pubDate>Wed, 30 Oct 2013 13:00:59 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Ben Orenstein]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1553</guid>
+		<description><![CDATA[Panel Ben Orenstein (twitter github blog) James Edward Gray (twitter github blog) Josh Susser (twitter github blog) Avdi Grimm (twitter github blog book) Katrina Owen (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:29 &#8211; Ben Orenstein Introduction Giant Robots Smashing into other Giant Robots thoughtbot thoughtbot [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/129-rr-sharpening-tools-with-ben-orenstein/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR129SharpeningTools.mp3" length="60416992" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Ben Orenstein (twitter github blog)   James Edward Gray (twitter github blog)   Josh Susser (twitter github blog)   Avdi Grimm (twitter github blog book)   Katrina Owen (twitter github blog)   Charles Max Wood (twitter github Teach Me To Code...</itunes:subtitle>
+		<itunes:summary>Panel
+
+	Ben Orenstein (twitter github blog)
+	James Edward Gray (twitter github blog)
+	Josh Susser (twitter github blog)
+	Avdi Grimm (twitter github blog book)
+	Katrina Owen (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:29 - Ben Orenstein Introduction
+
+
+	Giant Robots Smashing into other Giant Robots
+	thoughtbot
+	thoughtbot Learn
+
+04:23 - Tool Sharpening
+
+
+	Play by Play: Refactoring with Ben Orenstein
+	Ben&#039;s GoGaRuCo Talk
+
+07:16 - Coding Environment
+
+
+	Remaps and Shortcuts
+	Learning New Commands
+	Disabling Commands
+
+20:06 - Prioritizing Things
+21:08 - Tool Sharpening Activities
+22:55 - Sharpening Skills
+26:26 - Tool Sharpening with Teams and Organizations
+
+
+	Changing Policies and Procedures
+	Big vs Small Company Resistance
+	Making Improvements
+
+35:52 - Operating System Sharpening
+
+
+	Alfred App
+	SizeUp
+	Vimium
+	LaunchBar
+
+39:32 - Hardware &amp; Other Physical Tools
+
+
+	Kinesis Advantage Ergonomic Keyboard
+	GeekDesk
+	A standing desk for $22
+	VIVOBAREFOOT
+	Ruby Rogues Episode 074: Developer Environments
+
+48:37 - Favorite Remap
+
+
+	Dash
+
+53:33 - Upcoming Appearances
+
+
+	RubyConf
+	Garden City Ruby
+
+Picks
+
+	oj (James)
+	I introduced my 5-year-old and 2-year-old to startx and xmonad. They’re DELIGHTED! (James)
+	Cloudy with a Chance of Meatballs (James)
+	thoughtbot Learn (Avdi)
+	Hybrid Kangaroo (Avdi)
+	There&#039;s Plenty of Room at the Bottom by Richard P. Feynman (Josh)
+	MS Fnd in a Lbry (Josh)
+	The Secret Weapon (Chuck)
+	Narcissistic Design - Stuart Halloway (Ben)
+
+Book Club
+Functional Programming for the Object-Oriented Programmer by Brian Marick! We will be interviewing Brian on December 18th, and the show will air on Christmas Day. Oh! And here&#039;s a $5.00 off code to get the book: please_remember_the_starving_artist
+
+So, well, Merry Christmas!
+Next Week
+Data Visualization with Aja Hammerly
+Transcript
+BEN:  I’ll take heckling over like lack of audience attention any day.
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Raise the visibility of quality within your team with Code Climate and start shipping better code faster. Try it free at RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+CHUCK:  Hey everybody and welcome to episode 129 of the Ruby Rogues podcast. This week on our panel, we have James Edward Gray.
+
+JAMES:  Good morning, everyone.
+
+CHUCK:  Josh Susser.
+
+JOSH:  Good morning from San Francisco where the visibility is about 50 feet.
+
+CHUCK:  Avdi Grimm.
+
+AVDI:  Good morning from Pennsylvania.
+
+CHUCK:  Katrina Owen.
+
+KATRINA:  Good morning from Denver.
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. And this week, we have a special guest and that is Ben Orenstein.
+
+BEN:  Hello from thoughtbot in Boston.
+
+CHUCK:  So Ben, you’re the host of a fairly popular podcast.
+
+JAMES:  Wait! Don’t say that on our show.
+
+[Laughter]
+
+JOSH:  Competition, man.
+
+BEN:  From a tiny little, barely relevant podcast.
+
+JAMES:  [Laughs]
+
+CHUCK:  Yeah, it’s the same name as the blog, right? Giant Robots Smashing into other Giant Robots?
+
+BEN:  It is. That’s right. We only have the ability to come up with one good name after a few years.
+
+JOSH:  Chuck, you have to say it with the voice.
+
+AVDI:  Yeah, you have to say, ‘Giant Robots’.
+
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:02:56</itunes:duration>
+	</item>
+		<item>
+		<title>128 RR Book Club: Confident Ruby with Avdi Grimm</title>
+		<link>http://rubyrogues.com/128-rr-book-club-confident-ruby-with-avdi-grimm/</link>
+		<comments>http://rubyrogues.com/128-rr-book-club-confident-ruby-with-avdi-grimm/#comments</comments>
+		<pubDate>Wed, 23 Oct 2013 13:00:31 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Book Club]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1548</guid>
+		<description><![CDATA[Panel Avdi Grimm (twitter github blog book) Josh Susser (twitter github blog) David Brady (twitter github blog ADDcasts) Katrina Owen (twitter github blog) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 03:28 &#8211; The Point of Confident Ruby Confident Ruby by Avdi Grimm 05:57 [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/128-rr-book-club-confident-ruby-with-avdi-grimm/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR128ConfidentRuby.mp3" length="73479058" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Avdi Grimm (twitter github blog book)   Josh Susser (twitter github blog)   David Brady (twitter github blog ADDcasts)   Katrina Owen (twitter github blog)   James Edward Gray (twitter github blog) </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Avdi Grimm (twitter github blog book)
+	Josh Susser (twitter github blog)
+	David Brady (twitter github blog ADDcasts)
+	Katrina Owen (twitter github blog)
+	James Edward Gray (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+03:28 - The Point of Confident Ruby
+
+
+	Confident Ruby by Avdi Grimm
+
+05:57 - Defensive Programming
+09:56 - Conversion Methods
+12:58 - Pattern Matching
+15:37 - Highlighting Code
+16:44 - Book Synopsis
+
+
+	Collecting Input
+	Performing Work
+	Delivering Results
+	Handling Failure
+
+24:24 - Language Level Support
+27:48 - Confident Ruby Companion Video
+
+
+	Josh and Avdi’s Pairing Session
+
+34:05 - TDD
+38:00 - Lengthy Code Samples
+41:42 - “Code Should Tell a Story”
+
+
+	Shape
+	Cadence
+	gem sing
+
+45:27 - The Most Important Point in the Book
+48:22 - Conversions
+55:02 - Callbacks
+01:05:07 - Much Ado About Naught
+
+
+	naught
+
+Picks
+
+	Rich Hickey’s Greatest Hits (James)
+	Baruco 2012: Micro-Service Architecture, by Fred George (James)
+	Using Python to Code by Voice (James)
+	Eye - Optical Illusion (Josh)
+	i-Qi clock &amp; meditation timer (Katrina)
+	Google Now (Avdi)
+
+Book Club
+Functional Programming for the Object-Oriented Programmer
+
+Next Week
+Sharpening Tools with Ben Orenstein
+Transcript
+JAMES:  Mandy, please schedule more episodes where I can throw hard programming questions at Avdi for one hour.
+
+[Chuckle]
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Over 1,000 organizations trust Code Climate to help improve quality and security in their Ruby apps. Get 50% off your first three months for being a Rogues listener by starting a free trial this week. Go to RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+CHUCK:  Hey everybody and welcome to episode 128 of the Ruby Rogues podcast. This week on our panel, we have Avdi Grimm.
+
+AVDI:  Hello. And since Josh has helped me achieve enlightenment, I will now be known as Baba Ram Dig Vim.
+
+[Laughter]
+
+JAMES:  I’m not saying that throughout this entire episode.
+
+CHUCK:  Josh Susser.
+
+JOSH:  [Chuckles] Hi from San Francisco. And Avdi, it’s about time I was getting tired of calling you ‘Your Worship’.
+
+AVDI:  [Laughs]
+
+CHUCK:  David Brady.
+
+DAVID:  My code has an inferior Ruby complex. Can we do something about that?
+
+CHUCK:  Katrina Owen.
+
+KATRINA:  Hello from Denver.
+
+CHUCK:  James Edward Gray.
+
+JAMES:  I got nothing.
+
+[Laughter]
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. A quick reminder: go check out GoingRogueVideo.com for my video on how I went freelance. And we also have a special guest this week and that’s Avdi Grimm.
+
+AVDI:  Baba Ram Dig Vim.
+
+[Laughter]
+
+DAVID:  Can I just call you Baba? There’s [inaudible] Mr. Vim.
+
+JAMES:  I am for him correcting us for the entire episode.
+
+[Laughter]
+
+JOSH:  I’m going to call him Baba Dig Vim.
+
+[Laughter]
+
+AVDI:  Just to let everybody on the joke. Josh pointed out that Ram Dig Vim is an anagram of my name. And so apparently, according to my name, I have secret Vim tendencies.
+
+CHUCK:  [Laughs]
+
+JOSH:  What’s in a name?
+
+JAMES:  Yeah. We always knew that. We knew before you knew, Avdi. Relax.
+
+[Laughter]
+
+JOSH:  That’s always the case.
+
+CHUCK:  Oh, no! This is going to be one of those episodes, isn’t it?
+
+JOSH:  Yeah. So,</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:16:32</itunes:duration>
+	</item>
+		<item>
+		<title>127 RR Erik Michaels-Ober</title>
+		<link>http://rubyrogues.com/127-rr-erik-michaels-ober/</link>
+		<comments>http://rubyrogues.com/127-rr-erik-michaels-ober/#comments</comments>
+		<pubDate>Wed, 16 Oct 2013 13:00:42 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[Erik Michaels-Ober]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1534</guid>
+		<description><![CDATA[Panel Erik Michaels-Ober (twitter github) James Edward Gray (twitter github blog) Katrina Owen (twitter github blog) Avdi Grimm (twitter github blog book) Josh Susser (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:53 &#8211; Erik Michaels-Ober SoundCloud 02:45 &#8211; Unofficial Rogue: Emily Stolfo 03:32 &#8211; Rogues Golf [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/127-rr-erik-michaels-ober/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR127ErikMichaelsOber.mp3" length="94064377" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Erik Michaels-Ober (twitter github)   James Edward Gray (twitter github blog)   Katrina Owen (twitter github blog)   Avdi Grimm (twitter github blog book)   Josh Susser (twitter github blog)   Charles Max Wood (twitter github Teach Me To Code...</itunes:subtitle>
+		<itunes:summary>Panel
+
+	Erik Michaels-Ober (twitter github)
+	James Edward Gray (twitter github blog)
+	Katrina Owen (twitter github blog)
+	Avdi Grimm (twitter github blog book)
+	Josh Susser (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:53 - Erik Michaels-Ober
+
+	SoundCloud
+
+02:45 - Unofficial Rogue: Emily Stolfo
+03:32 - Rogues Golf Contest
+
+
+	Erik&#039;s Ruby Golf Submission
+	github.com/sferik/twitter
+	Josh&#039;s Follow-Up Tweet
+
+09:31 - Twitter Gems
+
+
+	jnunemaker/twitter
+	140 Proof
+	faraday
+	T
+	twitter / etc / erd.rb
+	Travis CI
+	Rubinius
+	JRuby
+
+17:21 - Other Open-Source Projects
+
+
+	rails_admin
+	thor
+	Erik&#039;s Github Repositories
+	tweetstream
+	OptionParser
+	Steve Agalloco
+	Tony Arcieri
+	celluloid
+	http
+
+23:42 - Dependency Management
+
+
+	Yehuda Katz: Using &gt;= Considered Harmful (or, What’s Wrong With &gt;=)
+
+25:17 - Semantic Versioning
+
+
+	~&gt; Twiddle waka
+	Going 1.0
+
+32:10- Advice for maintaining a new gem (project)
+
+
+	Cargo Culting
+
+33:49 - Changelogs
+37:15 - Diagnostic Signals
+
+
+	1.0
+	Tests
+	Coveralls
+	Code Climate
+	083 RR Decomposing Fat Models with Bryan Helmkamp
+	041 RR Code Metrics with Bryan Helmkamp
+	Sarah Mei - &quot;Why Hasn&#039;t Ruby Won?&quot;
+
+43:51 - Maintaining Twitter Gems vs Standard Rails Gems
+
+
+	Erik Michaels-Ober: Writing a Rails Engine
+	Testing an engine
+
+47:12 - adamantium
+
+
+	Memoization
+	thread_safe
+
+54:32 - hashie
+01:05:77 - The Null Object Pattern
+01:08:27 - Gem Wrappers
+
+
+	congress
+	gems
+
+Picks
+
+	Food Fight Show: Immutable Infrastructure (James)
+	B T (James)
+	Serious Pony: Presentation Skills Considered Harmful (James)
+	Cabeau Memory Foam Evolution Neck and Travel Pillow with Portable Bag (Avdi)
+	Parrot Zik Headphones (Avdi)
+	The West Wing (Avdi)
+	Rubinius 2 (Josh)
+	Ruby stdlib gem (Josh)
+	Codex Seraphinianus (Josh)
+	Nathen Harvey: Learning Chef (Chuck)
+	Redmine Backlogs (Chuck)
+	spree_digital (Chuck)
+	Benchmarking Ruby 2.1 and Rubinius 2.0 (Erik)
+	The DOT Language (Erik)
+	DuoLingo (Erik)
+	Charlie Kaufman: Screenwriting Lecture (Erik)
+	Louis CK (Erik)
+	
+@Brilliant_Ads (Erik)
+
+	@SeinfeldToday (Erik)
+
+Next Week
+Book Club: Confident Ruby with Avdi Grimm
+Transcript
+ERIK:  So, what are we going to talk about?
+
+JOSH:  European breakfast pastries, right? [Chuckles]
+
+JAMES:  Okay.
+
+JOSH:  What else do we talk about with a Berliner?
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.]
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Code Climate automated code reviews ensure that your projects stay on track. Fix and find quality and security issues in your Ruby code sooner. Try it free at RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+CHUCK:  Hey everybody and welcome to episode 127 of the Ruby Rogues podcast. This week on our panel, we have James Edward Gray.
+
+JAMES:  Good morning everyone.
+
+CHUCK:  Katrina Owen.
+
+KATRINA:  Good morning.
+
+CHUCK:  Avdi Grimm.
+
+AVDI:  Good morning.
+
+CHUCK:  Josh Susser.
+
+JOSH:  Generic greeting.
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV with a quick reminder to go check out my free freelancing video at GoingRogueVideo.com. And we have a special guest this week and that is Erik Michaels-Ober.
+
+ERIK:  Guten tag.
+
+JOSH:  [Chuckles] Guten tag. Hey, Erik.
+
+ERIK:  Hey, how’s it going?
+
+JOSH:  Good. Welcome aboard the show.
+
+ERIK:  Thanks, great to be here.
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:37:59</itunes:duration>
+	</item>
+		<item>
+		<title>126 RR Remote Pair Programming with Sam Livingston-Gray</title>
+		<link>http://rubyrogues.com/126-rr-remote-pair-programming-with-sam-livingston-gray/</link>
+		<comments>http://rubyrogues.com/126-rr-remote-pair-programming-with-sam-livingston-gray/#comments</comments>
+		<pubDate>Wed, 09 Oct 2013 13:00:27 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+		<category><![CDATA[Sam Livingston-Gray]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1527</guid>
+		<description><![CDATA[Panel Sam Livingston-Gray (twitter github blog) Josh Susser (twitter github blog) James Edward Gray (twitter github blog) Katrina Owen (twitter github blog) David Brady (twitter github blog ADDcasts) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:50 &#8211; Sam Livingston-Gray Introduction LivingSocial 02:52 &#8211; Remote Pairing 04:41 &#8211; Tools GNU [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/126-rr-remote-pair-programming-with-sam-livingston-gray/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR126RemotePairing.mp3" length="66563931" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Sam Livingston-Gray (twitter github blog)   Josh Susser (twitter github blog)   James Edward Gray (twitter github blog)   Katrina Owen (twitter github blog)   David Brady (twitter github blog ADDcasts) </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Sam Livingston-Gray (twitter github blog)
+	Josh Susser (twitter github blog)
+	James Edward Gray (twitter github blog)
+	Katrina Owen (twitter github blog)
+	David Brady (twitter github blog ADDcasts)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:50 - Sam Livingston-Gray Introduction
+
+	LivingSocial
+
+02:52 - Remote Pairing
+04:41 - Tools
+
+
+	GNU Screen
+	tmux
+	Cloud9 IDE
+	Floobits
+	Google Drive
+	OmniGraffle
+	Screenhero
+	Skype
+
+13:35 - Terminal Configuration/Setup
+
+
+	Vim vs Emacs
+	ls-pair
+	Pair Program with Me
+	dbrady/emacs_libs
+	PeepCode: Commanding Your Text Editor
+
+27:24 - Face-to-Face Interaction &amp; Telepresence
+
+
+	Pivotal Labs: Pairing tete-a-tete
+	Teleport
+
+42:51 - Pairing, Remote Work and LivingSocial
+44:51 - Conquering Pairing Intimidation
+
+
+	exercism.io
+
+51:43 - Recording Pair Programming Sessions
+
+
+	Josh and Avdi Pairing on Discourse
+	Play by Play | PeepCode Screencasts
+
+53:47 - Tom Howlett: The Shame of Pair Programming
+54:31 - Advice for Pair Programmers
+
+
+	Get your ego in check
+	Good hygiene
+	Good Connection
+	Use a Headset
+	Keyboard Noise
+	ls-pair/README
+
+Picks
+
+	Editor Wars: Revenge of the... oh, whatever. (David)
+	PSY vs LMFAO - Sexy Style (Mash-up) (David)
+	Katy Perry vs. Green Day vs Coldplay - Wide Awake on Paradise Boulevard (Mash-up) (David)
+	JavaScript: The Definitive Guide: Activate Your Web Pages by David Flanagan (James)
+	Every Day: A Five-Year Memory Book by Mr. Boddington&#039;s Studio (James)
+	Joe Moore: Remote Pair Programming (Josh)
+	AllTheBadges.io (Katrina)
+	Terrafab (Katrina)
+	Every Time Zone (Chuck)
+	Parallels (Chuck)
+	GoToMeeting (Chuck)
+	Evernote (Chuck)
+	Bacon Biz (Chuck)
+	Ada Developers Academy (Sam)
+	IndieGoGo campaign for Ada Developers Academy (Sam)
+	Find or make a community you can learn with and learn from (Sam)
+	Calagator (and source is at calagator) (Sam)
+	Ruby Hangman 2013-02-05 (Sam)
+
+Book Club
+Confident Ruby by Avdi Grimm! Use the discount code ROGUESCLUB for 20% off of any of the editions! Avdi will talk about the book on the show on October 16th, 2013.
+Next Week
+Erik Michaels-Ober
+Transcript
+DAVID:  Probably the biggest perk of working for the NSA is that you get the Ruby Rogues episodes a week before they air.
+
+[Laughter]
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Code Climate’s new security monitor alerts you immediately when vulnerabilities are introduced into your Rails app. Sleep better knowing that your data is protected. Try it free at RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+CHUCK:  Hey everybody and welcome to episode 126 of the Ruby Rogues podcast. This week on our panel, we have Josh Susser.
+
+JOSH:  I will not be making any jokes today.
+
+CHUCK:  James Edward Gray.
+
+JAMES:  We do the government shutdown, we’re all doing this podcast without a paycheck.
+
+CHUCK:  Katrina Owen.
+
+KATRINA:  I don’t make jokes anywhere or anytime.
+
+CHUCK:  David Brady.
+
+DAVID:  [keyboard typing] I&#039;ve just got to get this last piece of code to compile and…go!
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. I just want to remind you to go check out my freelancing video at GoingRogueVideo.com. We also have a special guest and that is Sam Livingston-Gray.
+
+SAM:  Hello from the sunny Portland, Oregon.
+
+JAMES:  Woohoo!
+
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:09:20</itunes:duration>
+	</item>
+		<item>
+		<title>125 RR Loyalty and Layoffs</title>
+		<link>http://rubyrogues.com/125-rr-loyalty-and-layoffs/</link>
+		<comments>http://rubyrogues.com/125-rr-loyalty-and-layoffs/#comments</comments>
+		<pubDate>Wed, 02 Oct 2013 13:00:21 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1520</guid>
+		<description><![CDATA[Panel David Brady (twitter github blog ADDcasts) Katrina Owen (twitter github blog) Avdi Grimm (twitter github blog book) Josh Susser (twitter github blog) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:43 &#8211; Going Rogue Video 02:12 &#8211; Unofficial Rogue: Mark Turner 02:31 &#8211; [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/125-rr-loyalty-and-layoffs/feed/</wfw:commentRss>
+		<slash:comments>5</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR125LoyaltyAndLayoffs.mp3" length="83017283" type="audio/mpeg" />
+		<itunes:subtitle>Panel  David Brady (twitter github blog ADDcasts)   Katrina Owen (twitter github blog)   Avdi Grimm (twitter github blog book)   Josh Susser (twitter github blog)   James Edward Gray (twitter github blog) </itunes:subtitle>
+		<itunes:summary>Panel
+
+	David Brady (twitter github blog ADDcasts)
+	Katrina Owen (twitter github blog)
+	Avdi Grimm (twitter github blog book)
+	Josh Susser (twitter github blog)
+	James Edward Gray (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:43 - Going Rogue Video
+02:12 - Unofficial Rogue: Mark Turner
+02:31 - David Brady: Loyalty and Layoffs
+
+
+	David Brady: Loyalty and Trust
+	David Brady: Loyalty and Your Professional Network
+
+05:21 - The company is not on your side
+
+
+	Power Dynamic
+
+10:24 - Loyalty and Obligation
+
+
+	Profit and Value
+	“Job for Life”
+	Burning Bridges
+	Job Hopper Phobia
+	Freakonomics: A Rogue Economist Explores the Hidden Side of Everything by Steven D. Levitt and Stephen J. Dubner
+	Strauss–Howe generational theory
+	Why Generation Y Yuppies Are Unhappy
+
+36:18 - Freelance Work
+38:43 - The Company’s Perspective of Loyalty
+41:49 - Loyalty to Your Coworkers and Peers
+
+
+	Brené Brown: The power of vulnerability
+	The Ones Who Walk Away from Omelas
+
+54:51 - Money and Making Connections
+
+
+	Introversion Hacks
+	How to Be Interesting: (In 10 Simple Steps) by Jessica Hagy
+	Toastmasters International
+
+1:11:02 - Employer Takeaways
+
+
+	Undercover Boss
+
+Picks
+
+	dotenv (James)
+	Ruby 2.1 (James)
+	Artoo (James)
+	Continuum (David)
+	Why Generation Y Yuppies Are Unhappy (David)
+	David Brady: Loyalty and Trust (David)
+	David Brady: Loyalty and Your Professional Network (David)
+	David Brady: Loyalty and Layoffs (David)
+	Quiet: The Power of Introverts in a World That Can&#039;t Stop Talking by Susan Cain (Katrina)
+	The Long Winter (Avdi)
+	Eagle Creek Cat Nap Blanket (Avdi)
+	The Steelcase Leap (Avdi)
+	James&#039; GoGaRuCo Talk (Josh)
+	A Capella Science - Bohemian Gravity! (Josh)
+	Book Yourself Solid: The Fastest, Easiest, and Most Reliable System for Getting More Clients Than You Can Handle Even if You Hate Marketing and Selling by Michael Port (Chuck)
+	The Freelancers’ Show 081: Book Club - Book Yourself Solid with Michael Port (Chuck)
+	Michael Vey (Chuck)
+	ShareMouse (Chuck)
+	Tweetbot (Chuck)
+	Going Rogue Video (Chuck)
+
+Book Club
+Confident Ruby by Avdi Grimm! Use the discount code ROGUESCLUB for 20% off of any of the editions! Avdi will talk about the book on the show on October 16th, 2013.
+Next Week
+Transcript
+JAMES:  I don’t know if you all can hear, but there&#039;s all these helicopters circling over my house. I think they&#039;re looking for me.
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Code Climate’s new security monitor alerts you immediately when vulnerabilities are introduced into your Rails app. Sleep better knowing that your data is protected. Try it free at RubyRogues.com/CodeClimate.]
+
+[This episode is sponsored by SendGrid, the leader in transactional email and email deliverability. SendGrid helps eliminate the cost and complexity of owning and maintaining your own email infrastructure by handling ISP monitoring, DKIM, SPF, feedback loops, whitelabeling, link customization and more. If you’d rather focus on your business than on scaling your email infrastructure, then visit www.SendGrid.com.]
+
+CHUCK:  Hey everybody and welcome to episode 125 of the Ruby Rogues podcast. This week on our panel, we have David Brady.
+
+Katrina Owen.
+
+KATRINA:  [Chuckles] Yo! Hi.
+
+DAVID:  I was muted.
+
+CHUCK:  [Laughs] Avdi Grimm.
+
+DAVID:  I didn’t have a funny joke, so…
+
+CHUCK:  We also have Avdi Grimm.
+
+AVDI:  Hello from Pennsylvania.
+
+CHUCK:  Josh Susser.
+
+JOSH:  Timing! Oh, wait. No. [Inaudible].
+
+CHUCK:  [Chuckles] James Edward Gray.
+
+JAMES:  I can&#039;t compete with that.
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV.</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:26:29</itunes:duration>
+	</item>
+		<item>
+		<title>124 RR JRuby with Charlie Nutter</title>
+		<link>http://rubyrogues.com/124-rr-jruby-with-charlie-nutter/</link>
+		<comments>http://rubyrogues.com/124-rr-jruby-with-charlie-nutter/#comments</comments>
+		<pubDate>Wed, 25 Sep 2013 11:00:09 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[Charlie Nutter]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1509</guid>
+		<description><![CDATA[Panel Charlie Nutter (twitter github blog) Katrina Owen (twitter github blog) Josh Susser (twitter github blog) David Brady (twitter github blog ADDcasts) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:13 &#8211; Going Rogue Video 01:54 &#8211; Charlie Nutter Introduction 03:03 &#8211; Unofficial Rogue: Christian Schlensker 03:47 &#8211; The History [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/124-rr-jruby-with-charlie-nutter/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR124JRuby.mp3" length="64323229" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Charlie Nutter (twitter github blog)   Katrina Owen (twitter github blog)   Josh Susser (twitter github blog)   David Brady (twitter github blog ADDcasts)   Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) - Discussion </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Charlie Nutter (twitter github blog)
+	Katrina Owen (twitter github blog)
+	Josh Susser (twitter github blog)
+	David Brady (twitter github blog ADDcasts)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:13 - Going Rogue Video
+01:54 - Charlie Nutter Introduction
+03:03 - Unofficial Rogue: Christian Schlensker
+03:47 - The History of JRuby
+
+
+	Red Hat
+	TorqueBox
+
+09:25 - Who’s Using JRuby in Production?
+10:42 - JRuby Conferences
+12:22 - The JRuby Elevator Pitch(es)
+
+
+	Selling Ruby to the Java Community
+	For Rubyists: MRI &amp; a need for specific Java libraries
+	Concurrency
+
+15:14 - Drawbacks of using JRuby
+
+
+	Startup Time
+	Lack of Support Directly for MRI’s C Extentions
+	POSIX Compliance
+	SIGINT
+
+19:42 - The Popularity of JRuby among the JVM Community
+
+
+	Jython
+
+21:01 - Interpretation
+25:10 - Updating JRuby
+
+
+	Implementing New Features
+	Encoding
+
+27:08 - Collaboration
+
+
+	Rubinius
+	RubySpec
+
+29:57 - Process for Adding New Features
+31:17 - Support for JRuby
+35:35 - Making sure gems work for all implementations
+
+
+	TravisCI
+
+37:10 - Getting JRuby Support
+
+
+	Mailing List
+	JRuby on Freenode IRC
+
+40:46 - Java-Side Integration
+47:06 - What’s next for JRuby?
+
+
+	1.7.5 Release
+
+ Picks
+
+	zonebie (David)
+	rails_best_practices (David)
+	Dash Documentation Viewer (Josh)
+	Night&#039;s Dawn Trilogy by Peter F. Hamilton (Josh)
+	Planscope.io (Chuck)
+	Going to the Gym (Chuck)
+	Meditation (Chuck)
+	Practical Object-Oriented Design in Ruby: An Agile Primer by Sandi Metz (Charlie)
+	Ctags (Charlie)
+	thread_safe (Charlie)
+	ruby-atomic (Charlie)
+	Java Concurrency in Practice by Brian Goetz (Charlie)
+	Contributing to JRuby (David)
+
+Book Club
+Confident Ruby by Avdi Grimm! Use the discount code ROGUESCLUB for 20% off of any of the editions! Avdi will talk about the book on the show on October 16th, 2013.
+Next Week
+Rogues Only: On Loyalty and Layoffs
+Transcript
+JOSH:  Anyone else? Anyone else ever had chicken in waffles? Come on!
+
+CHUCK:  I can&#039;t say that I have actually.
+
+JOSH:  It’s a really…Anyway, are we going to do a show today?
+
+[Laughter]
+
+CHUCK:  Yeah, let’s do the show.
+
+DAVID:  Yeah.
+
+KATRINA:  We’re talking Yay Ruby today.
+
+JOSH:  Yay Ruby, I like it.
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Raise the visibility of quality within your team with Code Climate and start shipping better code faster. Try it free at RubyRogues.com/CodeClimate.]
+
+CHUCK:  Hey everybody and welcome to episode 124 of the JRuby JRogues podcast. This week on our panel, we have Katrina Owen.
+
+KATRINA:  Hello.
+
+CHUCK:  Josh Susser.
+
+JOSH:  I&#039;m null for something completely different.
+
+CHUCK:  David Brady.
+
+DAVID:  I was hoping you were going to try to say JDavid JBrady.
+
+CHUCK:  [Laughs] I’m Charles Max Wood from DevChat.TV. Before I introduce our special guest, I want to just briefly make a quick announcement and that is this Friday is my Freedom Day. It’s the day that I got laid off three years ago and I am celebrating that. I&#039;m celebrating my freedom by putting out a free video that kind of talks about the first year or so that I was freelance, how I found clients, how I got started, how I put my business together, all that kind of stuff. So, if you&#039;re interested in that, you can get it at GoingRogueVideo.com. Anyway, like I said, it’s free. So, just go and hopefully it helps some folks out who are interested in going freelance.
+
+Anyway, our special guest this week is Charlie Nutter.
+
+CHARLIE:  Hello there, everybody.
+
+JOSH:  Hi Charlie.
+
+CHUCK:  Charlie, you haven’t been on the show before. Do you want to introduce yourself really quickly?
+
+CHARLIE:  In this community,</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:07:00</itunes:duration>
+	</item>
+		<item>
+		<title>123 RR ROM with Piotr Solnica</title>
+		<link>http://rubyrogues.com/123-rr-rom-with-piotr-solnica/</link>
+		<comments>http://rubyrogues.com/123-rr-rom-with-piotr-solnica/#comments</comments>
+		<pubDate>Wed, 18 Sep 2013 12:00:22 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Piotr Solnica]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1503</guid>
+		<description><![CDATA[Panel Piotr Solnica (twitter github blog) James Edward Gray (twitter github blog) Avdi Grimm (twitter github blog book) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:24 &#8211; Piotr Solnica Introduction Ruby Object Mapper 06:08 &#8211; Adapters axiom 09:50 &#8211; Mapping 17:22 &#8211; Early Releasing 20:47 &#8211; Pieces and Patterns [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/123-rr-rom-with-piotr-solnica/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR123ROM.mp3" length="65587135" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Piotr Solnica (twitter github blog)   James Edward Gray (twitter github blog)   Avdi Grimm (twitter github blog book)   Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) - Discussion 01:24 - Piotr Solnica Introduction - </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Piotr Solnica (twitter github blog)
+	James Edward Gray (twitter github blog)
+	Avdi Grimm (twitter github blog book)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:24 - Piotr Solnica Introduction
+
+	Ruby Object Mapper
+
+06:08 - Adapters
+
+
+	axiom
+
+09:50 - Mapping
+17:22 - Early Releasing
+20:47 - Pieces and Patterns
+
+
+	rom-session
+	rom-relation
+
+26:06 - Axiom and Sequel-based Servers
+
+
+	rom-mapper
+	rom-rb
+
+29:48 - Libraries
+
+
+	concord
+	equalizer
+	adamantium
+	virtus
+	coercible
+	axiom-types
+
+36:21 - Creating Ecosystems
+38:11 - The Memory Adapter
+42:47 - Storing Attributes
+45:28 - Validations
+51:02 - Supporting Data Features for Various Databases
+54:27 - Upcoming Features
+
+
+	SQL Library
+	Missing features in Axiom
+	Support for Relationships
+	Nesting and Unnesting
+
+57:02 - Mutation Testing
+
+
+	mutant
+
+Picks
+
+	Nathan Kontny: Rails Performance Help: Tracer Bullets (James)
+	Ryan Bigg: Bundler local paths (James)
+	Using ltree for hierarchical structures in PostgreSQL (James)
+	Ernie Miller: On Funemployment (and My Next Job) (James)
+	the church of interruption (Avdi)
+	Asphalt 8: Airborne (Avdi)
+	Holy Grail of eCommerce Conversion Optimization - 91 Point Checklist and Infographic (Chuck)
+	resque (Chuck)
+	resque-scheduler (Chuck)
+	Calca (Piotr)
+
+Book Club
+Confident Ruby by Avdi Grimm! Use the discount code ROGUESCLUB for 20% off of any of the editions! Avdi will talk about the book on the show on October 16th, 2013.
+Next Week
+JRuby with Charles Nutter
+Transcript
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This episode is sponsored by JetBrains, makers of RubyMine. If you like having an IDE that provides great inline debugging tools, built-in version control, and intelligent code insight and refactorings, check out RubyMine by going to JetBrains.com/Ruby.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Over 1000 organizations trust Code Climate to help improve quality and security in their Ruby apps. Get 50% off your first three months for being a Rogues Listener by starting a free trial this week. Go to RubyRogues.com/CodeClimate.]
+
+CHUCK:  Hey everybody and welcome to episode 123 of the Ruby Rogues Podcast. This week on our panel, we have James Edward Gray.
+
+JAMES:  You all make me want to program wet and naked.
+
+CHUCK:  Nice. Avdi Grimm.
+
+AVDI:  Hello.
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. And we’ve got a special guest and that is Piotr Solnica.
+
+PIOTR:  That was very good. Hey everyone. I’m Piotr.
+
+CHUCK:  I was just thinking it rhymed with pizza.
+
+PIOTR:  [Laughter]
+
+CHUCK:  Alright, well do you want to just explain who you are and what you’ve done?
+
+PIOTR:  Okay, sure. I’m a software developer from Poland. I live in Kraków. I’m mostly a Ruby developer. I’m also doing some frontend work from time to time. People probably know me from a project called DataMapper and now it’s called Ruby Object Mapper. So this is my biggest priority in open source right now. And yeah, that would be it, probably.
+
+JAMES:  So DataMapper is dead? Just kidding. Just floating [inaudible] rumors there.
+
+[Laughter]
+
+PIOTR:  That’s a hard question.
+
+[Chuckles]
+
+CHUCK:  So are you not following the DataMapper pattern anymore? Or did you just feel like it was time to refresh?
+
+JAMES:  Actually, it’s the other way around, isn’t it?
+
+PIOTR:  Yeah, it’s the other way around. We basically started with DataMapper as the project name. However, it implements active record pattern, which is funny. Eventually, we decided to rename the project Ruby Object Mapper because we didn’t actually like having the project called by the pattern itself. So the first project called DataMapper, as I’ve said, is an implementation of active record.</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:08:19</itunes:duration>
+	</item>
+		<item>
+		<title>122 RR Daemons with Kenneth Kalmer</title>
+		<link>http://rubyrogues.com/122-rr-daemons-with-kenneth-kalmer/</link>
+		<comments>http://rubyrogues.com/122-rr-daemons-with-kenneth-kalmer/#comments</comments>
+		<pubDate>Wed, 11 Sep 2013 12:00:17 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+		<category><![CDATA[Kenneth Kalmer]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1496</guid>
+		<description><![CDATA[Panel Kenneth Kalmer (twitter github blog ValuationUP) James Edward Gray (twitter github blog) Josh Susser (twitter github blog) Katrina Owen (twitter github blog) Avdi Grimm (twitter github blog book) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:49 &#8211; Kenneth Kalmer Introduction 02:33 &#8211; How to say “daemon” 03:47 &#8211; [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/122-rr-daemons-with-kenneth-kalmer/feed/</wfw:commentRss>
+		<slash:comments>4</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR122Daemons.mp3" length="69639254" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Kenneth Kalmer (twitter github blog ValuationUP)   James Edward Gray (twitter github blog)   Josh Susser (twitter github blog)   Katrina Owen (twitter github blog)   Avdi Grimm (twitter github blog book) </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Kenneth Kalmer (twitter github blog ValuationUP)
+	James Edward Gray (twitter github blog)
+	Josh Susser (twitter github blog)
+	Katrina Owen (twitter github blog)
+	Avdi Grimm (twitter github blog book)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:49 - Kenneth Kalmer Introduction
+02:33 - How to say “daemon”
+03:47 - Definition
+
+
+	Tammer Saleh: Angels and Daemons
+
+04:48 - Sending signals to daemons
+06:02 - What daemons are used for
+
+
+	daemon-kit
+
+08:26 - The process of starting up a daemon
+
+
+	ruby/ruby/blob/trunk/lib/webrick/server.rb#L45
+
+11:10 - .pid file management
+13:40 - Cron Job
+
+
+	058 RR Book Club: Working with Unix Processes with Jesse Storimer
+
+17:37 - Why the JVM isn’t good for running daemons
+
+
+	god
+	bluepill
+
+20:18 - Daemonizing on a Windows system
+
+
+	Win32Utils - Ruby Libraries for MS Windows
+	win32-service
+
+21:53 - Getting daemons to start up when the server starts
+
+
+	god
+	foreman
+	monit
+
+25:02 - Writing a daemon
+
+
+	rufus-scheduler
+
+29:22 - When would you want to create your own daemon?
+
+
+	Metrics Gathering
+
+32:54 - Communicating with daemons
+
+
+	blather
+	AMQP
+	mkfifo
+
+36:29 - Deployment cycle for daemons
+
+
+	capistrano
+
+40:11 - Sharing Code
+
+
+	SIGTERM VS. SIGKILL
+
+48:51 - What do you put in the payload of the jobs?
+
+
+	Unicorn!
+
+53:23 - Knowing when something goes wrong
+
+
+	Exceptional Ruby by Avdi Grimm
+	zero-zero
+	safely
+
+Picks
+
+	servolux (Katrina)
+	Aral Balkan: Superheroes &amp; Villains in Design (Katrina)
+	A Unix Utility You Should Know About: Pipe Viewer (Josh)
+	Pipe Viewer: Online Man Page (Josh)
+	The Mote in God&#039;s Eye by Larry Niven (Josh)
+	James&#039; Google+ Hangout: Emacs Part 1 (James)
+	James&#039; Google+ Hangout: Emacs Part 2 (James)
+	James Edward Gray: Ruby 2 Jeopardy (James)
+	Dungeons of Dredmor (James)
+	Prince (Avdi)
+	DocRaptor (Avdi)
+	XMLStarlet Command Line XML Toolkit (Avdi)
+	Evernote (Chuck)
+	The MacSparky Paperless Field Guide by David Sparks  (Chuck)
+	Fujisu ScanSnap S1300i (Chuck)
+	SaneBox (Chuck)
+	Gmail (Chuck)
+	Tammer Saleh: Angels and Daemons (Kenneth)
+	Rubyfuza (Kenneth)
+	Oppikoppi (Kenneth)
+	Manna: the beer drone at Oppikoppi (Kenneth)
+	99% Invisible (Kenneth)
+	Radiolab (Kenneth)
+
+Book Club
+Confident Ruby by Avdi Grimm! Use the discount code ROGUESCLUB for 20% off of any of the editions! Avdi will talk about the book on the show on October 16th, 2013.
+Next Week
+ROM with Piotr Solnica
+Transcript
+KATRINA:  Can you say, “I believe I broke his jaw”?
+
+KENNETH:  Who, me?
+
+KATRINA:  Yes, you. Of course, you.
+
+KENNETH:  I believe I broke his jaw.
+
+KATRINA:  Ah! It’s so brilliant.
+
+JAMES:  Okay, now you have to explain that.
+
+[Laughter]
+
+KATRINA:  I think at the first Mission Impossible movie, there are some really bad guys from South Africa and one of them says, “I believe I broke his jaw,” and it’s so funny.
+
+[Laughter]
+
+CHUCK:  Okay.
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This episode is sponsored by JetBrains, makers of RubyMine. If you like having an IDE that provides great inline debugging tools, built-in version control, and intelligent code insight and refactorings, check out RubyMine by going to JetBrains.com/Ruby.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Code Climate automated code reviews ensure that your projects stay on track. Fix and find quality and security issues in your Ruby code sooner. Try it free at RubyRogues.com/CodeClimate.]
+
+CHUCK:  Hey everybody and welcome to episode 122 of the Ruby Rogues podcast. This week on our panel, we have James Edward Gray.
+
+JAMES:  Good morning everyone.
+
+CHUCK:  Josh Susser.
+
+JOSH:  Everything done for the first time unleashes a daemon.
+
+CHUCK:  Katrina Owen.
+
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:12:32</itunes:duration>
+	</item>
+		<item>
+		<title>121 RR Consulting vs Product Work with Adam Keys</title>
+		<link>http://rubyrogues.com/121-rr-consulting-vs-product-work-with-adam-keys/</link>
+		<comments>http://rubyrogues.com/121-rr-consulting-vs-product-work-with-adam-keys/#comments</comments>
+		<pubDate>Wed, 04 Sep 2013 13:00:16 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Adam Keys]]></category>
+		<category><![CDATA[Avdi Grimm]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Katrina Owen]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1490</guid>
+		<description><![CDATA[Panel Adam Keys (twitter github blog) Avdi Grimm (twitter github blog book) Josh Susser (twitter github blog) Katrina Owen (twitter github blog) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:17 &#8211; Adam Keys Introduction Keeping Up with Gowalla with Adam Keys LivingSocial Sifter [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/121-rr-consulting-vs-product-work-with-adam-keys/feed/</wfw:commentRss>
+		<slash:comments>8</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR121ProductVsConsulting.mp3" length="73893674" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Adam Keys (twitter github blog)   Avdi Grimm (twitter github blog book)   Josh Susser (twitter github blog)   Katrina Owen (twitter github blog)   James Edward Gray (twitter github blog)   Charles Max Wood (twitter github Teach Me To Code Rai...</itunes:subtitle>
+		<itunes:summary>Panel
+
+	Adam Keys (twitter github blog)
+	Avdi Grimm (twitter github blog book)
+	Josh Susser (twitter github blog)
+	Katrina Owen (twitter github blog)
+	James Edward Gray (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:17 - Adam Keys Introduction
+
+	Keeping Up with Gowalla with Adam Keys
+	LivingSocial
+	Sifter
+
+02:11 - What is a Consultant?
+03:58 - Consultants vs Contractors
+04:46 - Consulting Work vs Product Work
+
+
+	Perspective &amp; Goals
+	Cash Flow
+
+08:39 - Making the Product Better vs Getting Paid
+13:15 - Good Consultants vs Bad Consultants
+15:11 - Freedom of Experimentation
+
+
+	Communication
+
+18:16 - Responsibility for writing good code
+20:38 - Are consultants more likely to speak at conferences or work on things like podcasts?
+
+
+	Permission to take time off
+	Billable Hours
+
+26:26 - Development Process: Freelance vs Full Time
+31:02 - Attitude Towards Writing Code
+
+
+	Cutthroat vs Quality Code
+
+37:56 - Job Security
+
+
+	The Prisoner’s Dilemma
+
+41:42 - Technology Choices
+
+
+	Risk
+
+45:07 - Iteration vs Long-Term Thinking, Architecture &amp; Design
+55:16 - Grinders, Cowboy Coders, and Cut Rate Consultants
+
+Picks
+
+	pbrisbin - chruby (James)
+	chruby (James)
+	ruby-install (James)
+	ASUS RT-N66u (Avdi)
+	WhatTheFont (Avdi)
+	Ruby Ramen (Avdi)
+	The Game of Life in 140 Characters (Josh)
+	Socrates Jones: Pro Philosopher (Josh)
+	The Best Map Ever Made of America’s Racial Segregation (Josh)
+	David Brady: Loyalty and Layoffs (Chuck)
+	Sports and Pop Culture (Adam)
+
+Book Club
+Confident Ruby by Avdi Grimm! Use the discount code ROGUESCLUB for 20% off of any of the editions! Avdi will talk about the book on the show on October 16th, 2013.
+Next Week
+Daemons with Kenneth Kalmer
+Transcript
+JOSH:  How is your tattoo feeling there, James?
+
+JAMES:  It kind of hurts. Thanks!
+
+[Laughter]
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This episode is sponsored by JetBrains, makers of RubyMine. If you like having an IDE that provides great inline debugging tools, built-in version control, and intelligent code insight and refactorings, check out RubyMine by going to JetBrains.com/Ruby.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Code Climates’ new security monitor alerts you immediately when vulnerabilities are introduced into your Rails app. Sleep better knowing that your data is protected. Try it free at RubyRogues.com/CodeClimate.]
+
+CHUCK:  Hey everybody and welcome to episode 121 of the Ruby Rogues podcast. This week on our panel, we have Avdi Grimm.
+
+AVDI:  Hello!
+
+CHUCK:  Josh Susser.
+
+JOSH:  Good morning.
+
+CHUCK:  Katrina Owen.
+
+KATRINA:  Hello.
+
+CHUCK:  James Edward Gray.
+
+JAMES:  Good morning.
+
+CHUCK:  I’m Charles Max Wood from DevChat.TV. And this week, we have a special guest, Adam Keys.
+
+ADAM:  Hello there.
+
+CHUCK:  You’ve been on the show before, Adam. Do you want to introduce your self anyway?
+
+ADAM:  Sure. I&#039;m Adam, I&#039;m from Texas. I currently work at LivingSocial and work on Sifter app on the side. I&#039;ve only been a consultant for like four months of my life. So, there.
+
+CHUCK:  [Laughs] Is that a good thing or a bad thing?
+
+ADAM:  It was a discovery process. I learned that I liked just working on a product more than doing all the other things that consulting work entails.
+
+JAMES:  That’s kind of funny actually. I was wondering if you were going to say it was the worst four months of your life. But for me, I think it’s almost backwards, like I love the constantly seeing new things and stuff like that. So, I never feel like I&#039;m bored and stuff.
+
+JOSH:  Hey, maybe we can start with a definition. Like, what is a consultant?
+
+JAMES:  What is a consultant? Yes.
+
+JOSH:  What do you mean by ‘consultant’?</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:16:58</itunes:duration>
+	</item>
+		<item>
+		<title>120 RR Book Club: Understanding Computation with Tom Stuart</title>
+		<link>http://rubyrogues.com/120-rr-book-club-understanding-computation-with-tom-stuart/</link>
+		<comments>http://rubyrogues.com/120-rr-book-club-understanding-computation-with-tom-stuart/#comments</comments>
+		<pubDate>Wed, 28 Aug 2013 13:00:43 +0000</pubDate>
+		<dc:creator><![CDATA[Charles Max Wood]]></dc:creator>
+				<category><![CDATA[Book Club]]></category>
+		<category><![CDATA[Charles Max Wood]]></category>
+		<category><![CDATA[David Brady]]></category>
+		<category><![CDATA[James Edward Gray II]]></category>
+		<category><![CDATA[Josh Susser]]></category>
+		<category><![CDATA[Tom Stuart]]></category>
+
+		<guid isPermaLink="false">http://rubyrogues.com/?p=1479</guid>
+		<description><![CDATA[Panel Tom Stuart (twitter github blog) David Brady (twitter github blog ADDcasts) Josh Susser (twitter github blog) James Edward Gray (twitter github blog) Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) Discussion 01:52 &#8211; Tom Stuart Introduction 02:24 &#8211; Understanding Computation by Tom Stuart 02:53 &#8211; Why Tom Wrote the Book [&#8230;]]]></description>
+		<wfw:commentRss>http://rubyrogues.com/120-rr-book-club-understanding-computation-with-tom-stuart/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+<enclosure url="http://traffic.libsyn.com/rubyrogues/RR120UnderstandingComputation.mp3" length="105854607" type="audio/mpeg" />
+		<itunes:subtitle>Panel  Tom Stuart (twitter github blog)   David Brady (twitter github blog ADDcasts)   Josh Susser (twitter github blog)   James Edward Gray (twitter github blog)   Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up) - Discussion </itunes:subtitle>
+		<itunes:summary>Panel
+
+	Tom Stuart (twitter github blog)
+	David Brady (twitter github blog ADDcasts)
+	Josh Susser (twitter github blog)
+	James Edward Gray (twitter github blog)
+	Charles Max Wood (twitter github Teach Me To Code Rails Ramp Up)
+
+Discussion
+01:52 - Tom Stuart Introduction
+02:24 - Understanding Computation by Tom Stuart
+02:53 - Why Tom Wrote the Book
+12:46 - Finite Automata
+14:27 - Turing Machines
+18:37 - Pages 187-192
+
+
+	Types and Programming Languages by Benjamin C. Pierce
+
+22:22 - Lambda Calculus
+
+
+	The Halting Problem
+
+35:36 - Decidability and Undecidability
+46:12 - The Cyclic Tag System &amp; Iota
+52:40 - Understanding Computation
+
+
+	DNA Computing
+
+57:37 - The Goldbach Conjecture
+01:02:52 - Finite State Machine
+01:05:14 - The Impact of Quantum Computing
+
+
+	Scott Aaronson
+	Quantum Computing since Democritus by Scott Aaronson
+
+01:07:25 - The Book and Rails
+
+
+	html - RegEx match open tags except XHTML self-contained tags - Stack Overflow
+
+01:16:41 - Using Ruby for the Book
+01:23:59 - Struct
+01:26:18 - Teaching Programming Habits
+01:31:16 - What Makes a Good Language?
+
+Picks
+
+	Just2bits - YouTube (Josh)
+	Seashells (Josh)
+	Google Maps Has An Incredible Doctor Who Easter Egg (Josh)
+	Detangling Business Logic in Rails Apps with PORO Events and Observers (James)
+	A Cost-effective Approach to Scaling Event-based Data Collection and Analysis (James)
+	The Case for Vertical Sharding (James)
+	CM Punk&#039;s Grammar Slam - Literally vs. Figuratively (David)
+	LessAccounting (Chuck)
+	iOS Programing: The Big Nerd Ranch Guide (3rd Edition) (Chuck)
+	Learn to Program by Chris Pine (2nd Edition) (Tom)
+	showterm (Tom)
+	How to Write a Web Application in Ruby (Tom)
+
+Next Week
+Consulting vs Product Work with Adam Keys
+Transcript
+JAMES:  Alright. So, what are we talking about today?
+
+JOSH:  It’s hard to say.
+
+JAMES:  It’s hard to say.
+
+JOSH:  It’s undecidable.
+
+[Laughter]
+
+
+
+[Hosting and bandwidth provided by the Blue Box Group. Check them out at BlueBox.net.] 
+
+[This episode is sponsored by JetBrains, makers of RubyMine. If you like having an IDE that provides great inline debugging tools, built-in version control, and intelligent code insight and refactorings, check out RubyMine by going to JetBrains.com/Ruby.] 
+
+[This podcast is sponsored by New Relic. To track and optimize your application performance, go to RubyRogues.com/NewRelic.]
+
+[This episode is sponsored by Code Climate. Raise the visibility of quality within your team with Code Climate and start shipping better code faster. Try it free at RubyRogues.com/CodeClimate.]
+
+CHUCK:  Hey everybody and welcome to episode 120 of the Ruby Rogues Podcast. This week on our panel, we have David Brady.
+
+DAVID:  All programs halt. Computer science is a fraud.
+
+CHUCK:  Josh Susser.
+
+JOSH:  My introduction is NP-complete.
+
+CHUCK:  James Edward Gray.
+
+JAMES:  I am made of lambda calculus.
+
+CHUCK:  And I’m Charles Max Wood from DevChat.TV. We have a special guest this week and that is Tom Stuart.
+
+TOM:  Hello from sunny London.
+
+JAMES:  That’s not true. I’ve been to London.
+
+DAVID:  What?
+
+[Laughter]
+
+CHUCK:  I was going to say.
+
+JAMES:  I don’t buy that.
+
+TOM:  It is a beautiful day in London today.
+
+JAMES:  What? There were no beautiful days. I was there for half a month. [Chuckles]
+
+TOM:  Got to plan ahead.
+
+CHUCK:  Yeah.
+
+[Laughter]
+
+CHUCK:  You have to be there.
+
+DAVID:  [inaudible] doing a podcall.
+
+JOSH:  Okay, let’s not do a podcast about weather.
+
+[Laughter]
+
+JOSH:  How are you doing, Tom?
+
+TOM:  I’m good, thanks. How are you?
+
+JOSH:  Could use more sleep, but I’m feeling great.
+
+CHUCK:  Since you’re new to the show, Tom, do you want to introduce yourself really quickly?
+
+TOM:  Yeah. My name is Tom Stuart. I’m a Ruby on Rails developer and freelancer and I just wrote a book. I think that’s probably what we’re going to talk about today.
+
+CHUCK:  Probably.
+
+</itunes:summary>
+		<itunes:author>Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen</itunes:author>
+		<itunes:explicit>no</itunes:explicit>
+		<itunes:duration>1:50:16</itunes:duration>
+	</item>
+	</channel>
+</rss>
