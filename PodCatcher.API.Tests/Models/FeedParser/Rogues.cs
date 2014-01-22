@@ -10,7 +10,7 @@ using PodCatcher.API.Tests.Stubs;
 namespace PodCatcher.API.Tests.Models
 {
     [TestFixture]
-    public class FeedParserTest
+    public class FeedParserRoguesTest
     {
         private Podcast podcast = null;
         private string xml = null;
@@ -27,7 +27,7 @@ namespace PodCatcher.API.Tests.Models
         [Test]
         public void FeedParserReturnsPopulatedPodcast()
         {
-            
+
             podcast = feedParser.Parse(podcast, xml);
 
             Assert.AreEqual(podcast.Title, "Ruby Rogues");

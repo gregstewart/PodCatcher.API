@@ -65,7 +65,8 @@
   <ItemGroup>
     <Compile Include="Controllers\PodcastsController.cs" />
     <Compile Include="Models\FeedFetcher.cs" />
-    <Compile Include="Models\FeedParser.cs" />
+    <Compile Include="Models\FeedParser\Instance.cs" />
+    <Compile Include="Models\FeedParser\Rogues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stubs\FeedFetcherWrapperStub.cs" />
   </ItemGroup>
@@ -79,6 +80,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fixtures\instance-rss.xml" />
     <Content Include="Fixtures\ruby-rogues.xml" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

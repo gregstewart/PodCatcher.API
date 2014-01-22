@@ -64,14 +64,14 @@ namespace PodCatcher.API.Models
         {
             return (string)
                 (from el in root.Descendants(element)
-                    select el.Attribute(attribute)).First();
+                    select el.Attribute(attribute)).FirstOrDefault();
         }
 
         private static string GetNamespaceFirstAttribute(XElement root, XNamespace itunes, string element, string attribute)
         {
             return (string)
                 (from el in root.Descendants(itunes + element)
-                 select el.Attribute(attribute)).First();
+                 select el.Attribute(attribute)).FirstOrDefault();
         }
 
 
@@ -79,14 +79,14 @@ namespace PodCatcher.API.Models
         {
             return (string)
                 (from el in root.Descendants(element)
-                    select el).First();
+                 select el).FirstOrDefault();
         }
 
         private static string GetNamespaceFirstElement(XElement root, XNamespace itunes, string element)
         {
             return (string)
                 (from el in root.Descendants(itunes + element)
-                 select el).First();
+                 select el).FirstOrDefault();
         }
     }
 }
