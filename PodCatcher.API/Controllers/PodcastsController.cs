@@ -40,7 +40,14 @@ namespace PodCatcher.API.Controllers
             {
                 Podcast podcast = new Podcast {Uri = Uri};
                 podcast = repository.Add(podcast);
-                return CreatedAtRoute("DefaultApi", new {podcast.Id}, podcast);
+                if (podcast != null)
+                {
+                    return CreatedAtRoute("DefaultApi", new {podcast.Id}, podcast);
+                }
+                else
+                {
+                    return StatusCode(HttpStatusCode.BadRequest);
+                }
             }
             else
             {

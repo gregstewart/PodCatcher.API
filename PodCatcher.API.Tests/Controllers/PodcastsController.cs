@@ -75,6 +75,21 @@ namespace PodCatcher.API.Controllers
         }
 
         [Test]
+        public void PostValidUrlButPodcastIsNullReturnsBadRequest()
+        {
+            // Arrange
+            var httpWwwTestComFeedXml = "http://someurl.com";
+            _mPodcastRepository.PodcastToBeReturned = null;
+            PodcastsController controller = new PodcastsController();
+
+            // Act
+            var actionResult = controller.Post(httpWwwTestComFeedXml);
+
+            // Assert
+            var getResponse = actionResult as StatusCodeResult;
+            Assert.AreEqual(getResponse.StatusCode, HttpStatusCode.BadRequest);
+        }
+        [Test]
         public void GetPodcastAfterPostShouldReturnOk()
         {
             // Arrange
