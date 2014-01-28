@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PodCatcher.API.Models
 {
-    interface IPodcastRepository
+    public interface IPodcastRepository
     {
         IEnumerable<Podcast> GetAll();
         Podcast Get(Guid Id);

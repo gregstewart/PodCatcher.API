@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace PodCatcher.API.Models
 {
-    public class FeedParser
+    public class FeedParser : IFeedParser
     {
         public Podcast Parse(Podcast podcast, string xml)
         {

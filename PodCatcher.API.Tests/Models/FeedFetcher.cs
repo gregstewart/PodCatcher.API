@@ -9,11 +9,11 @@ namespace PodCatcher.API.Tests.Models
     [TestFixture]
     public class FeedFetcher
     {
-        private FeedFetcherWrapperStub _mFeedFetcherWrapper = null;
+        private FeedFetcherStub _mFeedFetcherWrapper = null;
         [SetUp]
         public void Init()
         {
-            _mFeedFetcherWrapper = new FeedFetcherWrapperStub();
+            _mFeedFetcherWrapper = new FeedFetcherStub();
         }
 
         [Test]

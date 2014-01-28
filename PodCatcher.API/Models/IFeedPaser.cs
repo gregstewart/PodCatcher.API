@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PodCatcher.API.Models
 {
-    public interface IFeedFetcherWrapper
+    public interface IFeedParser
     {
-        HttpResponseMessage GetFeed(string Uri);
+        Podcast Parse(Podcast podcast, string xml);
     }
 }

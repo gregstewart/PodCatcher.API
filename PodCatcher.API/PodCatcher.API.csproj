@@ -101,12 +101,16 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Episode.cs" />
+    <Compile Include="Models\FeedFetcher.cs" />
+    <Compile Include="Models\FeedFetcherFactory.cs" />
     <Compile Include="Models\FeedParser.cs" />
+    <Compile Include="Models\FeedParserFactory.cs" />
+    <Compile Include="Models\IFeedPaser.cs" />
     <Compile Include="Models\Podcast.cs" />
-    <Compile Include="Models\FeedFetcherWrapper.cs" />
     <Compile Include="Models\PodcastRepository.cs" />
-    <Compile Include="Models\IFeedFetcherWrapper.cs" />
+    <Compile Include="Models\IFeedFetcher.cs" />
     <Compile Include="Models\IPodcastRepository.cs" />
+    <Compile Include="Models\PodcastRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

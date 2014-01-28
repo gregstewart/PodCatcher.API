@@ -4,13 +4,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Results;
+using System.Web.WebPages;
 using PodCatcher.API.Models;
 
 namespace PodCatcher.API.Controllers
 {
     public class PodcastsController : ApiController
     {
-        private static readonly IPodcastRepository repository = new PodcastRepository();
+        private static IPodcastRepository repository;
+
+        public PodcastsController()
+        {
+            repository = PodcastRepositoryFactory.Create();
+        }
 
         public IEnumerable<Podcast> GetAll()
         {
@@ -29,9 +36,17 @@ namespace PodCatcher.API.Controllers
 
         public IHttpActionResult Post(string Uri)
         {
-            Podcast podcast = new Podcast {Uri = Uri};
-            podcast = repository.Add(podcast);
-            return CreatedAtRoute("DefaultApi", new { podcast.Id }, podcast);
+            if (!Uri.IsEmpty())
+            {
+                Podcast podcast = new Podcast {Uri = Uri};
+                podcast = repository.Add(podcast);
+                return CreatedAtRoute("DefaultApi", new {podcast.Id}, podcast);
+            }
+            else
+            {
+                return StatusCode(HttpStatusCode.BadRequest);
+            }
+            
         }
 
         public void Put(Guid id, Podcast item)

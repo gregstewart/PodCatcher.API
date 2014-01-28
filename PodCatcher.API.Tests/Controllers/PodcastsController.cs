@@ -1,21 +1,32 @@
 ﻿using System;
+using System.Net;
 using System.Web.Http.Results;
 using PodCatcher.API.Models;
 using NUnit.Framework;
+using PodCatcher.API.Tests.Stubs;
 
 namespace PodCatcher.API.Controllers
 {
     [TestFixture]
     public class PodcastsControllerTest
     {
+        private PodcastRepositoryStub _mPodcastRepository;
+        [SetUp]
+        public void Init()
+        {
+            _mPodcastRepository = new PodcastRepositoryStub();
+            PodcastRepositoryFactory.SetPodcastRepository(_mPodcastRepository);
+        }
+
         [Test]
         public void PostNewPodcastReturnsCreated()
         {
             // Arrange
+            var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
+            _mPodcastRepository.PodcastToBeReturned = new Podcast{Uri = httpWwwTestComFeedXml};
             PodcastsController controller = new PodcastsController();
 
             // Act
-            var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
             var actionResult = controller.Post(httpWwwTestComFeedXml);
 
             // Assert
@@ -25,6 +36,21 @@ namespace PodCatcher.API.Controllers
             Assert.AreEqual("DefaultApi", response.RouteName);
             Assert.AreEqual(response.Content.Id, response.RouteValues["Id"]);
         }
+        [Test]
+        public void PostNullReturnsBadRequest()
+        {
+            // Arrange
+            string httpWwwTestComFeedXml = null;
+            _mPodcastRepository.PodcastToBeReturned = new Podcast();
+            PodcastsController controller = new PodcastsController();
+
+            // Act
+            var actionResult = controller.Post(httpWwwTestComFeedXml);
+
+            // Assert
+            var getResponse = actionResult as StatusCodeResult;
+            Assert.AreEqual(getResponse.StatusCode, HttpStatusCode.BadRequest);
+        }
 
         [Test, Ignore]
         public void PostDuplicatePodcastReturnsConflict()
@@ -32,18 +58,29 @@ namespace PodCatcher.API.Controllers
             //should return 409 or 422
         }
 
-        [Test, Ignore]
+        [Test]
         public void PostEmptyUrlReturnsBadRequest()
         {
-            // should return 400;
+            // Arrange
+            var httpWwwTestComFeedXml = "";
+            _mPodcastRepository.PodcastToBeReturned = new Podcast();
+            PodcastsController controller = new PodcastsController();
+
+            // Act
+            var actionResult = controller.Post(httpWwwTestComFeedXml);
+
+            // Assert
+            var getResponse = actionResult as StatusCodeResult;
+            Assert.AreEqual(getResponse.StatusCode, HttpStatusCode.BadRequest);
         }
 
         [Test]
-        public void GetPodcastAfterPostNewFeedShouldReturnOk()
+        public void GetPodcastAfterPostShouldReturnOk()
         {
             // Arrange
-            PodcastsController controller = new PodcastsController();
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
+            _mPodcastRepository.PodcastToBeReturned = new Podcast { Id = Guid.NewGuid(), Uri = httpWwwTestComFeedXml };
+            PodcastsController controller = new PodcastsController();
             var actionResult = controller.Post(httpWwwTestComFeedXml);
             var response = actionResult as CreatedAtRouteNegotiatedContentResult<Podcast>;
 

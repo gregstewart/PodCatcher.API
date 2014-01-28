@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Formatting;
 using System.Text;
 using System.Threading.Tasks;
 using PodCatcher.API.Models;
 
 namespace PodCatcher.API.Tests.Stubs
 {
-    public class FeedFetcherWrapperStub : IFeedFetcherWrapper
+    public class FeedFetcherStub : IFeedFetcher
     {
         public HttpResponseMessage ToReturn;
         public HttpResponseMessage GetFeed(string Uri)
@@ -19,7 +21,9 @@ namespace PodCatcher.API.Tests.Stubs
                 return ToReturn;
             }
 
-            return new HttpResponseMessage(HttpStatusCode.OK);
+            var httpResponseMessage = new HttpResponseMessage();
+            httpResponseMessage.StatusCode = HttpStatusCode.OK;
+            return httpResponseMessage;
         }
     }
 }
