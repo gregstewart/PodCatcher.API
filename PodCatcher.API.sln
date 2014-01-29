@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PodCatcher.API", "PodCatcher.API\PodCatcher.API.csproj", "{D66DA856-4B72-42A0-B980-8F32302A3DDC}"
 EndProject
@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{49F8B9
 	ProjectSection(SolutionItems) = preProject
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "PodCatcher.API.Azure", "PodCatcher.API.Azure\PodCatcher.API.Azure.ccproj", "{F8127DD5-A34D-42A0-B853-D0F552CCBF19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{E1290DA1-2853-44B7-8FE0-7B1E3A6E21C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1290DA1-2853-44B7-8FE0-7B1E3A6E21C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1290DA1-2853-44B7-8FE0-7B1E3A6E21C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8127DD5-A34D-42A0-B853-D0F552CCBF19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8127DD5-A34D-42A0-B853-D0F552CCBF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8127DD5-A34D-42A0-B853-D0F552CCBF19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8127DD5-A34D-42A0-B853-D0F552CCBF19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
