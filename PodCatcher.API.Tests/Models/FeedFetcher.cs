@@ -2,26 +2,24 @@
 using System.Net;
 using System.Net.Http;
 using NUnit.Framework;
-using PodCatcher.API.Tests.Stubs;
+using PodCatcher.API.Models;
 
 namespace PodCatcher.API.Tests.Models
 {
     [TestFixture]
-    public class FeedFetcher
+    public class FeedFetcherTest
     {
-        private FeedFetcherStub _mFeedFetcherWrapper = null;
+        private FeedFetcher _mFeedFetcher = null;
         [SetUp]
         public void Init()
         {
-            _mFeedFetcherWrapper = new FeedFetcherStub();
+            _mFeedFetcher = new FeedFetcher();
         }
 
         [Test]
         public void FetcheedReturnsOk()
         {
-            _mFeedFetcherWrapper.ToReturn = new HttpResponseMessage(HttpStatusCode.OK);
-
-            HttpResponseMessage response = _mFeedFetcherWrapper.GetFeed("http://someurl.com");
+            HttpResponseMessage response = _mFeedFetcher.GetFeed("http://gregs.tcias.co.uk/atom.xml");
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.OK);
         }
@@ -29,29 +27,30 @@ namespace PodCatcher.API.Tests.Models
         [Test]
         public void FetcheedReturnsNotFound()
         {
-            _mFeedFetcherWrapper.ToReturn = new HttpResponseMessage(HttpStatusCode.NotFound);
-
-            HttpResponseMessage response = _mFeedFetcherWrapper.GetFeed("http://someurl.com");
+            HttpResponseMessage response = _mFeedFetcher.GetFeed("http://www.tcias.co.uk/1");
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.NotFound);
         }
 
-        [Test]
+        [Test, Ignore]
         public void FetcheedReturnsServerError()
         {
-            _mFeedFetcherWrapper.ToReturn = new HttpResponseMessage(HttpStatusCode.InternalServerError);
-
-            HttpResponseMessage response = _mFeedFetcherWrapper.GetFeed("http://someurl.com");
+            HttpResponseMessage response = _mFeedFetcher.GetFeed("http://someurl.com");
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.InternalServerError);
         }
 
         [Test]
-        public void FetchFeedWithNullUrieturnBadRequest()
+        public void FetchFeedWithNullUriReturnsBadRequest()
         {
-            _mFeedFetcherWrapper.ToReturn = new HttpResponseMessage(HttpStatusCode.BadRequest);
+            HttpResponseMessage response = _mFeedFetcher.GetFeed(null);
 
-            HttpResponseMessage response = _mFeedFetcherWrapper.GetFeed(null);
+            Assert.AreEqual(response.StatusCode, HttpStatusCode.BadRequest);
+        }
+        [Test]
+        public void FetchFeedWithEmptyUriReturnsBadRequest()
+        {
+            HttpResponseMessage response = _mFeedFetcher.GetFeed("");
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.BadRequest);
         }
