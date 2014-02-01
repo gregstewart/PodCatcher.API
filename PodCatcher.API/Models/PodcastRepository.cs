@@ -11,13 +11,9 @@ namespace PodCatcher.API.Models
     public class PodcastRepository : IPodcastRepository
     {
         private readonly List<Podcast> podcasts = new List<Podcast>();
-        private readonly IFeedFetcher _feedFetcher;
-        private readonly IFeedParser _feedParser;
-
+        
         public PodcastRepository()
         {
-            _feedFetcher = FeedFetcherFactory.Create();
-            _feedParser = FeedParserFactory.Create();
 
 //            Add(new Podcast { Uri = "http://rubyrogues.com/feed/"});
 //            Add(new Podcast { Uri = "http://wow.joystiq.com/category/wow-insider-show/rss.xml" });
@@ -43,13 +39,7 @@ namespace PodCatcher.API.Models
             {
                 throw new ArgumentNullException("item");
             }
-
-            HttpResponseMessage response = _feedFetcher.GetFeed(item.Uri);
-            var xml = response.Content == null ? "" : response.Content.ToString();
-            item = _feedParser.Parse(item, xml);
-            item.Id = Guid.NewGuid();
             podcasts.Add(item);
-
             return item;
         }
 

@@ -4,6 +4,7 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=podcatcher;AccountKey=gqSk0SpyKETpLIb7sXeydulujn1r3auh79BdOr1sJmUWHDUQwOw3liGTCM06A7IEQ0DU0uLGeXjIK8WiFoCj2g==" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=podcatcher;AccountKey=gqSk0SpyKETpLIb7sXeydulujn1r3auh79BdOr1sJmUWHDUQwOw3liGTCM06A7IEQ0DU0uLGeXjIK8WiFoCj2g==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

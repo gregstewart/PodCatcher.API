@@ -11,11 +11,14 @@ namespace PodCatcher.API.Controllers
     public class PodcastsControllerTest
     {
         private PodcastRepositoryStub _mPodcastRepository;
+        private PodcastBuilderStub _mPodcastBuilder;
         [SetUp]
         public void Init()
         {
             _mPodcastRepository = new PodcastRepositoryStub();
             PodcastRepositoryFactory.SetPodcastRepository(_mPodcastRepository);
+            _mPodcastBuilder = new PodcastBuilderStub();
+            PodcastBuilderFactory.SetPodcastBuilder(_mPodcastBuilder);
         }
 
         [Test]
@@ -24,6 +27,7 @@ namespace PodCatcher.API.Controllers
             // Arrange
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
             _mPodcastRepository.PodcastToBeReturned = new Podcast{Uri = httpWwwTestComFeedXml};
+            _mPodcastBuilder.ToReturn = new Podcast{Uri = httpWwwTestComFeedXml};
             PodcastsController controller = new PodcastsController();
 
             // Act
@@ -95,7 +99,9 @@ namespace PodCatcher.API.Controllers
         {
             // Arrange
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
-            _mPodcastRepository.PodcastToBeReturned = new Podcast { Id = Guid.NewGuid(), Uri = httpWwwTestComFeedXml };
+            var podcast = new Podcast {Id = Guid.NewGuid(), Uri = httpWwwTestComFeedXml};
+            _mPodcastRepository.PodcastToBeReturned = podcast;
+            _mPodcastBuilder.ToReturn = podcast;
             PodcastsController controller = new PodcastsController();
             var actionResult = controller.Post(httpWwwTestComFeedXml);
             var response = actionResult as CreatedAtRouteNegotiatedContentResult<Podcast>;

@@ -13,10 +13,12 @@ namespace PodCatcher.API.Controllers
     public class PodcastsController : ApiController
     {
         private static IPodcastRepository repository;
+        private static IPodcastBuilder podcastBuilder;
 
         public PodcastsController()
         {
             repository = PodcastRepositoryFactory.Create();
+            podcastBuilder = PodcastBuilderFactory.Create();
         }
 
         public IEnumerable<Podcast> GetAll()
@@ -38,9 +40,9 @@ namespace PodCatcher.API.Controllers
         {
             if (!Uri.IsEmpty())
             {
-                Podcast podcast = new Podcast {Uri = Uri};
                 try 
                 {
+                    Podcast podcast = podcastBuilder.Build(Uri);
                     podcast = repository.Add(podcast);                    
                     return CreatedAtRoute("DefaultApi", new {podcast.Id}, podcast);
                 }
@@ -58,22 +60,22 @@ namespace PodCatcher.API.Controllers
 
         public void Put(Guid id, Podcast item)
         {
-            item.Id = id;
-            if (!repository.Update(item))
-            {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            }
+//            item.Id = id;
+//            if (!repository.Update(item))
+//            {
+//                throw new HttpResponseException(HttpStatusCode.NotFound);
+//            }
         }
 
         public void Delete(Guid id)
         {
-            Podcast item = repository.Get(id);
-            if (item == null)
-            {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            }
-
-            repository.Remove(id);
+//            Podcast item = repository.Get(id);
+//            if (item == null)
+//            {
+//                throw new HttpResponseException(HttpStatusCode.NotFound);
+//            }
+//
+//            repository.Remove(id);
         }
     }
 }
