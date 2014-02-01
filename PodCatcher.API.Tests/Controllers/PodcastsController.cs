@@ -80,6 +80,7 @@ namespace PodCatcher.API.Controllers
             // Arrange
             var httpWwwTestComFeedXml = "http://someurl.com";
             _mPodcastRepository.PodcastToBeReturned = null;
+            _mPodcastRepository.ToBeThrown = new ArgumentNullException("item");
             PodcastsController controller = new PodcastsController();
 
             // Act

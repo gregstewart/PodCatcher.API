@@ -10,6 +10,7 @@ namespace PodCatcher.API.Tests.Stubs
     public class PodcastRepositoryStub : IPodcastRepository
     {
         public Podcast PodcastToBeReturned;
+        public Exception ToBeThrown;
 
         public IEnumerable<Podcast> GetAll()
         {
@@ -23,6 +24,11 @@ namespace PodCatcher.API.Tests.Stubs
 
         public Podcast Add(Podcast item)
         {
+            if (ToBeThrown != null)
+            {
+                throw ToBeThrown;
+            }
+            
             return PodcastToBeReturned;
         }
 
