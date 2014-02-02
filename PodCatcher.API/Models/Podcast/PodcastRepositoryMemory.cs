@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Web;
-using System.Web.UI.WebControls;
 
 namespace PodCatcher.API.Models
 {
-    public class PodcastRepository : IPodcastRepository
+    public class PodcastRepositoryMemory : IPodcastRepository
     {
         private readonly List<Podcast> podcasts = new List<Podcast>();
         
-        public PodcastRepository()
+        public PodcastRepositoryMemory()
         {
 
 //            Add(new Podcast { Uri = "http://rubyrogues.com/feed/"});

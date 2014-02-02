@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Results;
 using System.Web.WebPages;
 using PodCatcher.API.Models;
 
@@ -36,17 +33,17 @@ namespace PodCatcher.API.Controllers
             return Ok(item);
         }
 
-        public IHttpActionResult Post(string Uri)
+        public IHttpActionResult Post(Podcast podcast)
         {
-            if (!Uri.IsEmpty())
+            if (podcast != null && !podcast.Uri.IsEmpty())
             {
                 try 
                 {
-                    Podcast podcast = podcastBuilder.Build(Uri);
-                    podcast = repository.Add(podcast);                    
-                    return CreatedAtRoute("DefaultApi", new {podcast.Id}, podcast);
+                    Podcast builtPodcast = podcastBuilder.Build(podcast.Uri);
+                    builtPodcast = repository.Add(builtPodcast);                    
+                    return CreatedAtRoute("DefaultApi", new {builtPodcast.Id}, builtPodcast);
                 }
-                catch(Exception exception)
+                catch(Exception)
                 {
                     return StatusCode(HttpStatusCode.BadRequest);
                 }
@@ -54,28 +51,7 @@ namespace PodCatcher.API.Controllers
             else
             {
                 return StatusCode(HttpStatusCode.BadRequest);
-            }
-            
-        }
-
-        public void Put(Guid id, Podcast item)
-        {
-//            item.Id = id;
-//            if (!repository.Update(item))
-//            {
-//                throw new HttpResponseException(HttpStatusCode.NotFound);
-//            }
-        }
-
-        public void Delete(Guid id)
-        {
-//            Podcast item = repository.Get(id);
-//            if (item == null)
-//            {
-//                throw new HttpResponseException(HttpStatusCode.NotFound);
-//            }
-//
-//            repository.Remove(id);
+            }        
         }
     }
 }

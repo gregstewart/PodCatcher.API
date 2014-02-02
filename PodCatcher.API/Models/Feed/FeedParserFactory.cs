@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace PodCatcher.API.Models
+﻿namespace PodCatcher.API.Models
 {
     public class FeedParserFactory
     {
