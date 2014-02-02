@@ -19,7 +19,7 @@ namespace PodCatcher.API.Tests.Models
         [Test]
         public void FetcheedReturnsOk()
         {
-            HttpResponseMessage response = _mFeedFetcher.GetFeed("http://gregs.tcias.co.uk/atom.xml");
+            Feed response = _mFeedFetcher.GetFeed("http://gregs.tcias.co.uk/atom.xml");
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.OK);
         }
@@ -27,7 +27,7 @@ namespace PodCatcher.API.Tests.Models
         [Test]
         public void FetcheedReturnsNotFound()
         {
-            HttpResponseMessage response = _mFeedFetcher.GetFeed("http://www.tcias.co.uk/1");
+            Feed response = _mFeedFetcher.GetFeed("http://www.tcias.co.uk/1");
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.NotFound);
         }
@@ -35,7 +35,7 @@ namespace PodCatcher.API.Tests.Models
         [Test, Ignore]
         public void FetcheedReturnsServerError()
         {
-            HttpResponseMessage response = _mFeedFetcher.GetFeed("http://someurl.com");
+            Feed response = _mFeedFetcher.GetFeed("http://someurl.com");
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.InternalServerError);
         }
@@ -43,14 +43,14 @@ namespace PodCatcher.API.Tests.Models
         [Test]
         public void FetchFeedWithNullUriReturnsBadRequest()
         {
-            HttpResponseMessage response = _mFeedFetcher.GetFeed(null);
+            Feed response = _mFeedFetcher.GetFeed(null);
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.BadRequest);
         }
         [Test]
         public void FetchFeedWithEmptyUriReturnsBadRequest()
         {
-            HttpResponseMessage response = _mFeedFetcher.GetFeed("");
+            Feed response = _mFeedFetcher.GetFeed("");
 
             Assert.AreEqual(response.StatusCode, HttpStatusCode.BadRequest);
         }

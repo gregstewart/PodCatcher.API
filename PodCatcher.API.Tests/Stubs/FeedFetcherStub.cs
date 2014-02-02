@@ -13,17 +13,15 @@ namespace PodCatcher.API.Tests.Stubs
 {
     public class FeedFetcherStub : IFeedFetcher
     {
-        public HttpResponseMessage ToReturn;
-        public HttpResponseMessage GetFeed(string Uri)
+        public HttpStatusCode ToReturn = HttpStatusCode.OK;
+        public Feed GetFeed(string Uri)
         {
-            if (ToReturn != null)
-            {
-                return ToReturn;
-            }
-
-            var httpResponseMessage = new HttpResponseMessage();
-            httpResponseMessage.StatusCode = HttpStatusCode.OK;
-            return httpResponseMessage;
+            Feed feed = new Feed();
+            
+            feed.StatusCode = ToReturn;
+            
+            return feed;
+            
         }
     }
 }

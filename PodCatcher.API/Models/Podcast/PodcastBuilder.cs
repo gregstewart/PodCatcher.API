@@ -19,25 +19,24 @@ namespace PodCatcher.API.Models
 
         public Podcast Build(string Uri)
         {
-            Podcast podcast = null;
             if (Uri.IsEmpty())
             {
                 throw new ArgumentNullException("item");
             }
 
-            podcast = new Podcast {Uri = Uri};
+            Podcast podcast = new Podcast {Uri = Uri};
 
-            HttpResponseMessage response = _feedFetcher.GetFeed(podcast.Uri);
-            if (response.StatusCode == HttpStatusCode.OK)
+            Feed feed = _feedFetcher.GetFeed(podcast.Uri);
+            if (feed.StatusCode == HttpStatusCode.OK)
             {
-                var xml = response.Content == null ? "" : response.Content.ToString();
+                var xml = feed.Content ?? "";
                 podcast = _feedParser.Parse(podcast, xml);
                 podcast.Id = Guid.NewGuid();
                 return podcast;
             }
             else
             {
-                throw new HttpResponseException(response.StatusCode);
+                throw new HttpResponseException(feed.StatusCode);
             }
             
         }

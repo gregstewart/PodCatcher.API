@@ -54,7 +54,7 @@ namespace PodCatcher.API.Tests.Models
         [ExpectedException(typeof(HttpResponseException))]
         public void Build_WithValidUrlIsNotFound_IsNull()
         {
-            _mFeedFetcher.ToReturn = new HttpResponseMessage(HttpStatusCode.NotFound);
+            _mFeedFetcher.ToReturn = HttpStatusCode.NotFound;
             PodcastBuilder podcastBuilder = new PodcastBuilder();
             Podcast podcast = podcastBuilder.Build("http://rubyrogues.com/feed/");
         }

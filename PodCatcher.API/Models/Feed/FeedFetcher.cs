@@ -9,11 +9,13 @@ namespace PodCatcher.API.Models
     public class FeedFetcher : IFeedFetcher
     {
         
-        public HttpResponseMessage GetFeed(string Uri)
+        public Feed GetFeed(string Uri)
         {
+            Feed feed = new Feed();
             if (Uri.IsEmpty())
             {
-                return new HttpResponseMessage(HttpStatusCode.BadRequest);
+                feed.StatusCode = HttpStatusCode.BadRequest;
+                return feed;
             }
 
             HttpWebRequest request = (HttpWebRequest) WebRequest.Create(Uri);
@@ -32,21 +34,29 @@ namespace PodCatcher.API.Models
                     string data = readStream.ReadToEnd();
                     response.Close();
                     readStream.Close();
-                    var result = new HttpResponseMessage(response.StatusCode);
-                    result.Content = new StringContent(data);
+                    feed.StatusCode = HttpStatusCode.OK;
+                    feed.Content = data;
 
-                    return result;
+                    return feed;
                 }
                 else
                 {
-                    return new HttpResponseMessage(response.StatusCode);
+                    feed.StatusCode = response.StatusCode;
+                    return feed;
                 }
             }
             catch (WebException e)
             {
-                return new HttpResponseMessage(((HttpWebResponse) e.Response).StatusCode);
+                feed.StatusCode = ((HttpWebResponse) e.Response).StatusCode;
+                return feed;
             }
             
         }
+    }
+
+    public class Feed
+    {
+        public HttpStatusCode StatusCode { get; set; }
+        public string Content { get; set; }
     }
 }
