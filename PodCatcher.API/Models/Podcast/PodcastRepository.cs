@@ -51,7 +51,6 @@ namespace PodCatcher.API.Models
 
         public IEnumerable<Podcast> GetAll()
         {
-            table = GetTable();
             // Construct the query operation for all customer entities where PartitionKey="Smith".
             TableQuery<PodcastEntity> query = new TableQuery<PodcastEntity>();
 
