@@ -40,7 +40,7 @@ namespace PodCatcher.API.Models
 
         private CloudTable GetTable()
         {
-// Create the table client.
+            // Create the table client.
             CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
 
             // Create the table if it doesn't exist.

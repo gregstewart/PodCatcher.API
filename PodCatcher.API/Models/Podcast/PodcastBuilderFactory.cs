@@ -17,6 +17,4 @@
             _podcastBuilder = podcastBuilder;
         }
     }
-
-    
 }

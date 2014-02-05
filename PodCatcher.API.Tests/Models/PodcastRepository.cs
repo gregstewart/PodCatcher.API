@@ -11,12 +11,12 @@ namespace PodCatcher.API.Tests.Models
     [TestFixture]
     public class PodcastRepositoryTest
     {
-        private PodcastRepository _mPodcastRepository;
-
+        private IPodcastRepository _mPodcastRepository;
+        
         [SetUp]
         public void Init()
         {
-            _mPodcastRepository = new PodcastRepository();
+            _mPodcastRepository = new PodcastRepositoryMemory();
         }
 
         [Test]
