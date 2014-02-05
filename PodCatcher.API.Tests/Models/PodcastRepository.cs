@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using NUnit.Framework;
 using PodCatcher.API.Models;
 using PodCatcher.API.Tests.Stubs;
