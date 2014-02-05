@@ -4,14 +4,9 @@ using Microsoft.WindowsAzure.Storage.Table;
 
 namespace PodCatcher.API.Models
 {
-    public class Podcast : TableEntity
+    public class Podcast
     {
-        public Podcast (string Title, string Uri)
-        {
-            this.PartitionKey = Uri;
-            this.RowKey = Title;
-        }
-
+        
         public Podcast()
         {
             

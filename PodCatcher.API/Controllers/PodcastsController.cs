@@ -43,7 +43,7 @@ namespace PodCatcher.API.Controllers
                     builtPodcast = repository.Add(builtPodcast);                    
                     return CreatedAtRoute("DefaultApi", new {builtPodcast.Id}, builtPodcast);
                 }
-                catch(Exception)
+                catch(Exception exception)
                 {
                     return StatusCode(HttpStatusCode.BadRequest);
                 }
