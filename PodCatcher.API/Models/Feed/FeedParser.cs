@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -43,8 +44,8 @@ namespace PodCatcher.API.Models
                     Explicit = (GetNamespaceFirstElement(xElement, itunes, "explicit") != "no"), 
                     Id = Guid.NewGuid(), 
                     Link = GetFirstElement(xElement, "link"), 
-                    PermaLink = GetFirstElement(xElement, "guid"), 
-                    PublicationDate = Convert.ToDateTime(GetFirstElement(xElement, "pubDate")), 
+                    PermaLink = GetFirstElement(xElement, "guid"),
+                    PublicationDate = ParseDate(GetFirstElement(xElement, "pubDate")), 
                     Subtitle = GetNamespaceFirstElement(xElement, itunes, "subtitle"), 
                     Summary = GetNamespaceFirstElement(xElement, itunes, "summary"),
                     MediaLink = GetFirstAttribute(xElement, "enclosure", "url"),
@@ -84,5 +85,42 @@ namespace PodCatcher.API.Models
                 (from el in root.Descendants(itunes + element)
                  select el).FirstOrDefault();
         }
+
+        private static DateTime ParseDate(string date)
+        {
+            try
+            {
+                return Convert.ToDateTime(date);
+            }
+            catch (Exception exception)
+            {
+                return NormalizeDate(date);  
+            
+            }
+        }
+
+        private static DateTime NormalizeDate(string date)
+        {
+            try
+            {
+                Dictionary<string, string> timeZones = new Dictionary<string, string>();
+                timeZones.Add("EST", "-05:00");
+                timeZones.Add("CST", "-06:00");
+                timeZones.Add("MST", "-07:00");
+                timeZones.Add("PST", "-08:00");
+
+                string inputDate = date;
+                string modifiedInputDate = inputDate.Substring(0, inputDate.LastIndexOf(" "));
+                string timeZoneIdentifier = inputDate.Substring(inputDate.LastIndexOf(" ") + 1);
+                string timeZoneOffset = timeZones[timeZoneIdentifier];
+                string dateForParsing = modifiedInputDate + " " + timeZoneOffset;
+
+                return DateTime.ParseExact(dateForParsing, "ddd, dd MMM yyyy HH:mm:ss zzz", System.Globalization.CultureInfo.CurrentCulture);
+            }
+            catch (Exception ex)
+            {
+                throw new DataException();
+            }
+        }  
     }
 }
