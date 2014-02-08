@@ -9,7 +9,7 @@
             if (_podcastRepository != null)
                 return _podcastRepository;
 
-            return new PodcastRepository();
+            return new PodcastTableRepository();
         }
 
         public static void SetPodcastRepository(IPodcastRepository podcastRepository)

@@ -12,30 +12,16 @@ using Newtonsoft.Json;
 
 namespace PodCatcher.API.Models
 {
-    public class PodcastRepository : IPodcastRepository
+    public class PodcastTableRepository : IPodcastRepository
     {
         private CloudStorageAccount storageAccount;
         private CloudTable table;
-        private CloudBlobContainer blob;
 
-        public PodcastRepository()
+        public PodcastTableRepository()
         {
             // Retrieve the storage account from the connection string.
             storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
-//            storageAccount = CloudStorageAccount.DevelopmentStorageAccount;
             table = GetTable();
-            blob = GetBlob();
-        }
-
-        private CloudBlobContainer GetBlob()
-        {
-            // Create the blob client.
-            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-
-            // Create the blob if it doesn't exist.
-            CloudBlobContainer blobContainer = blobClient.GetContainerReference("podcasts");
-            blobContainer.CreateIfNotExists();
-            return blobContainer;
         }
 
         private CloudTable GetTable()
@@ -58,9 +44,17 @@ namespace PodCatcher.API.Models
 
             foreach (var podcastEntity in podcastEntities)
             {
-                var blobName = string.Format(@"podcast\{0}\{1}.json", podcastEntity.PartitionKey, podcastEntity.RowKey);
-                var document = this.DownloadDocument(blobName);
-                yield return JsonConvert.DeserializeObject<Podcast>(document);
+//                var blobName = string.Format(@"podcast\{0}\{1}.json", podcastEntity.PartitionKey, podcastEntity.RowKey);
+//                var document = this.DownloadDocument(blobName);
+//                yield return JsonConvert.DeserializeObject<Podcast>(document);
+                yield return new Podcast
+                {
+                    Id = podcastEntity.Id,
+                    Title = podcastEntity.Title,
+                    Image = podcastEntity.Image,
+                    Summary = podcastEntity.Summary,
+                    Uri = podcastEntity.Uri
+                };
             }
         }
 
@@ -72,14 +66,23 @@ namespace PodCatcher.API.Models
 
             var podcastEntity = table.ExecuteQuery(query).SingleOrDefault();
             // handle null scenario document
+
             if (podcastEntity != null)
             {
-                var blobName = string.Format(@"podcast\{0}\{1}.json", podcastEntity.PartitionKey, podcastEntity.RowKey);
-                var document = this.DownloadDocument(blobName);
-                return JsonConvert.DeserializeObject<Podcast>(document);
+                return new Podcast
+                {
+                    Id = podcastEntity.Id,
+                    Title = podcastEntity.Title,
+                    Image = podcastEntity.Image,
+                    Summary = podcastEntity.Summary,
+                    Uri = podcastEntity.Uri
+                };
             }
-
-            return null;
+            else
+            {
+                return null;
+            }
+            
         }
 
         public Podcast Add(Podcast item)
@@ -88,8 +91,6 @@ namespace PodCatcher.API.Models
 
             var document = JsonConvert.SerializeObject(item, Newtonsoft.Json.Formatting.Indented);
 
-            UploadDocument(item.Title, item.Id.ToString(), document);
-            
             // Create the TableOperation that inserts the customer entity.
             TableOperation insertOperation = TableOperation.Insert(podcastEntity);
 
@@ -109,32 +110,6 @@ namespace PodCatcher.API.Models
             throw new NotImplementedException();
         }
 
-        private void UploadDocument(string partitionKey, string rowKey, string document)
-        {
-            var filename = string.Format(@"podcast\{0}\{1}.json", partitionKey, rowKey);
-            var blockBlob = blob.GetBlockBlobReference(filename);
-
-            using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(document)))
-            {
-                blockBlob.UploadFromStream(ms);
-            }
-
-            blockBlob.Properties.ContentType = "application/json";
-            blockBlob.SetProperties();
-        }
-
-        private string DownloadDocument(string blobName)
-        {
-            var blockBlob = this.blob.GetBlockBlobReference(blobName);
-
-            using (var memory = new MemoryStream())
-            using (var reader = new StreamReader(memory))
-            {
-                blockBlob.DownloadToStream(memory);
-                memory.Seek(0, SeekOrigin.Begin);
-
-                return reader.ReadToEnd();
-            }
-        }
+        
     }
 }

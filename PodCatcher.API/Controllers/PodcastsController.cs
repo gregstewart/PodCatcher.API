@@ -9,23 +9,27 @@ namespace PodCatcher.API.Controllers
 {
     public class PodcastsController : ApiController
     {
-        private static IPodcastRepository podcastRepository;
+        private static IPodcastRepository podcastTableRepository;
+        private static PodcastBlobRepository _podcastBlobRepository;
         private static IPodcastBuilder podcastBuilder;
 
         public PodcastsController()
         {
-            podcastRepository = PodcastRepositoryFactory.Create();
+            podcastTableRepository = PodcastRepositoryFactory.Create();
+            _podcastBlobRepository = new PodcastBlobRepository();
             podcastBuilder = PodcastBuilderFactory.Create();
         }
 
         public IEnumerable<Podcast> GetAll()
         {
-            return podcastRepository.GetAll();
+            IEnumerable<Podcast> podcasts = podcastTableRepository.GetAll();
+            IEnumerable<Podcast> desiarlisedPodcasts =_podcastBlobRepository.GetAll(podcasts);
+            return desiarlisedPodcasts;
         }
 
         public IHttpActionResult Get(Guid id)
         {
-            Podcast item = podcastRepository.Get(id);
+            Podcast item = podcastTableRepository.Get(id);
             if (item == null)
             {
                 return NotFound();
@@ -40,7 +44,8 @@ namespace PodCatcher.API.Controllers
                 try 
                 {
                     Podcast builtPodcast = podcastBuilder.Build(podcast.Uri);
-                    builtPodcast = podcastRepository.Add(builtPodcast);                    
+                    _podcastBlobRepository.Add(builtPodcast);
+                    builtPodcast = podcastTableRepository.Add(builtPodcast);                    
                     return CreatedAtRoute("DefaultApi", new {builtPodcast.Id}, builtPodcast);
                 }
                 catch(Exception exception)

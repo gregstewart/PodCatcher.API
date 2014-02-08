@@ -150,10 +150,11 @@
     <Compile Include="Models\JsonContentNegotiator.cs" />
     <Compile Include="Models\Podcast\IPodcastBuilder.cs" />
     <Compile Include="Models\Podcast.cs" />
+    <Compile Include="Models\Podcast\PodcastBlobRepository.cs" />
     <Compile Include="Models\Podcast\PodcastBuilder.cs" />
     <Compile Include="Models\Podcast\PodcastBuilderFactory.cs" />
     <Compile Include="Models\Podcast\PodcastEntity.cs" />
-    <Compile Include="Models\Podcast\PodcastRepository.cs" />
+    <Compile Include="Models\Podcast\PodcastTableRepository.cs" />
     <Compile Include="Models\Podcast\PodcastRepositoryMemory.cs" />
     <Compile Include="Models\Feed\IFeedFetcher.cs" />
     <Compile Include="Models\Podcast\IPodcastRepository.cs" />

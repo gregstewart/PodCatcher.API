@@ -23,6 +23,9 @@ namespace PodCatcher.API.Models
 
         public Guid Id { get; set; }
         public string Title { get; set; }
-        public string Document { get; set; }
+        public string Uri { get; set; } // atom:link @href
+        public string Summary { get; set; } // itunes:summary
+        public string Image { get; set; } //itunes:image @href
+        
     }
 }
