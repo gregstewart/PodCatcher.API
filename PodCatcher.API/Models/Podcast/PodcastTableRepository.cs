@@ -58,6 +58,16 @@ namespace PodCatcher.API.Models
             }
         }
 
+        public IEnumerable<Podcast> GetAll(IEnumerable<Podcast> podcasts)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Podcast Get(Podcast podcast)
+        {
+            throw new NotImplementedException();
+        }
+
         public Podcast Get(Guid Id)
         {
             // Create a retrieve operation that takes a customer entity.

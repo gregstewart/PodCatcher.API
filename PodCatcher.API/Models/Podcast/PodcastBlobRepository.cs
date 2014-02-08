@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace PodCatcher.API.Models
 {
-    public class PodcastBlobRepository
+    public class PodcastBlobRepository : IPodcastRepository
     {
         private CloudStorageAccount storageAccount;
         private CloudBlobContainer blob;
@@ -46,6 +46,16 @@ namespace PodCatcher.API.Models
             return null;
         }
 
+        public Podcast Get(Guid Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Podcast> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Podcast> GetAll(IEnumerable<Podcast> podcasts)
         {
             // Construct the query operation for all customer entities where PartitionKey="Smith".
@@ -65,6 +75,16 @@ namespace PodCatcher.API.Models
             UploadDocument(item.Title, item.Id.ToString(), document);
 
             return item;
+        }
+
+        public void Remove(Guid Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Update(Podcast item)
+        {
+            throw new NotImplementedException();
         }
 
         private void UploadDocument(string partitionKey, string rowKey, string document)

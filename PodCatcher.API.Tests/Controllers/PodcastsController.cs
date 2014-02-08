@@ -10,13 +10,14 @@ namespace PodCatcher.API.Controllers
     [TestFixture]
     public class PodcastsControllerTest
     {
-        private PodcastRepositoryStub _mPodcastRepository;
+        private PodcastRepositoryStub _mPodcastRepositoryStub;
         private PodcastBuilderStub _mPodcastBuilder;
         [SetUp]
         public void Init()
         {
-            _mPodcastRepository = new PodcastRepositoryStub();
-            PodcastRepositoryFactory.SetPodcastRepository(_mPodcastRepository);
+            _mPodcastRepositoryStub = new PodcastRepositoryStub();
+            PodcastTableRepositoryFactory.SetPodcastRepository(_mPodcastRepositoryStub);
+            PodcastBlobRepositoryFactory.SetPodcastRepository(_mPodcastRepositoryStub);
             _mPodcastBuilder = new PodcastBuilderStub();
             PodcastBuilderFactory.SetPodcastBuilder(_mPodcastBuilder);
         }
@@ -28,7 +29,7 @@ namespace PodCatcher.API.Controllers
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
             var podcast = new Podcast{Uri = httpWwwTestComFeedXml};
             _mPodcastBuilder.ToReturn = podcast;
-            _mPodcastRepository.PodcastToBeReturned = podcast;
+            _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             PodcastsController controller = new PodcastsController();
 
             // Act
@@ -47,7 +48,7 @@ namespace PodCatcher.API.Controllers
             // Arrange
             string httpWwwTestComFeedXml = null;
             var podcast = new Podcast { Uri = httpWwwTestComFeedXml };
-            _mPodcastRepository.PodcastToBeReturned = podcast;
+            _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             PodcastsController controller = new PodcastsController();
 
             // Act
@@ -70,7 +71,7 @@ namespace PodCatcher.API.Controllers
             // Arrange
             var httpWwwTestComFeedXml = "";
             var podcast = new Podcast { Uri = httpWwwTestComFeedXml };
-            _mPodcastRepository.PodcastToBeReturned = podcast;
+            _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             PodcastsController controller = new PodcastsController();
 
             // Act
@@ -85,8 +86,8 @@ namespace PodCatcher.API.Controllers
         public void Post_ValidUrlButPodcastIsNull_ReturnsBadRequest()
         {
             // Arrange
-            _mPodcastRepository.PodcastToBeReturned = null;
-            _mPodcastRepository.ToBeThrown = new ArgumentNullException("item");
+            _mPodcastRepositoryStub.PodcastToBeReturned = null;
+            _mPodcastRepositoryStub.ToBeThrown = new ArgumentNullException("item");
             PodcastsController controller = new PodcastsController();
 
             // Act
@@ -103,14 +104,16 @@ namespace PodCatcher.API.Controllers
             // Arrange
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
             var podcast = new Podcast {Id = Guid.NewGuid(), Uri = httpWwwTestComFeedXml};
-            _mPodcastRepository.PodcastToBeReturned = podcast;
+            _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             _mPodcastBuilder.ToReturn = podcast;
+            
             PodcastsController controller = new PodcastsController();
             var actionResult = controller.Post(podcast);
             var response = actionResult as CreatedAtRouteNegotiatedContentResult<Podcast>;
 
             // Act
             var getActionResult = controller.Get(Id(response));
+
             // Assert
             var getResponse = getActionResult as OkNegotiatedContentResult<Podcast>;
             Assert.IsNotNull(getResponse);

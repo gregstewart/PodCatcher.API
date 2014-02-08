@@ -23,6 +23,16 @@ namespace PodCatcher.API.Models
             return podcasts;
         }
 
+        public IEnumerable<Podcast> GetAll(IEnumerable<Podcast> podcasts)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Podcast Get(Podcast podcast)
+        {
+            throw new NotImplementedException();
+        }
+
         public Podcast Get(Guid id)
         {
             return podcasts.Find(p => p.Id == id);

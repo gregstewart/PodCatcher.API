@@ -1,6 +1,11 @@
-﻿namespace PodCatcher.API.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace PodCatcher.API.Models
 {
-    public class PodcastRepositoryFactory
+    public class PodcastBlobRepositoryFactory
     {
         private static IPodcastRepository _podcastRepository = null;
 
@@ -9,13 +14,12 @@
             if (_podcastRepository != null)
                 return _podcastRepository;
 
-            return new PodcastTableRepository();
+            return new PodcastBlobRepository();
         }
 
         public static void SetPodcastRepository(IPodcastRepository podcastRepository)
         {
             _podcastRepository = podcastRepository;
         }
-
     }
 }

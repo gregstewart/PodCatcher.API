@@ -17,6 +17,16 @@ namespace PodCatcher.API.Tests.Stubs
             throw new NotImplementedException();
         }
 
+        public IEnumerable<Podcast> GetAll(IEnumerable<Podcast> podcasts)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Podcast Get(Podcast podcast)
+        {
+            throw new NotImplementedException();
+        }
+
         public Podcast Get(Guid Id)
         {
             return PodcastToBeReturned;
