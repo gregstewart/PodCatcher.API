@@ -44,9 +44,6 @@ namespace PodCatcher.API.Models
 
             foreach (var podcastEntity in podcastEntities)
             {
-//                var blobName = string.Format(@"podcast\{0}\{1}.json", podcastEntity.PartitionKey, podcastEntity.RowKey);
-//                var document = this.DownloadDocument(blobName);
-//                yield return JsonConvert.DeserializeObject<Podcast>(document);
                 yield return new Podcast
                 {
                     Id = podcastEntity.Id,
@@ -98,8 +95,6 @@ namespace PodCatcher.API.Models
         public Podcast Add(Podcast item)
         {
             PodcastEntity podcastEntity = new PodcastEntity(item.Title, item.Id);
-
-            var document = JsonConvert.SerializeObject(item, Newtonsoft.Json.Formatting.Indented);
 
             // Create the TableOperation that inserts the customer entity.
             TableOperation insertOperation = TableOperation.Insert(podcastEntity);
