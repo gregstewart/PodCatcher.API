@@ -117,7 +117,7 @@ namespace PodCatcher.API.Controllers
             var getActionResult = controller.Get(Id(response));
 
             // Assert
-            var getResponse = getActionResult as OkNegotiatedContentResult<PodcastFeed>;
+            var getResponse = getActionResult as OkNegotiatedContentResult<Podcast>;
             Assert.IsNotNull(getResponse);
             Assert.AreEqual(Id(response), Id(getResponse));
         }
@@ -147,9 +147,9 @@ namespace PodCatcher.API.Controllers
 
         }
 
-        private Guid Id(OkNegotiatedContentResult<PodcastFeed> response)
+        private Guid Id(OkNegotiatedContentResult<Podcast> response)
         {
-            return response.Content.Podcast.Id;
+            return response.Content.Id;
         }
 
         private static Guid Id(CreatedAtRouteNegotiatedContentResult<PodcastFeed> response)

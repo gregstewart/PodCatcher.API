@@ -20,7 +20,7 @@ namespace PodCatcher.API.Models
 
         public PodcastFeed Build(Podcast podcast)
         {
-            if (podcast.Uri.IsEmpty())
+            if (podcast == null || podcast.Uri.IsEmpty())
             {
                 throw new ArgumentNullException("item");
             }
