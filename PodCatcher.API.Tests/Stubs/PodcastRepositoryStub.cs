@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PodCatcher.API.Models;
+using PodCatcher.API.Models.Podcasts;
 
 namespace PodCatcher.API.Tests.Stubs
 {
@@ -32,7 +33,7 @@ namespace PodCatcher.API.Tests.Stubs
             return PodcastToBeReturned;
         }
 
-        public Podcast Add(Podcast item)
+        public Podcast Add(Podcast podcast)
         {
             if (ToBeThrown != null)
             {

@@ -148,18 +148,19 @@
     <Compile Include="Models\Feed\FeedParserFactory.cs" />
     <Compile Include="Models\Feed\IFeedPaser.cs" />
     <Compile Include="Models\JsonContentNegotiator.cs" />
-    <Compile Include="Models\Podcast\IPodcastBuilder.cs" />
-    <Compile Include="Models\Podcast.cs" />
-    <Compile Include="Models\Podcast\PodcastBlobRepository.cs" />
-    <Compile Include="Models\Podcast\PodcastBlobRepositoryFactory.cs" />
-    <Compile Include="Models\Podcast\PodcastBuilder.cs" />
-    <Compile Include="Models\Podcast\PodcastBuilderFactory.cs" />
-    <Compile Include="Models\Podcast\PodcastEntity.cs" />
-    <Compile Include="Models\Podcast\PodcastTableRepository.cs" />
-    <Compile Include="Models\Podcast\PodcastRepositoryMemory.cs" />
+    <Compile Include="Models\Podcasts\IPodcastBuilder.cs" />
+    <Compile Include="Models\PodcastFeed.cs" />
+    <Compile Include="Models\Podcasts\Podcast.cs" />
+    <Compile Include="Models\Podcasts\PodcastBlobRepository.cs" />
+    <Compile Include="Models\Podcasts\PodcastBlobRepositoryFactory.cs" />
+    <Compile Include="Models\Podcasts\PodcastBuilder.cs" />
+    <Compile Include="Models\Podcasts\PodcastBuilderFactory.cs" />
+    <Compile Include="Models\Podcasts\PodcastEntity.cs" />
+    <Compile Include="Models\Podcasts\PodcastTableRepository.cs" />
+    <Compile Include="Models\Podcasts\PodcastRepositoryMemory.cs" />
     <Compile Include="Models\Feed\IFeedFetcher.cs" />
-    <Compile Include="Models\Podcast\IPodcastRepository.cs" />
-    <Compile Include="Models\Podcast\PodcastTableRepositoryFactory.cs" />
+    <Compile Include="Models\Podcasts\IPodcastRepository.cs" />
+    <Compile Include="Models\Podcasts\PodcastTableRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

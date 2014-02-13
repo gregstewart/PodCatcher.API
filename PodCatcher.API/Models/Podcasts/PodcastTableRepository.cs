@@ -9,6 +9,7 @@ using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 using Microsoft.WindowsAzure.Storage.Table;
 using Newtonsoft.Json;
+using PodCatcher.API.Models.Podcasts;
 
 namespace PodCatcher.API.Models
 {
@@ -92,9 +93,9 @@ namespace PodCatcher.API.Models
             
         }
 
-        public Podcast Add(Podcast item)
+        public Podcast Add(Podcast podcast)
         {
-            PodcastEntity podcastEntity = new PodcastEntity(item.Title, item.Id);
+            PodcastEntity podcastEntity = new PodcastEntity(podcast);
 
             // Create the TableOperation that inserts the customer entity.
             TableOperation insertOperation = TableOperation.Insert(podcastEntity);
@@ -102,7 +103,7 @@ namespace PodCatcher.API.Models
             // Execute the insert operation.
             table.Execute(insertOperation);
 
-            return item;
+            return podcast;
         }
 
         public void Remove(Guid Id)

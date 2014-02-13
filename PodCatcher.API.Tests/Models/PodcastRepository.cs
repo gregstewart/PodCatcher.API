@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using NUnit.Framework;
 using PodCatcher.API.Models;
+using PodCatcher.API.Models.Podcasts;
 using PodCatcher.API.Tests.Stubs;
 
 namespace PodCatcher.API.Tests.Models
@@ -22,10 +23,11 @@ namespace PodCatcher.API.Tests.Models
         [Test]
         public void Add_WithPodcast_IsSuccessful()
         {
-            _mPodcastRepository.Add(new Podcast { Uri = "http://rubyrogues.com/feed/" });
+            Podcast podcast = new Podcast {Uri = "http://rubyrogues.com/feed/"};
+            _mPodcastRepository.Add(podcast);
 
             var enumerable = _mPodcastRepository.GetAll();
-            Assert.IsTrue(enumerable.Count() == 1, "Failed to add new Podcast");
+            Assert.IsTrue(enumerable.Count() == 1, "Failed to add new PodcastFeed");
         }
         [Test]
         [ExpectedException(typeof(ArgumentNullException))]
@@ -34,7 +36,7 @@ namespace PodCatcher.API.Tests.Models
             _mPodcastRepository.Add(null);
 
             var enumerable = _mPodcastRepository.GetAll();
-            Assert.IsTrue(enumerable.Count() == 0, "Failed to add new Podcast");
+            Assert.IsTrue(enumerable.Count() == 0, "Failed to add new PodcastFeed");
         }
     }
 

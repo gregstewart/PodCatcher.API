@@ -9,11 +9,11 @@ namespace PodCatcher.API.Tests.Stubs
 {
     public class FeedParserStub : IFeedParser
     {
-        public Podcast Parse(Podcast podcast, string xml)
+        public PodcastFeed Parse(PodcastFeed podcastFeed, string xml)
         {
-            podcast.Title = "Test podcast";
-            podcast.Summary = "Test Summary";
-            podcast.Image = "http://some.url/image.png";
+            podcastFeed.Podcast.Title = "Test PodcastFeed";
+            podcastFeed.Podcast.Summary = "Test Summary";
+            podcastFeed.Podcast.Image = "http://some.url/image.png";
 
             List<Episode> episodes = new List<Episode>();
 
@@ -38,9 +38,9 @@ namespace PodCatcher.API.Tests.Stubs
 
             episodes.Add(episode);
 
-            podcast.Episodes = episodes;
+            podcastFeed.Episodes = episodes;
 
-            return podcast;
+            return podcastFeed;
         }
     }
 }

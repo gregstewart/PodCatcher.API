@@ -8,25 +8,25 @@ namespace PodCatcher.API.Models
 {
     public class FeedParser : IFeedParser
     {
-        public Podcast Parse(Podcast podcast, string xml)
+        public PodcastFeed Parse(PodcastFeed podcastFeed, string xml)
         {
             XElement root = XElement.Parse(xml);
-            XNamespace itunes = "http://www.itunes.com/dtds/podcast-1.0.dtd";
+            XNamespace itunes = "http://www.itunes.com/dtds/PodcastFeed-1.0.dtd";
 
-            podcast.Title = GetFirstElement(root, "title");
+            podcastFeed.Podcast.Title = GetFirstElement(root, "title");
 
-            podcast.Summary = GetFirstElement(root, "description");
+            podcastFeed.Podcast.Summary = GetFirstElement(root, "description");
 
-            podcast.Image = GetNamespaceFirstAttribute(root, itunes, "image", "href");
+            podcastFeed.Podcast.Image = GetNamespaceFirstAttribute(root, itunes, "image", "href");
 
-            podcast.Episodes = GetAllEpisodes(root);
+            podcastFeed.Episodes = GetAllEpisodes(root);
 
-            return podcast;
+            return podcastFeed;
         }
 
         private IEnumerable<Episode> GetAllEpisodes(XElement root)
         {
-            XNamespace itunes = "http://www.itunes.com/dtds/podcast-1.0.dtd";
+            XNamespace itunes = "http://www.itunes.com/dtds/PodcastFeed-1.0.dtd";
             List<Episode> episodes = new List<Episode>();
             IEnumerable<XElement> elements = from el in root.Descendants("item")
                 select el;

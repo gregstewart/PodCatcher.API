@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using PodCatcher.API.Models.Podcasts;
 
 namespace PodCatcher.API.Models
 {
@@ -10,12 +11,12 @@ namespace PodCatcher.API.Models
         public PodcastRepositoryMemory()
         {
 
-//            Add(new Podcast { Uri = "http://rubyrogues.com/feed/"});
-//            Add(new Podcast { Uri = "http://wow.joystiq.com/category/wow-insider-show/rss.xml" });
-//            Add(new Podcast { Uri = "http://pwop.com/feed.aspx?show=hanselminutes&filetype=master" });
-//            Add(new Podcast { Uri = "http://feeds.feedburner.com/JavascriptJabber" });
-//            Add(new Podcast { Uri = "http://converttoraid.libsyn.com/rss" });
-//            Add(new Podcast { Uri = "http://www.myextralife.com/ftp/radio/instance_rss.xml" });
+//            Add(new PodcastFeed { Uri = "http://rubyrogues.com/feed/"});
+//            Add(new PodcastFeed { Uri = "http://wow.joystiq.com/category/wow-insider-show/rss.xml" });
+//            Add(new PodcastFeed { Uri = "http://pwop.com/feed.aspx?show=hanselminutes&filetype=master" });
+//            Add(new PodcastFeed { Uri = "http://feeds.feedburner.com/JavascriptJabber" });
+//            Add(new PodcastFeed { Uri = "http://converttoraid.libsyn.com/rss" });
+//            Add(new PodcastFeed { Uri = "http://www.myextralife.com/ftp/radio/instance_rss.xml" });
         }
 
         public IEnumerable<Podcast> GetAll()
@@ -38,14 +39,14 @@ namespace PodCatcher.API.Models
             return podcasts.Find(p => p.Id == id);
         }
 
-        public Podcast Add(Podcast item)
+        public Podcast Add(Podcast podcast)
         {
-            if (item == null)
+            if (podcast == null)
             {
-                throw new ArgumentNullException("item");
+                throw new ArgumentNullException("podcastFeed");
             }
-            podcasts.Add(item);
-            return item;
+            podcasts.Add(podcast);
+            return podcast;
         }
 
         public void Remove(Guid id)

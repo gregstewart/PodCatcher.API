@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Microsoft.WindowsAzure.Storage.Table;
+using PodCatcher.API.Models.Podcasts;
 
 namespace PodCatcher.API.Models
 {
     public class PodcastEntity : TableEntity
     {
-        public PodcastEntity(string title, Guid id)
+        public PodcastEntity(Podcast podcast)
         {
-            this.PartitionKey = title;
-            this.RowKey = id.ToString();
-            Id = id;
-            Title = title;
+            this.PartitionKey = podcast.Title;
+            this.RowKey = podcast.Id.ToString();
+            Id = podcast.Id;
+            Title = podcast.Title;
+            Uri = podcast.Uri;
+            Summary = podcast.Summary;
+            Image = podcast.Image;
         }
 
         public PodcastEntity()

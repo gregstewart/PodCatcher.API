@@ -2,6 +2,6 @@
 {
     public interface IFeedParser
     {
-        Podcast Parse(Podcast podcast, string xml);
+        PodcastFeed Parse(PodcastFeed podcastFeed, string xml);
     }
 }

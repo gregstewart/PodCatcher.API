@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.WebPages;
+using PodCatcher.API.Models.Podcasts;
 
 namespace PodCatcher.API.Models
 {
@@ -17,22 +18,22 @@ namespace PodCatcher.API.Models
             _feedParser = FeedParserFactory.Create();
         }
 
-        public Podcast Build(string Uri)
+        public PodcastFeed Build(Podcast podcast)
         {
-            if (Uri.IsEmpty())
+            if (podcast.Uri.IsEmpty())
             {
                 throw new ArgumentNullException("item");
             }
 
-            Podcast podcast = new Podcast {Uri = Uri};
+            PodcastFeed podcastFeed = new PodcastFeed {Podcast = podcast};
 
             Feed feed = _feedFetcher.GetFeed(podcast.Uri);
             if (feed.StatusCode == HttpStatusCode.OK)
             {
                 var xml = feed.Content ?? "";
-                podcast = _feedParser.Parse(podcast, xml);
-                podcast.Id = Guid.NewGuid();
-                return podcast;
+                podcastFeed = _feedParser.Parse(podcastFeed, xml);
+                podcastFeed.Podcast.Id = Guid.NewGuid();
+                return podcastFeed;
             }
             else
             {

@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Web.Http;
 using NUnit.Framework;
 using PodCatcher.API.Models;
+using PodCatcher.API.Models.Podcasts;
 using PodCatcher.API.Tests.Stubs;
 
 namespace PodCatcher.API.Tests.Models
@@ -27,11 +28,12 @@ namespace PodCatcher.API.Tests.Models
         public void Build_WithValidURI_IsSuccessful()
         {
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
+            Podcast podcast = new Podcast {Uri = httpWwwTestComFeedXml};
             
             PodcastBuilder podcastBuilder = new PodcastBuilder();
-            Podcast podcast = podcastBuilder.Build(httpWwwTestComFeedXml);
+            PodcastFeed podcastFeed = podcastBuilder.Build(podcast);
             
-            Assert.IsInstanceOf(typeof (Podcast), podcast);
+            Assert.IsInstanceOf(typeof (PodcastFeed), podcastFeed);
         }
 
         [Test]
@@ -39,15 +41,16 @@ namespace PodCatcher.API.Tests.Models
         public void Build_WithNullURI_ThrowsArgumentNullException()
         {
             PodcastBuilder podcastBuilder = new PodcastBuilder();
-            Podcast podcast = podcastBuilder.Build(null);
+            PodcastFeed podcastFeed = podcastBuilder.Build(null);
         }
 
         [Test]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Build_WithEmptyURI_ThrowsArgumentNullException()
+        public void Build_WithEmptyPodcast_ThrowsArgumentNullException()
         {
+            Podcast podcast = new Podcast();
             PodcastBuilder podcastBuilder = new PodcastBuilder();
-            Podcast podcast = podcastBuilder.Build("");
+            PodcastFeed podcastFeed = podcastBuilder.Build(podcast);
         }
 
         [Test]
@@ -55,8 +58,10 @@ namespace PodCatcher.API.Tests.Models
         public void Build_WithValidUrlIsNotFound_IsNull()
         {
             _mFeedFetcher.ToReturn = HttpStatusCode.NotFound;
+            var httpWwwTestComFeedXml = "http://rubyrogues.com/feed/";
+            Podcast podcast = new Podcast { Uri = httpWwwTestComFeedXml };
             PodcastBuilder podcastBuilder = new PodcastBuilder();
-            Podcast podcast = podcastBuilder.Build("http://rubyrogues.com/feed/");
+            PodcastFeed podcastFeed = podcastBuilder.Build(podcast);
         }
     }
 }

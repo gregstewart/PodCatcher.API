@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,6 +9,7 @@ using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 using Newtonsoft.Json;
+using PodCatcher.API.Models.Podcasts;
 
 namespace PodCatcher.API.Models
 {
@@ -38,7 +40,7 @@ namespace PodCatcher.API.Models
         {
             if (podcast != null)
             {
-                var blobName = string.Format(@"podcast\{0}\{1}.json", podcast.Title, podcast.Id.ToString());
+                var blobName = string.Format(@"PodcastFeed\{0}\{1}.json", podcast.Title, podcast.Id.ToString());
                 var document = this.DownloadDocument(blobName);
                 return JsonConvert.DeserializeObject<Podcast>(document);
             }
@@ -62,19 +64,19 @@ namespace PodCatcher.API.Models
             
             foreach (var podcast in podcasts)
             {
-                var blobName = string.Format(@"podcast\{0}\{1}.json", podcast.Title, podcast.Id.ToString());
+                var blobName = string.Format(@"PodcastFeed\{0}\{1}.json", podcast.Title, podcast.Id.ToString());
                 var document = this.DownloadDocument(blobName);
                 yield return JsonConvert.DeserializeObject<Podcast>(document);
             }
         }
 
-        public Podcast Add(Podcast item)
+        public Podcast Add(Podcast podcast)
         {
-            var document = JsonConvert.SerializeObject(item, Newtonsoft.Json.Formatting.Indented);
+            var document = JsonConvert.SerializeObject(podcast, Newtonsoft.Json.Formatting.Indented);
 
-            UploadDocument(item.Title, item.Id.ToString(), document);
+            UploadDocument(podcast.Title, podcast.Id.ToString(), document);
 
-            return item;
+            return podcast;
         }
 
         public void Remove(Guid Id)
@@ -89,7 +91,7 @@ namespace PodCatcher.API.Models
 
         private void UploadDocument(string partitionKey, string rowKey, string document)
         {
-            var filename = string.Format(@"podcast\{0}\{1}.json", partitionKey, rowKey);
+            var filename = string.Format(@"PodcastFeed\{0}\{1}.json", partitionKey, rowKey);
             var blockBlob = blob.GetBlockBlobReference(filename);
 
             using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(document)))
