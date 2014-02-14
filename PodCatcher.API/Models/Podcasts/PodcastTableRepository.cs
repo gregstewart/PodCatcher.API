@@ -70,7 +70,7 @@ namespace PodCatcher.API.Models
         {
             // Create a retrieve operation that takes a customer entity.
             TableQuery<PodcastEntity> query = new TableQuery<PodcastEntity>().Where(
-                TableQuery.GenerateFilterCondition("Id", QueryComparisons.Equal, Id.ToString()));
+                TableQuery.GenerateFilterCondition("RowKey", QueryComparisons.Equal, Id.ToString()));
 
             var podcastEntity = table.ExecuteQuery(query).SingleOrDefault();
             // handle null scenario document

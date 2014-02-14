@@ -40,7 +40,7 @@ namespace PodCatcher.API.Models
         {
             if (podcast != null)
             {
-                var blobName = string.Format(@"PodcastFeed\{0}\{1}.json", podcast.Title, podcast.Id.ToString());
+                var blobName = string.Format(@"Podcast\{0}\{1}.json", podcast.Title, podcast.Id.ToString());
                 var document = this.DownloadDocument(blobName);
                 return JsonConvert.DeserializeObject<Podcast>(document);
             }
@@ -91,7 +91,7 @@ namespace PodCatcher.API.Models
 
         private void UploadDocument(string partitionKey, string rowKey, string document)
         {
-            var filename = string.Format(@"PodcastFeed\{0}\{1}.json", partitionKey, rowKey);
+            var filename = string.Format(@"Podcast\{0}\{1}.json", partitionKey, rowKey);
             var blockBlob = blob.GetBlockBlobReference(filename);
 
             using (MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(document)))
