@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Web.Http.Results;
 using PodCatcher.API.Models;
 using NUnit.Framework;
+using PodCatcher.API.Models.Episodes;
 using PodCatcher.API.Models.Podcasts;
 using PodCatcher.API.Tests.Stubs;
 
@@ -12,13 +14,15 @@ namespace PodCatcher.API.Controllers
     public class PodcastsControllerTest
     {
         private PodcastRepositoryStub _mPodcastRepositoryStub;
+        private EpisodeRepositoryStub _mEpisodeRepositoryStub;
         private PodcastBuilderStub _mPodcastBuilder;
         [SetUp]
         public void Init()
         {
             _mPodcastRepositoryStub = new PodcastRepositoryStub();
+            _mEpisodeRepositoryStub = new EpisodeRepositoryStub();
             PodcastTableRepositoryFactory.SetPodcastRepository(_mPodcastRepositoryStub);
-            PodcastBlobRepositoryFactory.SetPodcastRepository(_mPodcastRepositoryStub);
+            EpisodeTableRepositoryFactory.SetEpisodeRepository(_mEpisodeRepositoryStub);
             _mPodcastBuilder = new PodcastBuilderStub();
             PodcastBuilderFactory.SetPodcastBuilder(_mPodcastBuilder);
         }
@@ -105,7 +109,7 @@ namespace PodCatcher.API.Controllers
             // Arrange
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
             var podcast = new Podcast {Id = Guid.NewGuid(), Uri = httpWwwTestComFeedXml};
-            var podcastFeed = new PodcastFeed {Podcast = podcast};
+            var podcastFeed = new PodcastFeed {Podcast = podcast, Episodes = new List<Episode>()};
             _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             _mPodcastBuilder.ToReturn = podcastFeed;
             

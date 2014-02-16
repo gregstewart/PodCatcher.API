@@ -62,12 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\PodcastsController.cs" />
+    <Compile Include="Models\EpisodeRepositoryTest.cs" />
     <Compile Include="Models\FeedFetcher.cs" />
     <Compile Include="Models\FeedParser\Instance.cs" />
     <Compile Include="Models\FeedParser\Rogues.cs" />
     <Compile Include="Models\PodcastRepository.cs" />
     <Compile Include="Models\PodcastBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stubs\EpisodeRepositoryStub.cs" />
     <Compile Include="Stubs\FeedFetcherStub.cs" />
     <Compile Include="Stubs\FeedParserStub.cs" />
     <Compile Include="Stubs\PodcastBuilderStub.cs" />

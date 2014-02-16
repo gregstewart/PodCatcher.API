@@ -1,4 +1,6 @@
-﻿namespace PodCatcher.API.Models
+﻿using Microsoft.WindowsAzure.Storage.Table;
+
+namespace PodCatcher.API.Models
 {
     public class PodcastTableRepositoryFactory
     {
@@ -7,7 +9,9 @@
         public static IPodcastRepository Create()
         {
             if (_podcastRepository != null)
+            {
                 return _podcastRepository;
+            }
 
             return new PodcastTableRepository();
         }

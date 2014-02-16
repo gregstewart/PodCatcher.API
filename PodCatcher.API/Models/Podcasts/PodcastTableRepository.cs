@@ -15,25 +15,12 @@ namespace PodCatcher.API.Models
 {
     public class PodcastTableRepository : IPodcastRepository
     {
-        private CloudStorageAccount storageAccount;
-        private CloudTable table;
-
+        private CloudTable _cloudTable;
+        TableFactory tableFactory = new TableFactory();
+            
         public PodcastTableRepository()
         {
-            // Retrieve the storage account from the connection string.
-            storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
-            table = GetTable();
-        }
-
-        private CloudTable GetTable()
-        {
-            // Create the table client.
-            CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
-
-            // Create the table if it doesn't exist.
-            CloudTable table = tableClient.GetTableReference("podcasts");
-            table.CreateIfNotExists();
-            return table;
+            _cloudTable = tableFactory.GetTable("podcasts"); ;
         }
 
         public IEnumerable<Podcast> GetAll()
@@ -41,7 +28,7 @@ namespace PodCatcher.API.Models
             // Construct the query operation for all customer entities where PartitionKey="Smith".
             TableQuery<PodcastEntity> query = new TableQuery<PodcastEntity>();
 
-            var podcastEntities = table.ExecuteQuery(query).ToList();
+            var podcastEntities = _cloudTable.ExecuteQuery(query).ToList();
 
             foreach (var podcastEntity in podcastEntities)
             {
@@ -72,7 +59,7 @@ namespace PodCatcher.API.Models
             TableQuery<PodcastEntity> query = new TableQuery<PodcastEntity>().Where(
                 TableQuery.GenerateFilterCondition("RowKey", QueryComparisons.Equal, Id.ToString()));
 
-            var podcastEntity = table.ExecuteQuery(query).SingleOrDefault();
+            var podcastEntity = _cloudTable.ExecuteQuery(query).SingleOrDefault();
             // handle null scenario document
 
             if (podcastEntity != null)
@@ -101,7 +88,7 @@ namespace PodCatcher.API.Models
             TableOperation insertOperation = TableOperation.Insert(podcastEntity);
 
             // Execute the insert operation.
-            table.Execute(insertOperation);
+            _cloudTable.Execute(insertOperation);
 
             return podcast;
         }

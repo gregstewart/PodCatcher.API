@@ -4,6 +4,7 @@ using System.Net;
 using System.Web.Http;
 using System.Web.WebPages;
 using PodCatcher.API.Models;
+using PodCatcher.API.Models.Episodes;
 using PodCatcher.API.Models.Podcasts;
 
 namespace PodCatcher.API.Controllers
@@ -11,11 +12,13 @@ namespace PodCatcher.API.Controllers
     public class PodcastsController : ApiController
     {
         private static IPodcastRepository podcastTableRepository;
+        private static IEpisodeRepository episodeTableRepository;
         private static IPodcastBuilder podcastBuilder;
 
         public PodcastsController()
         {
             podcastTableRepository = PodcastTableRepositoryFactory.Create();
+            episodeTableRepository = EpisodeTableRepositoryFactory.Create();
             podcastBuilder = PodcastBuilderFactory.Create();
         }
 
@@ -44,6 +47,7 @@ namespace PodCatcher.API.Controllers
                     PodcastFeed builtPodcastFeed = podcastBuilder.Build(podcast);
                     Podcast builtPodcast = builtPodcastFeed.Podcast;
                     builtPodcast = podcastTableRepository.Add(builtPodcast);
+                    episodeTableRepository.Add(builtPodcast, builtPodcastFeed.Episodes);
                     return CreatedAtRoute("DefaultApi", new { builtPodcast.Id }, builtPodcastFeed);
                 }
                 catch(Exception exception)

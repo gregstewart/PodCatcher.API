@@ -141,7 +141,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Episode.cs" />
+    <Compile Include="Models\Episodes\Episode.cs" />
+    <Compile Include="Models\Episodes\EpisodeEntity.cs" />
+    <Compile Include="Models\Episodes\EpisodeRepositoryMemory.cs" />
+    <Compile Include="Models\Episodes\EpisodeTableRepository.cs" />
+    <Compile Include="Models\Episodes\EpisodeTableRepositoryFactory.cs" />
+    <Compile Include="Models\Episodes\IEpisodeRepository.cs" />
     <Compile Include="Models\Feed\FeedFetcher.cs" />
     <Compile Include="Models\Feed\FeedFetcherFactory.cs" />
     <Compile Include="Models\Feed\FeedParser.cs" />
@@ -161,6 +166,7 @@
     <Compile Include="Models\Feed\IFeedFetcher.cs" />
     <Compile Include="Models\Podcasts\IPodcastRepository.cs" />
     <Compile Include="Models\Podcasts\PodcastTableRepositoryFactory.cs" />
+    <Compile Include="Models\TableFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -177,7 +183,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Episodes\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
