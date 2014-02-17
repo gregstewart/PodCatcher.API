@@ -124,6 +124,7 @@ namespace PodCatcher.API.Models
                 timeZones.Add("CST", "-06:00");
                 timeZones.Add("MST", "-07:00");
                 timeZones.Add("PST", "-08:00");
+                timeZones.Add("EDT", "-04:00");
 
                 string inputDate = date;
                 string modifiedInputDate = inputDate.Substring(0, inputDate.LastIndexOf(" "));
