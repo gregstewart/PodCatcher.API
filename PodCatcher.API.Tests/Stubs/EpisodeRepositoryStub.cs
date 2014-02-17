@@ -41,7 +41,10 @@ namespace PodCatcher.API.Tests.Stubs
 
         public void Add(Podcast podcast, IEnumerable<Episode> episodes)
         {
-            throw new NotImplementedException();
+            if (ToBeThrown != null)
+            {
+                throw ToBeThrown;
+            }
         }
     }
 }

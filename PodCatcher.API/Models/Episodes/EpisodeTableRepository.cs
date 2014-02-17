@@ -80,7 +80,13 @@ namespace PodCatcher.API.Models.Episodes
 
         public void Add(Podcast podcast, IEnumerable<Episode> episodes)
         {
-            throw new NotImplementedException();
+            if (episodes.Count() > 1)
+            {
+                foreach (var episode in episodes)
+                {
+                    this.Add(podcast, episode);
+                }
+            }
         }
     }
 
