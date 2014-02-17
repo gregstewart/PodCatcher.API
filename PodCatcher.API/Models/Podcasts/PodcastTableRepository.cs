@@ -1,14 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Text;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Blob;
 using Microsoft.WindowsAzure.Storage.Table;
-using Newtonsoft.Json;
 using PodCatcher.API.Models.Podcasts;
 
 namespace PodCatcher.API.Models

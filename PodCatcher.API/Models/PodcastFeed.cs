@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.WindowsAzure.Storage.Table;
+﻿using System.Collections.Generic;
 using PodCatcher.API.Models.Podcasts;
 
 namespace PodCatcher.API.Models

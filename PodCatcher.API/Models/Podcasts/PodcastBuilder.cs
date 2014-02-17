@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.WebPages;
 using PodCatcher.API.Models.Podcasts;

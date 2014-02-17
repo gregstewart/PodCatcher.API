@@ -1,6 +1,4 @@
-﻿using Microsoft.WindowsAzure.Storage.Table;
-
-namespace PodCatcher.API.Models
+﻿namespace PodCatcher.API.Models
 {
     public class PodcastTableRepositoryFactory
     {

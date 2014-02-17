@@ -1,6 +1,4 @@
-﻿using System.Net.Http;
-
-namespace PodCatcher.API.Models
+﻿namespace PodCatcher.API.Models
 {
     public interface IFeedFetcher
     {
