@@ -64,6 +64,7 @@
     <Compile Include="Controllers\PodcastsController.cs" />
     <Compile Include="Models\EpisodeRepositoryTest.cs" />
     <Compile Include="Models\FeedFetcher.cs" />
+    <Compile Include="Models\FeedParser\ConvertToRaid.cs" />
     <Compile Include="Models\FeedParser\Instance.cs" />
     <Compile Include="Models\FeedParser\Rogues.cs" />
     <Compile Include="Models\PodcastRepository.cs" />
@@ -88,6 +89,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fixtures\convert-to-raid.xml" />
     <Content Include="Fixtures\instance-rss.xml" />
     <Content Include="Fixtures\ruby-rogues.xml" />
   </ItemGroup>

@@ -18,6 +18,7 @@ namespace PodCatcher.API.Models
             }
 
             HttpWebRequest request = (HttpWebRequest) WebRequest.Create(Uri);
+            
             try
             {
                 HttpWebResponse response = (HttpWebResponse) request.GetResponse();
@@ -26,7 +27,7 @@ namespace PodCatcher.API.Models
                 {
                     Stream receiveStream = response.GetResponseStream();
                     StreamReader readStream = null;
-                    if (response.CharacterSet == null)
+                    if (response.CharacterSet.IsEmpty())
                         readStream = new StreamReader(receiveStream);
                     else
                         readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));

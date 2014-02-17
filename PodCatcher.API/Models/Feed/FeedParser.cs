@@ -17,11 +17,27 @@ namespace PodCatcher.API.Models
 
             podcastFeed.Podcast.Summary = GetFirstElement(root, "description");
 
-            podcastFeed.Podcast.Image = GetNamespaceFirstAttribute(root, itunes, "image", "href");
+            podcastFeed.Podcast.Image = GetPodcastImage(root, itunes);
 
             podcastFeed.Episodes = GetAllEpisodes(root);
 
             return podcastFeed;
+        }
+
+        private string GetPodcastImage(XElement root, XNamespace itunes)
+        {
+//            GetNamespaceFirstAttribute(root, itunes, "image", "href");
+            var image = root.Descendants(itunes + "image").FirstOrDefault();
+            if (image != null)
+            {
+                return image.Attribute("href").Value;
+            }
+            else
+            {
+                image = root.Descendants("image").FirstOrDefault();
+                return (string) image.Descendants("url").FirstOrDefault();
+            }
+
         }
 
         private IEnumerable<Episode> GetAllEpisodes(XElement root)
@@ -40,7 +56,7 @@ namespace PodCatcher.API.Models
                     Author = GetNamespaceFirstElement(xElement, itunes, "author"), 
                     Comments = GetFirstElement(xElement, "comments"), 
                     Description = GetFirstElement(xElement, "description"), 
-                    Duration = GetNamespaceFirstElement(xElement, itunes, "duration"),
+                    Duration =  GetNamespaceFirstElement(xElement, itunes, "duration"),
                     Explicit = (GetNamespaceFirstElement(xElement, itunes, "explicit") != "no"), 
                     Id = Guid.NewGuid(), 
                     Link = GetFirstElement(xElement, "link"), 
