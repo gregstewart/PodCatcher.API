@@ -61,12 +61,5 @@ namespace PodCatcher.API.Controllers
             }        
         }
 
-        [Route("podcasts/{podcastId}/episodes")]
-        public IHttpActionResult GetEpisodesByPodCast(Guid podcastId)
-        {
-            IEnumerable<Episode> episodes = episodeTableRepository.GetAll(podcastId);
-
-            return Ok(episodes);
-        }
     }
 }

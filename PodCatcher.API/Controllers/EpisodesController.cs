@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using PodCatcher.API.Models;
 using PodCatcher.API.Models.Episodes;
+using PodCatcher.API.Models.Podcasts;
 
 namespace PodCatcher.API.Controllers
 {
@@ -13,16 +14,21 @@ namespace PodCatcher.API.Controllers
     {
 
         private static IEpisodeRepository episodeTableRepository;
+        private static IPodcastRepository podcastTableRepository;
 
         public EpisodesController()
         {
             episodeTableRepository = EpisodeTableRepositoryFactory.Create();            
+            podcastTableRepository = PodcastTableRepositoryFactory.Create();            
         }
 
-        public IHttpActionResult Get(Guid podcastId)
+        [Route("api/podcasts/{podcastId}/episodes")]
+        [HttpGet]
+        public IHttpActionResult GetEpisodesByPodCast(Guid podcastId)
         {
-            IEnumerable<Episode> episodes = episodeTableRepository.GetAll(podcastId);
-            
+            Podcast podcast = podcastTableRepository.Get(podcastId);
+            IEnumerable<Episode> episodes = episodeTableRepository.GetAll(podcast.Title);
+
             return Ok(episodes);
         }
     }

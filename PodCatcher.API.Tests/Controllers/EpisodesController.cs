@@ -10,6 +10,7 @@ using NUnit.Framework;
 using PodCatcher.API.Controllers;
 using PodCatcher.API.Models;
 using PodCatcher.API.Models.Episodes;
+using PodCatcher.API.Models.Podcasts;
 using PodCatcher.API.Tests.Stubs;
 
 namespace PodCatcher.API.Tests.Controllers
@@ -17,6 +18,7 @@ namespace PodCatcher.API.Tests.Controllers
     class EpisodesControllerTests
     {
         private EpisodeRepositoryStub _mEpisodeRepositoryStub;
+        private PodcastRepositoryStub _mPodcastRepositoryStub;
         private List<Episode> episodes;
         private Episode episode1;
         private Episode episode2;
@@ -25,7 +27,9 @@ namespace PodCatcher.API.Tests.Controllers
         public void Init()
         {
             _mEpisodeRepositoryStub = new EpisodeRepositoryStub();
+            _mPodcastRepositoryStub = new PodcastRepositoryStub();
             EpisodeTableRepositoryFactory.SetEpisodeRepository(_mEpisodeRepositoryStub);
+            PodcastTableRepositoryFactory.SetPodcastRepository(_mPodcastRepositoryStub);
             episodes = new List<Episode>();
             episode1 = new Episode { Title = "Test 1" };
             episode2 = new Episode { Title = "Test 2" };
@@ -39,10 +43,12 @@ namespace PodCatcher.API.Tests.Controllers
             // Arrange
             EpisodesController controller = new EpisodesController();
             Guid podcastGuid = GetPodcastGuid();
+            Podcast podcast = new Podcast {Title = "Convert to Raid: The podcast for raiders in World of Warcraft"};
             _mEpisodeRepositoryStub.EpisodesToBeReturned = episodes;
+            _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             
             // Act
-            var actionResult = controller.Get(podcastGuid);
+            var actionResult = controller.GetEpisodesByPodCast(podcastGuid);
 
             // Assert
             var getResponse = actionResult as OkNegotiatedContentResult<IEnumerable<Episode>>;
@@ -57,7 +63,6 @@ namespace PodCatcher.API.Tests.Controllers
 
         private Guid GetPodcastGuid()
         {
-            var PartitionKey = "Convert to Raid: The podcast for raiders in World of Warcraft";
             var RowKey = new Guid("8740c4dc-fde7-480b-9e81-889672dc9c44");
             return RowKey;
         }

@@ -22,7 +22,7 @@ namespace PodCatcher.API.Tests.Stubs
 
         public IEnumerable<Episode> GetAll(string podcastTitle)
         {
-            throw new NotImplementedException();
+            return EpisodesToBeReturned;
         }
 
         public IEnumerable<Episode> GetAll(Guid podcastGuid)

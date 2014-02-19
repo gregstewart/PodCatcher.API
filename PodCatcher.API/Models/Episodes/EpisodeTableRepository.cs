@@ -49,7 +49,32 @@ namespace PodCatcher.API.Models.Episodes
 
         public IEnumerable<Episode> GetAll(string podcastTitle)
         {
-            throw new NotImplementedException();
+            // Create a retrieve operation that takes a customer entity.
+            TableQuery<EpisodeEntity> query = new TableQuery<EpisodeEntity>().Where(
+                TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, podcastTitle.ToString()));
+
+            var episodeEntities = _cloudTable.ExecuteQuery(query).ToList();
+
+            foreach (var episodeEntity in episodeEntities)
+            {
+                yield return new Episode
+                {
+                    Id = episodeEntity.Id,
+                    Title = episodeEntity.Title,
+                    Link = episodeEntity.Link,
+                    Summary = episodeEntity.Summary,
+                    PublicationDate = episodeEntity.PublicationDate,
+                    PermaLink = episodeEntity.PermaLink,
+                    Description = episodeEntity.Description,
+                    Subtitle = episodeEntity.Subtitle,
+                    Author = episodeEntity.Author,
+                    Explicit = episodeEntity.Explicit,
+                    Duration = episodeEntity.Duration,
+                    MediaLink = episodeEntity.MediaLink,
+                    MediaDuration = episodeEntity.MediaDuration,
+                    MediaType = episodeEntity.MediaType
+                };
+            }
         }
 
         public IEnumerable<Episode> GetAll(Guid podcastGuid)
