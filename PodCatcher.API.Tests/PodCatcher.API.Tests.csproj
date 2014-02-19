@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\EpisodesController.cs" />
     <Compile Include="Controllers\PodcastsController.cs" />
     <Compile Include="Models\EpisodeRepositoryTest.cs" />
     <Compile Include="Models\FeedFetcher.cs" />

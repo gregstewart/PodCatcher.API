@@ -12,6 +12,7 @@ namespace PodCatcher.API.Tests.Stubs
     class EpisodeRepositoryStub : IEpisodeRepository
     {
         public Episode EpisodeToBeReturned;
+        public List<Episode> EpisodesToBeReturned;
         public Exception ToBeThrown;
 
         public IEnumerable<Episode> GetAll()
@@ -26,7 +27,7 @@ namespace PodCatcher.API.Tests.Stubs
 
         public IEnumerable<Episode> GetAll(Guid podcastGuid)
         {
-            throw new NotImplementedException();
+            return EpisodesToBeReturned;
         }
 
         public void Add(Episode episode)

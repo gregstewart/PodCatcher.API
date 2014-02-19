@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Web.Http.Results;
+using PodCatcher.API.Controllers;
 using PodCatcher.API.Models;
 using NUnit.Framework;
 using PodCatcher.API.Models.Episodes;
 using PodCatcher.API.Models.Podcasts;
 using PodCatcher.API.Tests.Stubs;
 
-namespace PodCatcher.API.Controllers
+namespace PodCatcher.API.Test.Controllers
 {
     [TestFixture]
     public class PodcastsControllerTest
@@ -16,6 +17,7 @@ namespace PodCatcher.API.Controllers
         private PodcastRepositoryStub _mPodcastRepositoryStub;
         private EpisodeRepositoryStub _mEpisodeRepositoryStub;
         private PodcastBuilderStub _mPodcastBuilder;
+        
         [SetUp]
         public void Init()
         {
@@ -47,6 +49,7 @@ namespace PodCatcher.API.Controllers
             Assert.AreEqual("DefaultApi", response.RouteName);
             Assert.AreEqual(response.Content.Podcast.Id, response.RouteValues["Id"]);
         }
+
         [Test]
         public void Post_Null_ReturnsBadRequest()
         {

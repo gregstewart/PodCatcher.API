@@ -60,5 +60,13 @@ namespace PodCatcher.API.Controllers
                 return StatusCode(HttpStatusCode.BadRequest);
             }        
         }
+
+        [Route("podcasts/{podcastId}/episodes")]
+        public IHttpActionResult GetEpisodesByPodCast(Guid podcastId)
+        {
+            IEnumerable<Episode> episodes = episodeTableRepository.GetAll(podcastId);
+
+            return Ok(episodes);
+        }
     }
 }
