@@ -27,9 +27,31 @@ namespace PodCatcher.API.Controllers
         public IHttpActionResult GetEpisodesByPodCast(Guid podcastId)
         {
             Podcast podcast = podcastTableRepository.Get(podcastId);
-            IEnumerable<Episode> episodes = episodeTableRepository.GetAll(podcast.Title);
 
-            return Ok(episodes);
+            if (podcast != null)
+            {
+                IEnumerable<Episode> episodes = episodeTableRepository.GetAll(podcast.Title);
+
+                if (episodes == null)
+                {
+                    return StatusCode(HttpStatusCode.BadRequest);
+                }
+
+                if (episodes.Any())
+                {
+                    return Ok(episodes);
+                }
+                else
+                {
+                    return StatusCode(HttpStatusCode.NotFound);
+                }
+                
+            }
+            else
+            {
+                return StatusCode(HttpStatusCode.NotFound);
+            }
+
         }
     }
 }

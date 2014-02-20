@@ -9,7 +9,7 @@ using PodCatcher.API.Models.Episodes;
 using PodCatcher.API.Models.Podcasts;
 using PodCatcher.API.Tests.Stubs;
 
-namespace PodCatcher.API.Test.Controllers
+namespace PodCatcher.API.Tests.Controllers
 {
     [TestFixture]
     public class PodcastsControllerTest
