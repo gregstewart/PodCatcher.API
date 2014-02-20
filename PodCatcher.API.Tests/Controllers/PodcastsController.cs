@@ -142,6 +142,22 @@ namespace PodCatcher.API.Tests.Controllers
             Assert.AreEqual(actionResult.GetType(), typeof(System.Web.Http.Results.NotFoundResult));
         }
 
+        [Test]
+        public void Get_PodcastWithAValidId_ReturnsOK()
+        {
+            // Arrange
+            var newGuid = Guid.NewGuid();
+            var podcast = new Podcast { Id = newGuid, Uri = "http://some.uri/" };
+            _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
+            var controller = new PodcastsController();
+
+            // Act
+            var actionResult = controller.Get(newGuid);
+
+            // Assert
+            Assert.AreEqual(actionResult.GetType(), typeof(System.Web.Http.Results.OkNegotiatedContentResult<Podcast>));
+        }
+
         [Test, Ignore]
         public void Put_Podcast()
         {

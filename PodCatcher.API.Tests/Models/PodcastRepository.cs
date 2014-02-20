@@ -29,6 +29,7 @@ namespace PodCatcher.API.Tests.Models
             var enumerable = _mPodcastRepository.GetAll();
             Assert.IsTrue(enumerable.Count() == 1, "Failed to add new PodcastFeed");
         }
+
         [Test]
         [ExpectedException(typeof(ArgumentNullException))]
         public void Add_WithNull_ShouldNotAddToCollection()
