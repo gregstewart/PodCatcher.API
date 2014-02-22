@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Web.Http;
+using System.Web.Http.Results;
 using System.Web.WebPages;
 using PodCatcher.API.Models;
 using PodCatcher.API.Models.Episodes;
@@ -76,10 +77,19 @@ namespace PodCatcher.API.Controllers
             }        
         }
 
+        public StatusCodeResult Put(Podcast podcast)
+        {
+            return StatusCode(HttpStatusCode.NotImplemented);
+        }
+
         private Uri GetEntryPointUri()
         {
             return new Uri(Url.Request.RequestUri.ToString());
         }
 
+        public StatusCodeResult Delete(Podcast podcast)
+        {
+            return StatusCode(HttpStatusCode.NotImplemented);
+        }
     }
 }

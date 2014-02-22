@@ -186,20 +186,34 @@ namespace PodCatcher.API.Tests.Controllers
             var getMetaData = MetaData(getResponse);
             // Assert
             Assert.AreEqual(actionResult.GetType(), typeof(System.Web.Http.Results.OkNegotiatedContentResult<Podcast>));
-//            Assert.AreEqual(metadata, getMetaData);
             Assert.AreEqual(metadata.Link, getMetaData.Link);
         }
 
-        [Test, Ignore]
-        public void Put_Podcast()
+        [Test]
+        public void Put_Podcast_ReturnsNotImplemented()
         {
+            // Arrange
+            var controller = new PodcastsController();
+                      
+            // Act
+            var actionResult = controller.Put(new Podcast());
             
+            // Assert
+            Assert.AreEqual(actionResult.StatusCode, HttpStatusCode.NotImplemented);
+
         }
 
-        [Test, Ignore]
-        public void Delete_Podcast()
+        [Test]
+        public void Delete_Podcast_ReturnsNotImplemented()
         {
+            // Arrange
+            var controller = new PodcastsController();
 
+            // Act
+            var actionResult = controller.Delete(new Podcast());
+
+            // Assert
+            Assert.AreEqual(actionResult.StatusCode, HttpStatusCode.NotImplemented);
         }
 
         private Guid Id(OkNegotiatedContentResult<Podcast> response)
