@@ -24,18 +24,33 @@ namespace PodCatcher.API.Controllers
 
         public IEnumerable<Podcast> GetAll()
         {
+            Uri entryPointUri = GetEntryPointUri();
             IEnumerable<Podcast> podcasts = podcastTableRepository.GetAll();
-            return podcasts;
+
+            foreach (var podcast in podcasts)
+            {
+                string path = podcast.Id.ToString();
+                MetaData metaData = new MetaData(entryPointUri, path);
+                podcast.Metadata = metaData;
+                yield return podcast;
+            }
+            
         }
 
         public IHttpActionResult Get(Guid id)
         {
-            Podcast item = podcastTableRepository.Get(id);
-            if (item == null)
+            Podcast podcast = podcastTableRepository.Get(id);
+            Uri entryPointUri = GetEntryPointUri();
+            string path = "episodes";
+
+            if (podcast == null)
             {
                 return NotFound();
             }
-            return Ok(item);
+
+            MetaData metaData = new MetaData(entryPointUri, path);
+            podcast.Metadata = metaData;
+            return Ok(podcast);
         }
 
         public IHttpActionResult Post(Podcast podcast)
@@ -59,6 +74,11 @@ namespace PodCatcher.API.Controllers
             {
                 return StatusCode(HttpStatusCode.BadRequest);
             }        
+        }
+
+        private Uri GetEntryPointUri()
+        {
+            return new Uri(Url.Request.RequestUri.ToString());
         }
 
     }

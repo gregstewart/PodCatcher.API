@@ -155,6 +155,7 @@
     <Compile Include="Models\Feed\FeedParserFactory.cs" />
     <Compile Include="Models\Feed\IFeedPaser.cs" />
     <Compile Include="Models\JsonContentNegotiator.cs" />
+    <Compile Include="Models\MetaData.cs" />
     <Compile Include="Models\Podcasts\IPodcastBuilder.cs" />
     <Compile Include="Models\PodcastFeed.cs" />
     <Compile Include="Models\Podcasts\Podcast.cs" />

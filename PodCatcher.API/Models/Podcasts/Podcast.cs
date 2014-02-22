@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace PodCatcher.API.Models.Podcasts
 {
@@ -16,5 +17,6 @@ namespace PodCatcher.API.Models.Podcasts
         public string Summary { get; set; } // itunes:summary
         public string Image { get; set; } //itunes:image @href
 
+        public MetaData Metadata { get; set; }
     }
 }

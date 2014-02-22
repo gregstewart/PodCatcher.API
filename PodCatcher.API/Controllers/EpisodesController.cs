@@ -22,7 +22,7 @@ namespace PodCatcher.API.Controllers
             podcastTableRepository = PodcastTableRepositoryFactory.Create();            
         }
 
-        [Route("api/podcasts/{podcastId}/episodes")]
+        [Route("api/podcasts/{podcastId}/episodes", Name = "GetEpisodesByPodcastId")]
         [HttpGet]
         public IHttpActionResult GetEpisodesByPodCast(Guid podcastId)
         {

@@ -55,6 +55,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.0\lib\net45\System.Web.Http.dll</HintPath>
@@ -69,6 +70,7 @@
     <Compile Include="Models\FeedParser\DateParsingFromFeed.cs" />
     <Compile Include="Models\FeedParser\Instance.cs" />
     <Compile Include="Models\FeedParser\Rogues.cs" />
+    <Compile Include="Models\MetaData.cs" />
     <Compile Include="Models\PodcastRepository.cs" />
     <Compile Include="Models\PodcastBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

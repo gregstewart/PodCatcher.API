@@ -1,7 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.Http;
+using System.Security.Policy;
+using System.Web.Http;
+using System.Web.Http.Controllers;
+using System.Web.Http.Hosting;
 using System.Web.Http.Results;
+using System.Web.Http.Routing;
 using PodCatcher.API.Controllers;
 using PodCatcher.API.Models;
 using NUnit.Framework;
@@ -117,6 +123,7 @@ namespace PodCatcher.API.Tests.Controllers
             _mPodcastBuilder.ToReturn = podcastFeed;
             
             PodcastsController controller = new PodcastsController();
+            SetupControllerForTests(controller, null);
             var actionResult = controller.Post(podcast);
             var response = actionResult as CreatedAtRouteNegotiatedContentResult<PodcastFeed>;
 
@@ -134,7 +141,8 @@ namespace PodCatcher.API.Tests.Controllers
         {
             // Arrange
             var controller = new PodcastsController();
-
+            SetupControllerForTests(controller, null);
+            
             // Act
             var actionResult = controller.Get(new Guid("05963625-9f5c-4e66-a573-c70bb36cc225"));
 
@@ -150,12 +158,36 @@ namespace PodCatcher.API.Tests.Controllers
             var podcast = new Podcast { Id = newGuid, Uri = "http://some.uri/" };
             _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             var controller = new PodcastsController();
-
+            SetupControllerForTests(controller, null);
+            
             // Act
             var actionResult = controller.Get(newGuid);
 
             // Assert
             Assert.AreEqual(actionResult.GetType(), typeof(System.Web.Http.Results.OkNegotiatedContentResult<Podcast>));
+        }
+
+        [Test]
+        public void Get_PodcastWithAValidId_ReturnsOKAndHasMetaData()
+        {
+            // Arrange
+            var newGuid = Guid.NewGuid();
+            var podcast = new Podcast { Id = newGuid, Uri = "http://some.uri/" };
+            var entryPointUri = new Uri("http://localhost:81/api/podcasts/" + newGuid.ToString());
+            var metadata = new MetaData(entryPointUri, "episodes");
+
+            _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
+            var controller = new PodcastsController();
+            SetupControllerForTests(controller, newGuid.ToString());
+            
+            // Act
+            var actionResult = controller.Get(newGuid);
+            var getResponse = actionResult as OkNegotiatedContentResult<Podcast>;
+            var getMetaData = MetaData(getResponse);
+            // Assert
+            Assert.AreEqual(actionResult.GetType(), typeof(System.Web.Http.Results.OkNegotiatedContentResult<Podcast>));
+//            Assert.AreEqual(metadata, getMetaData);
+            Assert.AreEqual(metadata.Link, getMetaData.Link);
         }
 
         [Test, Ignore]
@@ -178,6 +210,31 @@ namespace PodCatcher.API.Tests.Controllers
         private static Guid Id(CreatedAtRouteNegotiatedContentResult<PodcastFeed> response)
         {
             return response.Content.Podcast.Id;
+        }
+
+        private MetaData MetaData(OkNegotiatedContentResult<Podcast> response)
+        {
+            return response.Content.Metadata;
+        }
+
+        private static void SetupControllerForTests(ApiController controller, string path)
+        {
+            var config = new HttpConfiguration();
+            var requestedUri = "http://localhost:81/api/podcasts/" + path;
+            var request = new HttpRequestMessage(HttpMethod.Get, requestedUri);
+            var route = config.Routes.MapHttpRoute("DefaultApi", "api/{controller}/{id}");
+            var routeData = new HttpRouteData(route, new HttpRouteValueDictionary
+                {
+                    {"id", Guid.Empty},
+                    {"controller", "podcasts"}
+                });
+            controller.ControllerContext = new HttpControllerContext(config, routeData, request);
+            UrlHelper urlHelper = new UrlHelper(request);
+            controller.Request = request;
+            controller.Request.Properties[HttpPropertyKeys.HttpConfigurationKey] = config;
+            controller.Request.Properties[HttpPropertyKeys.HttpRouteDataKey] = routeData;
+            /// inject a fake helper
+            controller.Url = urlHelper;
         }
     }
 }
