@@ -58,6 +58,10 @@ namespace PodCatcher.API.Tests.Models
             Assert.AreEqual(episode.MediaLink, "http://traffic.libsyn.com/rubyrogues/RR139Riak.mp3");
             Assert.AreEqual(episode.MediaDuration, 69286507);
             Assert.AreEqual(episode.MediaType, "audio/mpeg");
+            Assert.AreEqual(episode.Subtitle, "Get your Ruby Rogues T-Shirt or hoodie!! Ladies' sizes available as well! Panel  Sean Cribbs (twitter github blog)   Bryce Kerley (twitter github blog)   Avdi Grimm (twitter github blog book)   James Edward Gray (twitter github blog) ");
+            Assert.IsTrue(episode.Summary.Contains("Get your Ruby Rogues T-Shirt or hoodie!! Ladies' sizes available as well!"));
+            Assert.AreEqual(episode.Author, "Charles Max Wood, James Edward Gray II, David Brady, Avdi Grimm, Josh Susser, Katrina Owen");
+            Assert.AreEqual(episode.Duration, "1:12:10");
         }
     }
 }

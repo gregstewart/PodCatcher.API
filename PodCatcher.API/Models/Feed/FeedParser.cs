@@ -8,26 +8,39 @@ namespace PodCatcher.API.Models
 {
     public class FeedParser : IFeedParser
     {
+        private static XNamespace _itunes;
         public PodcastFeed Parse(PodcastFeed podcastFeed, string xml)
         {
             XElement root = XElement.Parse(xml);
-            XNamespace itunes = "http://www.itunes.com/dtds/PodcastFeed-1.0.dtd";
-
+            _itunes = GetItunesNamespace(xml);
+            
             podcastFeed.Podcast.Title = GetFirstElement(root, "title");
 
             podcastFeed.Podcast.Summary = GetFirstElement(root, "description");
 
-            podcastFeed.Podcast.Image = GetPodcastImage(root, itunes);
+            podcastFeed.Podcast.Image = GetPodcastImage(root);
 
             podcastFeed.Episodes = GetAllEpisodes(root);
 
             return podcastFeed;
         }
 
-        private string GetPodcastImage(XElement root, XNamespace itunes)
+        private XNamespace GetItunesNamespace(string xml)
         {
-//            GetNamespaceFirstAttribute(root, itunes, "image", "href");
-            var image = root.Descendants(itunes + "image").FirstOrDefault();
+            XDocument document = XDocument.Parse(xml);
+            var result = document.Root.Attributes().
+                    Where(attribute => attribute.IsNamespaceDeclaration).
+                    GroupBy(attribute => attribute.Name.Namespace == XNamespace.None ? String.Empty : attribute.Name.LocalName,
+                            attribute => XNamespace.Get(attribute.Value)).
+                    ToDictionary(g => g.Key,
+                                 g => g.First());
+
+            return result["itunes"];
+        }
+
+        private string GetPodcastImage(XElement root)
+        {
+            var image = root.Descendants(_itunes + "image").FirstOrDefault();
             if (image != null)
             {
                 return image.Attribute("href").Value;
@@ -42,7 +55,6 @@ namespace PodCatcher.API.Models
 
         private IEnumerable<Episode> GetAllEpisodes(XElement root)
         {
-            XNamespace itunes = "http://www.itunes.com/dtds/PodcastFeed-1.0.dtd";
             List<Episode> episodes = new List<Episode>();
             IEnumerable<XElement> elements = from el in root.Descendants("item")
                 select el;
@@ -53,17 +65,17 @@ namespace PodCatcher.API.Models
                 episodes.AddRange(xElements.Select(xElement => new Episode
                 {
                     Title = GetFirstElement(xElement, "title"), 
-                    Author = GetNamespaceFirstElement(xElement, itunes, "author"), 
+                    Author = GetNamespaceFirstElement(xElement, "author"), 
                     Comments = GetFirstElement(xElement, "comments"), 
                     Description = GetFirstElement(xElement, "description"), 
-                    Duration =  GetNamespaceFirstElement(xElement, itunes, "duration"),
-                    Explicit = (GetNamespaceFirstElement(xElement, itunes, "explicit") != "no"), 
+                    Duration =  GetNamespaceFirstElement(xElement, "duration"),
+                    Explicit = (GetNamespaceFirstElement(xElement, "explicit") != "no"), 
                     Id = Guid.NewGuid(), 
                     Link = GetFirstElement(xElement, "link"), 
                     PermaLink = GetFirstElement(xElement, "guid"),
                     PublicationDate = ParseDate(GetFirstElement(xElement, "pubDate")), 
-                    Subtitle = GetNamespaceFirstElement(xElement, itunes, "subtitle"), 
-                    Summary = GetNamespaceFirstElement(xElement, itunes, "summary"),
+                    Subtitle = GetNamespaceFirstElement(xElement, "subtitle"), 
+                    Summary = GetNamespaceFirstElement(xElement, "summary"),
                     MediaLink = GetFirstAttribute(xElement, "enclosure", "url"),
                     MediaDuration = Convert.ToInt32(GetFirstAttribute(xElement, "enclosure", "length")),
                     MediaType = GetFirstAttribute(xElement, "enclosure", "type")
@@ -80,14 +92,6 @@ namespace PodCatcher.API.Models
                     select el.Attribute(attribute)).FirstOrDefault();
         }
 
-        private static string GetNamespaceFirstAttribute(XElement root, XNamespace itunes, string element, string attribute)
-        {
-            return (string)
-                (from el in root.Descendants(itunes + element)
-                 select el.Attribute(attribute)).FirstOrDefault();
-        }
-
-
         private static string GetFirstElement(XElement root, string element)
         {
             return (string)
@@ -95,10 +99,10 @@ namespace PodCatcher.API.Models
                  select el).FirstOrDefault();
         }
 
-        private static string GetNamespaceFirstElement(XElement root, XNamespace itunes, string element)
+        private static string GetNamespaceFirstElement(XElement root, string element)
         {
             return (string)
-                (from el in root.Descendants(itunes + element)
+                (from el in root.Descendants(_itunes + element) 
                  select el).FirstOrDefault();
         }
 
