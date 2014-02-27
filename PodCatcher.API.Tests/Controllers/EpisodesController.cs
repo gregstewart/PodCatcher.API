@@ -112,6 +112,58 @@ namespace PodCatcher.API.Tests.Controllers
             Assert.AreEqual(getResponse.StatusCode, HttpStatusCode.NotFound);
         }
 
+        [Test]
+        public void Delete_Episode_ReturnsNotImplemented()
+        {
+            // Arrange
+            var controller = new EpisodesController();
+
+            // Act
+            var actionResult = controller.Delete(episode1);
+
+            // Assert
+            Assert.AreEqual(actionResult.StatusCode, HttpStatusCode.NotImplemented);
+        }
+
+        [Test]
+        public void Put_Episode_ReturnsNotImplemented()
+        {
+            // Arrange
+            var controller = new EpisodesController();
+
+            // Act
+            var actionResult = controller.Put(episode1);
+
+            // Assert
+            Assert.AreEqual(actionResult.StatusCode, HttpStatusCode.NotImplemented);
+        }
+
+        [Test]
+        public void Post_Episode_ReturnsNotImplemented()
+        {
+            // Arrange
+            var controller = new EpisodesController();
+
+            // Act
+            var actionResult = controller.Post(episode1);
+
+            // Assert
+            Assert.AreEqual(actionResult.StatusCode, HttpStatusCode.NotImplemented);
+        }
+
+        [Test]
+        public void Get_Episode_ReturnsNotImplemented()
+        {
+            // Arrange
+            var controller = new EpisodesController();
+
+            // Act
+            var actionResult = controller.Get(episode1);
+
+            // Assert
+            Assert.AreEqual(actionResult.StatusCode, HttpStatusCode.NotImplemented);
+        }
+
         private Guid GetPodcastGuid()
         {
             var RowKey = new Guid("8740c4dc-fde7-480b-9e81-889672dc9c44");

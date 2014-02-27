@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Results;
 using PodCatcher.API.Models;
 using PodCatcher.API.Models.Episodes;
 using PodCatcher.API.Models.Podcasts;
@@ -52,6 +53,26 @@ namespace PodCatcher.API.Controllers
                 return StatusCode(HttpStatusCode.NotFound);
             }
 
+        }
+
+        public StatusCodeResult Delete(Episode episode)
+        {
+            return StatusCode(HttpStatusCode.NotImplemented);
+        }
+
+        public StatusCodeResult Put(Episode episode)
+        {
+            return StatusCode(HttpStatusCode.NotImplemented);
+        }
+
+        public StatusCodeResult Post(Episode episode)
+        {
+            return StatusCode(HttpStatusCode.NotImplemented);
+        }
+
+        public StatusCodeResult Get(Episode episode)
+        {
+            return StatusCode(HttpStatusCode.NotImplemented);
         }
     }
 }
