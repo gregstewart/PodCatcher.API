@@ -35,6 +35,16 @@ namespace PodCatcher.API.Models
             }
         }
 
+        public Uri SubscribeLink
+        {
+            get
+            {
+                var constructedUri = FixTrailingSlash(this.entryPointUri.ToString());
+                constructedUri += this.path + "/subscribe";
+                return new Uri(constructedUri);
+            }
+        }
+
         private string FixTrailingSlash(string Uri)
         {
             if (!Uri.EndsWith("/"))

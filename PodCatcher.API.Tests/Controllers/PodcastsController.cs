@@ -168,7 +168,7 @@ namespace PodCatcher.API.Tests.Controllers
         }
 
         [Test]
-        public void Get_PodcastWithAValidId_ReturnsOKAndHasMetaData()
+        public void Get_PodcastWithAValidId_ReturnsOKAndHasLinkMetaData()
         {
             // Arrange
             var newGuid = Guid.NewGuid();
@@ -187,6 +187,28 @@ namespace PodCatcher.API.Tests.Controllers
             // Assert
             Assert.AreEqual(actionResult.GetType(), typeof(System.Web.Http.Results.OkNegotiatedContentResult<Podcast>));
             Assert.AreEqual(metadata.Link, getMetaData.Link);
+        }
+
+        [Test]
+        public void Get_PodcastWithAValidId_ReturnsOKAndHasSubscribeLinkMetaData()
+        {
+            // Arrange
+            var newGuid = Guid.NewGuid();
+            var podcast = new Podcast { Id = newGuid, Uri = "http://some.uri/" };
+            var entryPointUri = new Uri("http://localhost:81/api/podcasts/" + newGuid.ToString());
+            var metadata = new MetaData(entryPointUri, "episodes");
+
+            _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
+            var controller = new PodcastsController();
+            SetupControllerForTests(controller, newGuid.ToString());
+
+            // Act
+            var actionResult = controller.Get(newGuid);
+            var getResponse = actionResult as OkNegotiatedContentResult<Podcast>;
+            var getMetaData = MetaData(getResponse);
+            // Assert
+            Assert.AreEqual(actionResult.GetType(), typeof(System.Web.Http.Results.OkNegotiatedContentResult<Podcast>));
+            Assert.AreEqual(metadata.SubscribeLink, getMetaData.SubscribeLink);
         }
 
         [Test]

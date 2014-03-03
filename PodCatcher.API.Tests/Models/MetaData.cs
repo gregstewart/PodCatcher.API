@@ -40,5 +40,20 @@ namespace PodCatcher.API.Tests.Models
             // Assert
             Assert.AreEqual(metadata.Link, new Uri(httpSomeUri + newGuid));
         }
+
+        [Test]
+        public void Create_WithValidUri_ReturnsMetaDataWithSubscribeLink()
+        {
+            // Arrange
+            var newGuid = Guid.NewGuid();
+
+            // Act
+            var httpSomeUri = "http://some.uri/api/";
+            var entryPointUri = new Uri("http://some.uri/api");
+            var metadata = new MetaData(entryPointUri, newGuid.ToString());
+
+            // Assert
+            Assert.AreEqual(metadata.SubscribeLink, new Uri(httpSomeUri + newGuid + "/subscribe"));
+        }
     }
 }
