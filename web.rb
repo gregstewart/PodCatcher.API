@@ -1,4 +1,4 @@
 require 'sinatra'
 get '/' do
-  "Learning Ruby on Heroku"
+  redirect '/index.html'
 end
