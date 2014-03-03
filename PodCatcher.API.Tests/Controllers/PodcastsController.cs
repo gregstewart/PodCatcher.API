@@ -238,6 +238,20 @@ namespace PodCatcher.API.Tests.Controllers
             Assert.AreEqual(actionResult.StatusCode, HttpStatusCode.NotImplemented);
         }
 
+        [Test]
+        public void Post_PodcastSubscribe_ReturnsNotImplemented()
+        {
+            // Arrange
+            var controller = new PodcastsController();
+            Guid podcastGuid = new Guid("8740c4dc-fde7-480b-9e81-889672dc9c44");
+
+            // Act
+            var actionResult = controller.SubscribeByPodcastId(podcastGuid);
+
+            // Assert
+            Assert.AreEqual(actionResult.StatusCode, HttpStatusCode.NotImplemented);
+        }
+
         private Guid Id(OkNegotiatedContentResult<Podcast> response)
         {
             return response.Content.Id;

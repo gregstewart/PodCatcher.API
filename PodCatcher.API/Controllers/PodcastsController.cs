@@ -91,5 +91,13 @@ namespace PodCatcher.API.Controllers
         {
             return StatusCode(HttpStatusCode.NotImplemented);
         }
+
+        [Route("api/podcasts/{podcastId}/subscribe", Name = "SubscribeByPodcastId")]
+        [HttpPost]
+        public StatusCodeResult SubscribeByPodcastId(Guid podcastId)
+        {
+            return StatusCode(HttpStatusCode.NotImplemented);
+        }
+
     }
 }
