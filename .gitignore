@@ -157,3 +157,5 @@ $RECYCLE.BIN/
 /.localhistory
 .idea/
 .bundle/
+coverage/**
+node_modules/
