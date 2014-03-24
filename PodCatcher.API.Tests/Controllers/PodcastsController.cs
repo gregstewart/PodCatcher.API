@@ -23,16 +23,19 @@ namespace PodCatcher.API.Tests.Controllers
         private PodcastRepositoryStub _mPodcastRepositoryStub;
         private EpisodeRepositoryStub _mEpisodeRepositoryStub;
         private PodcastBuilderStub _mPodcastBuilder;
+        private LoggerStub _mlogger;
         
         [SetUp]
         public void Init()
         {
             _mPodcastRepositoryStub = new PodcastRepositoryStub();
             _mEpisodeRepositoryStub = new EpisodeRepositoryStub();
+            _mPodcastBuilder = new PodcastBuilderStub();
+            _mlogger = new LoggerStub();
             PodcastTableRepositoryFactory.SetPodcastRepository(_mPodcastRepositoryStub);
             EpisodeTableRepositoryFactory.SetEpisodeRepository(_mEpisodeRepositoryStub);
-            _mPodcastBuilder = new PodcastBuilderStub();
             PodcastBuilderFactory.SetPodcastBuilder(_mPodcastBuilder);
+            LoggerFactory.SetLogger(_mlogger);
         }
 
         [Test]

@@ -20,7 +20,6 @@ namespace PodCatcher.API.Models
 
         public MetaData(Uri entryPointUri, String path)
         {
-            this.podcast = podcast;
             this.entryPointUri = entryPointUri;
             this.path = path;
         }

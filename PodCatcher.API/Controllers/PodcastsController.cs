@@ -15,16 +15,20 @@ namespace PodCatcher.API.Controllers
         private static IPodcastRepository podcastTableRepository;
         private static IEpisodeRepository episodeTableRepository;
         private static IPodcastBuilder podcastBuilder;
+        private static ILogger logger; 
 
         public PodcastsController()
         {
             podcastTableRepository = PodcastTableRepositoryFactory.Create();
             episodeTableRepository = EpisodeTableRepositoryFactory.Create();
+            logger = LoggerFactory.Create();
             podcastBuilder = PodcastBuilderFactory.Create();
         }
 
         public IEnumerable<Podcast> GetAll()
         {
+
+            logger.Debug("Get all podcasts");
             Uri entryPointUri = GetEntryPointUri();
             IEnumerable<Podcast> podcasts = podcastTableRepository.GetAll();
 
@@ -56,6 +60,7 @@ namespace PodCatcher.API.Controllers
 
         public IHttpActionResult Post(Podcast podcast)
         {
+            logger.Debug("Debugging message for creating a new podcast");
             if (podcast != null && !podcast.Uri.IsEmpty())
             {
                 try 
@@ -64,17 +69,22 @@ namespace PodCatcher.API.Controllers
                     Podcast builtPodcast = builtPodcastFeed.Podcast;
                     builtPodcast = podcastTableRepository.Add(builtPodcast);
                     episodeTableRepository.Add(builtPodcast, builtPodcastFeed.Episodes);
+                    logger.Info("Successfully created podcast entry for: " + builtPodcast.Title);
                     return CreatedAtRoute("DefaultApi", new { builtPodcast.Id }, builtPodcastFeed);
                 }
                 catch(Exception exception)
                 {
+                    logger.Error("Bad Request: " + exception.Message);
+                    logger.Error(exception.InnerException.ToString());
+                    logger.Error(exception.StackTrace);
                     return StatusCode(HttpStatusCode.BadRequest);
                 }
             }
             else
             {
+                logger.Error("Bad Request no URi provided");
                 return StatusCode(HttpStatusCode.BadRequest);
-            }        
+            }
         }
 
         public StatusCodeResult Put(Podcast podcast)

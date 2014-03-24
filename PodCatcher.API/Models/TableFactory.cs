@@ -1,6 +1,7 @@
 ﻿using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
+using System.Configuration;
 
 namespace PodCatcher.API.Models
 {
