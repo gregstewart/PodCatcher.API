@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PodCatcher.API.Controllers
+namespace PodCatcher.API.Models
 {
     public interface ILogger
     {

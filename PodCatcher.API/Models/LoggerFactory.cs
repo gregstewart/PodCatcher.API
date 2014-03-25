@@ -1,4 +1,4 @@
-﻿namespace PodCatcher.API.Controllers
+﻿namespace PodCatcher.API.Models
 {
     public class LoggerFactory
     {
@@ -10,7 +10,7 @@
                 return _logger;
             }
 
-            return new PodcastLogger();
+            return new LogEntriesLogger();
         }
 
         public static void SetLogger(ILogger logger)
