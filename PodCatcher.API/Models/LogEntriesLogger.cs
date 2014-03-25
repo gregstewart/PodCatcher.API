@@ -1,10 +1,12 @@
-﻿using NLog;
+﻿using log4net;
+using log4net.Repository.Hierarchy;
+using PodCatcher.API.Controllers;
 
 namespace PodCatcher.API.Models
 {
     public class LogEntriesLogger : ILogger
     {
-        private static Logger log = LogManager.GetCurrentClassLogger();
+        private static ILog log = LogManager.GetLogger(typeof(PodcastsController));
 
         public void Debug(string message)
         {
