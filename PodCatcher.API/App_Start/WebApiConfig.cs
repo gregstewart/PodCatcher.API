@@ -10,7 +10,7 @@ namespace PodCatcher.API
         public static void Register(HttpConfiguration config)
         {
             //CORS
-            var cors = new EnableCorsAttribute("http://podcatcher.azurewebsites.net", "*", "*");
+            var cors = new EnableCorsAttribute("http://podcatcher.azurewebsites.net,http://podcatcher-staging.azurewebsites.net", "*", "*");
             config.EnableCors(cors);
 
             // Web API routes
