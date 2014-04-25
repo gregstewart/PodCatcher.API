@@ -11,6 +11,7 @@ namespace PodCatcher.API.Models.Episodes
 
         public IEnumerable<Episode> GetAll()
         {
+            _episodes.Sort((x, y) => DateTime.Compare(y.PublicationDate, x.PublicationDate));
             return _episodes;
         }
 

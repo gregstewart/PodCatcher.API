@@ -23,8 +23,8 @@ namespace PodCatcher.API.Tests.Models
         {
             _episodeRepository = new EpisodeRepositoryMemory();
             episodes = new List<Episode>();
-            episode1 = new Episode { Title = "Test 1" };
-            episode2 = new Episode { Title = "Test 2" };
+            episode1 = new Episode { Title = "Test 1", PublicationDate = new DateTime(2013, 12, 12) };
+            episode2 = new Episode { Title = "Test 2", PublicationDate = new DateTime(2014, 01, 12) };
             episodes.Add(episode1);
             episodes.Add(episode2);
         }
@@ -67,5 +67,15 @@ namespace PodCatcher.API.Tests.Models
             Assert.IsTrue(enumerable.Count() == 0, "Failed to add new Episode collection");
         }
 
+        [Test]
+        public void GetAll_ReturnsItemsInTheRepository_InTheCorrectOrder()
+        {
+            _episodeRepository.Add(episode1);
+            _episodeRepository.Add(episode2);
+
+            var enumerable = _episodeRepository.GetAll();
+            Assert.IsTrue(enumerable.Count() == 2, "Failed to get 2 items added to the collection");
+            Assert.IsTrue(enumerable.ElementAt(0).Equals(episode2), "Episode 1 is not the first item in the result");
+        }
     }    
 }
