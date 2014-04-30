@@ -17,6 +17,6 @@ namespace PodCatcher.API.Models.Podcasts
         public string Summary { get; set; } // itunes:summary
         public string Image { get; set; } //itunes:image @href
 
-        public MetaData Metadata { get; set; }
+        public PodcastMetaData Metadata { get; set; }
     }
 }

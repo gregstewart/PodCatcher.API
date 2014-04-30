@@ -19,7 +19,7 @@ namespace PodCatcher.API
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                defaults: new { controller = "Home", id = RouteParameter.Optional }
             );
 
             // Web API configuration and services

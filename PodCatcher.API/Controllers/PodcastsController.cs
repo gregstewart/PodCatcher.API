@@ -35,8 +35,8 @@ namespace PodCatcher.API.Controllers
             foreach (var podcast in podcasts)
             {
                 string path = podcast.Id.ToString();
-                MetaData metaData = new MetaData(entryPointUri, path);
-                podcast.Metadata = metaData;
+                PodcastMetaData podcastMetaData = new PodcastMetaData(entryPointUri, path);
+                podcast.Metadata = podcastMetaData;
                 yield return podcast;
             }
             
@@ -53,8 +53,8 @@ namespace PodCatcher.API.Controllers
                 return NotFound();
             }
 
-            MetaData metaData = new MetaData(entryPointUri, path);
-            podcast.Metadata = metaData;
+            PodcastMetaData podcastMetaData = new PodcastMetaData(entryPointUri, path);
+            podcast.Metadata = podcastMetaData;
             return Ok(podcast);
         }
 

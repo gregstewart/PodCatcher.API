@@ -177,7 +177,7 @@ namespace PodCatcher.API.Tests.Controllers
             var newGuid = Guid.NewGuid();
             var podcast = new Podcast { Id = newGuid, Uri = "http://some.uri/" };
             var entryPointUri = new Uri("http://localhost:81/api/podcasts/" + newGuid.ToString());
-            var metadata = new MetaData(entryPointUri, "episodes");
+            var metadata = new PodcastMetaData(entryPointUri, "episodes");
 
             _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             var controller = new PodcastsController();
@@ -199,7 +199,7 @@ namespace PodCatcher.API.Tests.Controllers
             var newGuid = Guid.NewGuid();
             var podcast = new Podcast { Id = newGuid, Uri = "http://some.uri/" };
             var entryPointUri = new Uri("http://localhost:81/api/podcasts/" + newGuid.ToString());
-            var metadata = new MetaData(entryPointUri, "episodes");
+            var metadata = new PodcastMetaData(entryPointUri, "episodes");
 
             _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             var controller = new PodcastsController();
@@ -265,7 +265,7 @@ namespace PodCatcher.API.Tests.Controllers
             return response.Content.Podcast.Id;
         }
 
-        private MetaData MetaData(OkNegotiatedContentResult<Podcast> response)
+        private PodcastMetaData MetaData(OkNegotiatedContentResult<Podcast> response)
         {
             return response.Content.Metadata;
         }

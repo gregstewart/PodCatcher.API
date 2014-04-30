@@ -20,7 +20,7 @@ namespace PodCatcher.API.Tests.Models
             // Act
             var httpSomeUri = "http://some.uri/";
             var entryPointUri = new Uri(httpSomeUri);
-            var metadata = new MetaData(entryPointUri, newGuid.ToString());
+            var metadata = new PodcastMetaData(entryPointUri, newGuid.ToString());
 
             // Assert
             Assert.AreEqual(metadata.Link, new Uri(httpSomeUri + newGuid));
@@ -35,7 +35,7 @@ namespace PodCatcher.API.Tests.Models
             // Act
             var httpSomeUri = "http://some.uri/api/";
             var entryPointUri = new Uri("http://some.uri/api");
-            var metadata = new MetaData(entryPointUri, newGuid.ToString());
+            var metadata = new PodcastMetaData(entryPointUri, newGuid.ToString());
 
             // Assert
             Assert.AreEqual(metadata.Link, new Uri(httpSomeUri + newGuid));
@@ -50,7 +50,7 @@ namespace PodCatcher.API.Tests.Models
             // Act
             var httpSomeUri = "http://some.uri/api/";
             var entryPointUri = new Uri("http://some.uri/api");
-            var metadata = new MetaData(entryPointUri, newGuid.ToString());
+            var metadata = new PodcastMetaData(entryPointUri, newGuid.ToString());
 
             // Assert
             Assert.AreEqual(metadata.SubscribeLink, new Uri(httpSomeUri + newGuid + "/subscribe"));
