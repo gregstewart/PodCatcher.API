@@ -150,6 +150,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EpisodesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\Feed\DateParser.cs" />
     <Compile Include="Models\ILogger.cs" />
     <Compile Include="Models\LoggerFactory.cs" />
     <Compile Include="Models\LogEntriesLogger.cs" />

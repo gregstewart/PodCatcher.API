@@ -70,7 +70,7 @@
     <Compile Include="Models\EpisodeRepositoryTest.cs" />
     <Compile Include="Models\FeedFetcher.cs" />
     <Compile Include="Models\FeedParser\ConvertToRaid.cs" />
-    <Compile Include="Models\FeedParser\DateParsingFromFeed.cs" />
+    <Compile Include="Models\FeedParser\DateParsing.cs" />
     <Compile Include="Models\FeedParser\Instance.cs" />
     <Compile Include="Models\FeedParser\Rogues.cs" />
     <Compile Include="Models\MetaData.cs" />
