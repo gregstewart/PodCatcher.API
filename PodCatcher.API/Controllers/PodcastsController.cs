@@ -109,5 +109,15 @@ namespace PodCatcher.API.Controllers
             return StatusCode(HttpStatusCode.NotImplemented);
         }
 
+        [Route("api/podcasts/sync", Name = "SyncPodcasts")]
+        [HttpGet]
+        public IHttpActionResult SyncPodcasts()
+        {
+            SyncPodcasts syncPodcasts = new SyncPodcasts();
+            syncPodcasts.Sync();
+
+            return StatusCode(HttpStatusCode.OK);
+        }
+
     }
 }

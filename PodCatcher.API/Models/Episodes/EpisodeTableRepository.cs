@@ -21,7 +21,8 @@ namespace PodCatcher.API.Models.Episodes
             // Construct the query operation for all customer entities where PartitionKey="Smith".
             TableQuery<EpisodeEntity> query = new TableQuery<EpisodeEntity>();
 
-            var episodeEntities = SortedEpisodeEntities(query);
+            var entitiesAsList = _cloudTable.ExecuteQuery(query).ToList();
+            var episodeEntities = SortedEpisodeEntities(entitiesAsList);
 
             foreach (var episodeEntity in episodeEntities)
             {
@@ -47,21 +48,14 @@ namespace PodCatcher.API.Models.Episodes
  
         }
 
-        private List<EpisodeEntity> SortedEpisodeEntities(TableQuery<EpisodeEntity> query)
-        {
-            var episodeEntities = _cloudTable.ExecuteQuery(query).ToList();
-
-            episodeEntities.Sort((x, y) => DateTime.Compare(y.PublicationDate, x.PublicationDate));
-            return episodeEntities;
-        }
-
         public IEnumerable<Episode> GetAll(string podcastTitle)
         {
             // Create a retrieve operation that takes a customer entity.
             TableQuery<EpisodeEntity> query = new TableQuery<EpisodeEntity>().Where(
                 TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, podcastTitle.ToString()));
 
-            var episodeEntities = SortedEpisodeEntities(query);
+            var entitiesAsList = _cloudTable.ExecuteQuery(query).ToList();
+            var episodeEntities = SortedEpisodeEntities(entitiesAsList);
 
             foreach (var episodeEntity in episodeEntities)
             {
@@ -117,7 +111,11 @@ namespace PodCatcher.API.Models.Episodes
                 }
             }
         }
-    }
 
-    
+        private List<EpisodeEntity> SortedEpisodeEntities(List<EpisodeEntity> entities)
+        {
+            entities.Sort((x, y) => DateTime.Compare(y.PublicationDate, x.PublicationDate));
+            return entities;
+        }
+    }
 }

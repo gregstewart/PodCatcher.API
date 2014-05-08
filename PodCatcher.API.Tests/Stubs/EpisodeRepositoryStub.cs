@@ -27,6 +27,7 @@ namespace PodCatcher.API.Tests.Stubs
 
         public IEnumerable<Episode> GetAll(Guid podcastGuid)
         {
+            EpisodesToBeReturned.Sort((x, y) => DateTime.Compare(y.PublicationDate, x.PublicationDate));
             return EpisodesToBeReturned;
         }
 

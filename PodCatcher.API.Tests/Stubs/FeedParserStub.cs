@@ -28,7 +28,7 @@ namespace PodCatcher.API.Tests.Stubs
                 Id = Guid.NewGuid(),
                 Link = "http://some.url/test/link",
                 PermaLink = "some test guid",
-                PublicationDate = Convert.ToDateTime("1/12/2014 17:13:23"),
+                PublicationDate = new DateTime(),
                 Subtitle = "Some test subtitle",
                 Summary = "Some test summary",
                 MediaLink = "http://some.url/file.mp3",

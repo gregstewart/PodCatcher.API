@@ -11,11 +11,12 @@ namespace PodCatcher.API.Tests.Stubs
     public class PodcastRepositoryStub : IPodcastRepository
     {
         public Podcast PodcastToBeReturned;
+        public IEnumerable<Podcast> PodcastsToBeReturned;
         public Exception ToBeThrown;
 
         public IEnumerable<Podcast> GetAll()
         {
-            throw new NotImplementedException();
+            return PodcastsToBeReturned; 
         }
 
         public IEnumerable<Podcast> GetAll(IEnumerable<Podcast> podcasts)

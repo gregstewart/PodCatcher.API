@@ -185,6 +185,7 @@
     <Compile Include="Models\Feed\IFeedFetcher.cs" />
     <Compile Include="Models\Podcasts\IPodcastRepository.cs" />
     <Compile Include="Models\Podcasts\PodcastTableRepositoryFactory.cs" />
+    <Compile Include="Models\SyncPodcasts.cs" />
     <Compile Include="Models\TableFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
