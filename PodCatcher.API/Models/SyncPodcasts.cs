@@ -74,7 +74,7 @@ namespace PodCatcher.API.Models
 
         public virtual IEnumerable<Episode> GetStoredEpisodes(Podcast podcast)
         {
-            return episodeTableRepository.GetAll(podcast.Id);
+            return episodeTableRepository.GetAll(podcast.Title);
         }
 
         public virtual Episode GetLatestStoredEpisode(IEnumerable<Episode> episodes)
