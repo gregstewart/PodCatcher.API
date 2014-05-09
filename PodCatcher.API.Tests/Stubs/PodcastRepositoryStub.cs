@@ -36,7 +36,14 @@ namespace PodCatcher.API.Tests.Stubs
 
         public Podcast Get(string title)
         {
-            return PodcastToBeReturned;
+            if (title == PodcastToBeReturned.Title)
+            {
+                return PodcastToBeReturned;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public Podcast Add(Podcast podcast)

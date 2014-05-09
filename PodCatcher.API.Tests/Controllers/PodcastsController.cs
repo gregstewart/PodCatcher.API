@@ -44,7 +44,8 @@ namespace PodCatcher.API.Tests.Controllers
             // Arrange
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
             var podcast = new Podcast{Uri = httpWwwTestComFeedXml};
-            _mPodcastBuilder.ToReturn = new PodcastFeed{Podcast = podcast};
+            var builtPodcast = new Podcast{Uri = httpWwwTestComFeedXml, Title = "wibble"};
+            _mPodcastBuilder.ToReturn = new PodcastFeed { Podcast = builtPodcast };
             _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             PodcastsController controller = new PodcastsController();
 
@@ -135,8 +136,10 @@ namespace PodCatcher.API.Tests.Controllers
         {
             // Arrange
             var httpWwwTestComFeedXml = "http://www.test.com/feed.xml";
-            var podcast = new Podcast {Id = Guid.NewGuid(), Uri = httpWwwTestComFeedXml};
-            var podcastFeed = new PodcastFeed {Podcast = podcast, Episodes = new List<Episode>()};
+            var newGuid = Guid.NewGuid();
+            var podcast = new Podcast {Id = newGuid, Uri = httpWwwTestComFeedXml};
+            var builtPodcast = new Podcast { Id = newGuid, Uri = httpWwwTestComFeedXml, Title = "wibble" };
+            var podcastFeed = new PodcastFeed { Podcast = builtPodcast, Episodes = new List<Episode>() };
             _mPodcastRepositoryStub.PodcastToBeReturned = podcast;
             _mPodcastBuilder.ToReturn = podcastFeed;
             
