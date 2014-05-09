@@ -67,6 +67,13 @@ namespace PodCatcher.API.Controllers
                 {
                     PodcastFeed builtPodcastFeed = podcastBuilder.Build(podcast);
                     Podcast builtPodcast = builtPodcastFeed.Podcast;
+
+                    Podcast podcastExists = podcastTableRepository.Get(builtPodcast.Title);
+                    if (podcastExists != null)
+                    {
+                        return StatusCode(HttpStatusCode.Conflict);                    
+                    }
+
                     builtPodcast = podcastTableRepository.Add(builtPodcast);
                     episodeTableRepository.Add(builtPodcast, builtPodcastFeed.Episodes);
                     logger.Info("Successfully created podcast entry for: " + builtPodcast.Title);

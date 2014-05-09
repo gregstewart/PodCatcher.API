@@ -50,6 +50,11 @@ namespace PodCatcher.API.Models
             throw new NotImplementedException();
         }
 
+        public Podcast Get(string title)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Podcast> GetAll()
         {
             throw new NotImplementedException();

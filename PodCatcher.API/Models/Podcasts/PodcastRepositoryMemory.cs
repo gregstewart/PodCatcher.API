@@ -39,6 +39,11 @@ namespace PodCatcher.API.Models
             return podcasts.Find(p => p.Id == id);
         }
 
+        public Podcast Get(string title)
+        {
+            throw new NotImplementedException();
+        }
+
         public Podcast Add(Podcast podcast)
         {
             if (podcast == null)

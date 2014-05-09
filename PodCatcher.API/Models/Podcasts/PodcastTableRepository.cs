@@ -73,6 +73,31 @@ namespace PodCatcher.API.Models
             
         }
 
+        public Podcast Get(string title)
+        {
+            // Create a retrieve operation that takes a customer entity.
+            TableQuery<PodcastEntity> query = new TableQuery<PodcastEntity>().Where(
+                TableQuery.GenerateFilterCondition("Title", QueryComparisons.Equal, title));
+
+            var podcastEntity = _cloudTable.ExecuteQuery(query).SingleOrDefault();
+
+            if (podcastEntity != null)
+            {
+                return new Podcast
+                {
+                    Id = podcastEntity.Id,
+                    Title = podcastEntity.Title,
+                    Image = podcastEntity.Image,
+                    Summary = podcastEntity.Summary,
+                    Uri = podcastEntity.Uri
+                };
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public Podcast Add(Podcast podcast)
         {
             PodcastEntity podcastEntity = new PodcastEntity(podcast);

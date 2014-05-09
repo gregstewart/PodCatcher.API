@@ -76,10 +76,25 @@ namespace PodCatcher.API.Tests.Controllers
             Assert.AreEqual(getResponse.StatusCode, HttpStatusCode.BadRequest);
         }
 
-        [Test, Ignore]
+        [Test]
         public void Post_DuplicatePodcast_ReturnsConflict()
         {
-            //should return 409 or 422
+            //should return 409
+            // Arrange
+            Podcast storedPodcast = new Podcast { Title = "Test Podcast" };
+            Podcast submittedPodcast = new Podcast { Uri= "http://some.uri", Title = "Test Podcast" };
+            var podcastFeed = new PodcastFeed { Podcast = submittedPodcast, Episodes = new List<Episode>() };
+            _mPodcastRepositoryStub.PodcastToBeReturned = storedPodcast;
+            _mPodcastBuilder.ToReturn = podcastFeed;
+            PodcastsController controller = new PodcastsController();
+            SetupControllerForTests(controller, null);
+
+            // Act
+            var actionResult = controller.Post(submittedPodcast);
+
+            // Assert
+            var getResponse = actionResult as StatusCodeResult;
+            Assert.AreEqual(HttpStatusCode.Conflict, getResponse.StatusCode);
         }
 
         [Test]

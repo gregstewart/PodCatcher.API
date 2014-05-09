@@ -10,6 +10,7 @@ namespace PodCatcher.API.Models
         IEnumerable<Podcast> GetAll(IEnumerable<Podcast> podcasts);
         Podcast Get(Podcast podcast);
         Podcast Get(Guid Id);
+        Podcast Get(String title);
         Podcast Add(Podcast podcast);
         void Remove(Guid Id);
         bool Update(Podcast item);
